@@ -1,6 +1,17 @@
+import { useState } from "react"
 import Navbar from "../components/Navbar"
 
 const Home = () => {
+    const [email, setEmail] = useState("")
+
+    const handleChange = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(email)
+    }
     return (
         <>
             {/* Navbar Section */}
@@ -115,7 +126,30 @@ const Home = () => {
             </section>
             {/* -------------------------------------------------------------------------------------------------- */}
             <section id="sign-up">
-
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6 sign-up">
+                            <h2>
+                                Sign up for our free weekly newsletter
+                            </h2>
+                            <p>Stay up to date with our new collections, latest deals & special offers! Get a new collection every week.</p>
+                        </div>
+                        <div className="col-lg-6">
+                            <form onSubmit={handleSubmit}>
+                                <div className="form">
+                                    <input className="userEmail"
+                                        type="email"
+                                        required
+                                        placeholder="enter email address"
+                                        name="email"
+                                        onChange={handleChange}
+                                    />
+                                    <button className="subscribe">Subscribe now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </section>
         </>
     )
