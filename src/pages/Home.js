@@ -1,17 +1,8 @@
-import { useState } from "react"
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 const Home = () => {
-    const [email, setEmail] = useState("")
 
-    const handleChange = (e) => {
-        setEmail(e.target.value);
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(email)
-    }
     return (
         <>
             {/* Navbar Section */}
@@ -22,9 +13,9 @@ const Home = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h1><span className="cheap">Cheapest </span>& Trusted delivery service</h1>
+                            <h1 className="hero-section-h1"><span className="cheap">Affordable </span>& Trusted delivery service</h1>
                             <p>The fastest and most affordable delivery platform made just for you. Sign up for an efficient and hassle-free experience. </p>
-                            <button className="cta">Schedule a delivery</button>
+                            <button className="cta">Book an Order</button>
                         </div>
                         <div className="col-lg-6">
                             <div className="rectangle"></div>
@@ -32,7 +23,35 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            {/* --------------------------------------------------------------------------------------------------------------------- */}
+            {/* What We Offer */}
+            <section id="what-we-offer">
+                <div className="container">
+                    <h2 className="what-we-offer">What our Customers say</h2>
+                    <p className="what-we-offer-p1">See what our customers, riders, and vendors have to say about us</p>
+                    <br /> <br />
+                    <p className="what-we-offer-p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam tempus ipsum, feugiat urna risus cursus porta dui. Ultrices quis adipiscing pharetra venenatis.
+                        In egestas sapien ac mollis adipiscing in auctor.</p>
+                </div>
+            </section>
             {/* -------------------------------------------------------------------------------------------------------------- */}
+            {/* Partner-Section */}
+            <section id="partner">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <h3>Become a Partner</h3>
+                            <br />
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa amet pulvinar ac nulla risus. Ac nisl enim sodales ut enim bibendum vestibulum.</p>
+                            <button className="partner">Partner with us </button>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="rectangle2"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* ------------------------------------------------------------------------------------------------ */}
             {/* Features Section */}
             <section id="features">
                 <div className="container">
@@ -58,23 +77,6 @@ const Home = () => {
                         </div>
                         <div className="col-lg-3">
 
-                        </div>
-                    </div>
-                </div>
-            </section>
-            {/* --------------------------------------------------------------------------------------------------------------- */}
-            {/* Partner-Section */}
-            <section id="partner">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <h3>Become a Partner</h3>
-                            <br />
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa amet pulvinar ac nulla risus. Ac nisl enim sodales ut enim bibendum vestibulum.</p>
-                            <button className="partner">Partner with us </button>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="rectangle2"></div>
                         </div>
                     </div>
                 </div>
@@ -125,32 +127,16 @@ const Home = () => {
                 </div>
             </section>
             {/* -------------------------------------------------------------------------------------------------- */}
-            <section id="sign-up">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6 sign-up">
-                            <h2>
-                                Sign up for our free weekly newsletter
-                            </h2>
-                            <p>Stay up to date with our new collections, latest deals & special offers! Get a new collection every week.</p>
-                        </div>
-                        <div className="col-lg-6">
-                            <form onSubmit={handleSubmit}>
-                                <div className="form">
-                                    <input className="userEmail"
-                                        type="email"
-                                        required
-                                        placeholder="enter email address"
-                                        name="email"
-                                        onChange={handleChange}
-                                    />
-                                    <button className="subscribe">Subscribe now</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+            <section id="join-team">
+                <br /> <br />
+                <h1 className="join-team-h1">Join Our Team</h1>
+                <p className="join-team-p1">Help us on our quest to make life better for our customers</p>
+                <br />
+                <button className="sco-button">See Current Openings</button>
             </section>
+            {/* ---------------------------------------------------------------------------------------------------- */}
+            {/* Footer-Section */}
+            <Footer />
         </>
     )
 }

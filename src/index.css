@@ -1,5 +1,17 @@
+/* General */
 body{
-  font-family:  'Plus Jakarta Sans', sans-serif;;
+  font-family:  'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+li{
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 37.8px;
 }
 
 /* Navbar */
@@ -9,29 +21,27 @@ body{
 
 /* Hero-Section */
 #hero-section{
-  margin: 30px 0;
+  margin: 80px 0;
 }
-
+.hero-section-h1{
+  font-size: 50.9087px;
+  line-height: 65px;
+  font-weight: bold;
+}
 .cheap{
   color: #F2C040;
 }
 .cta{
-  background: #ffffff;
-  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
-  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
-  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
-  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  background: #FFCD4D;
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
   border-radius: 5px;
   border-style: 2px #0000 solid;
-  font-family: Arial;
-  color: #000000;
+  color: #1B1B1B;
   font-size: 20px;
-  padding: 13px 33px 14px 33px;
+  padding: 16px 32px;
   text-decoration: none;
-  margin-top: 2%;
+  border-style: none;
 }
 .rectangle{
   position: absolute;
@@ -42,6 +52,26 @@ body{
   overflow: hidden;
 }
 
+/* What-We-Offer */
+#what-we-offer{
+  margin: 5% 0;
+  text-align: center;
+}
+.what-we-offer{
+  font-size: 50px;
+  font-weight: bold;
+}
+.what-we-offer-p1{
+  color: #000929;
+  opacity: 0.7;
+}
+.what-we-offer-p2{
+  color: #000929;
+  padding: 0 100px;
+  letter-spacing: 0.02em;
+  line-height: 29px;
+  font-weight: 400;
+}
 /* Features */
 #features{
   margin: 12% 0;
@@ -49,7 +79,7 @@ body{
 
 /* Partner */
 #partner{
-  margin: 30px 0;
+  margin: 5% 0;
 }
 
 .partner{
@@ -77,7 +107,7 @@ body{
 /* FAQ */
 #faq{
   text-align: center;
-  margin: 10% 0;
+  margin: 3% 0;
 }
 
 .accordion-body{
@@ -88,38 +118,83 @@ body{
   font-weight: bold;
 }
 
-/* SignUp */
-#sign-up{
-  background-color: #000;
-  padding: 5% 0;
-}
 
-.sign-up{
-  color: #fff;
-}
-
-.form{
-  display: block;
-  margin:  10px auto;
+/* Join-Team */
+#join-team{
   text-align: center;
+  margin: 5% 0;
+}
+.join-team-h1{
+  margin-top: 15%;
+}
+.join-team-p1{
+  line-height: 25px;
+  letter-spacing: -0.01em;
+}
+.sco-button{
+  background: #FFCD4D;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  border-style: 2px #0000 solid;
+  color: #1B1B1B;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-style: none;
 }
 
-.userEmail{
-  border-radius: 7px;
-  padding: 10px;
-  width: 80%;
-  border: 1px #000 solid;
+/* Footer */
+.footer{
+  margin: 15% 0 4% 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Privacy Policy */
+#privacy-policy{
+  margin: 5% 0;
+}
+.privacy-policy-p{
+  font-weight: 400;
+  font-size: 18.7868px;
+  line-height: 33px;
+  letter-spacing: 0.055em;
+  color: #303030;
+}
+.privacy-rectangle{
+  height: 250px;
+  width: 90%;
+  object-fit: cover;
+  background-color: #1B1B1B;
   display: block;
   margin: auto;
 }
 
-.subscribe{
-  margin-top: 20px;
+/* Blog */
+#safety-tips{
+  margin: 3% 0;
+}
+.blog-header{
+  text-align: center;
+}
+.blog-safety-tips-p1{
+  line-height: 33px;
+  letter-spacing: 0.055em;
+}
+.blog-safety-tips-p2{
+  line-height: 35px;
+  letter-spacing: -0.01em;
+  color: #ADADAD;
+  font-size: 20px;
+}
+.rectangle-blog{
   width: 80%;
-  font-size: 16px;
-  padding: 10px 25px 10px 25px;
-  color: #000;
-  background-color: #F2C040;
-  border-radius: 7px;
-  border-style: none;
+  height: 250px;
+  background-color: #1B1B1B;
+  margin: auto;
+}
+.read-latest{
+  font-weight: bold;
+  text-align: center;
+  margin: 60px 0;
 }
