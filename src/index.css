@@ -125,7 +125,7 @@ li{
   margin: 5% 0;
 }
 .join-team-h1{
-  margin-top: 15%;
+  margin-top: 5%;
 }
 .join-team-p1{
   line-height: 25px;
@@ -187,11 +187,19 @@ li{
   color: #ADADAD;
   font-size: 20px;
 }
-.rectangle-blog{
+.rectangle-blog1{
   width: 80%;
   height: 250px;
   background-color: #1B1B1B;
   margin: auto;
+  border-radius: 9.71429px;
+}
+.rectangle-blog2{
+  width: 80%;
+  height: 250px;
+  background-color: #1B1B1B;
+  margin: 20px auto;
+  border-radius: 9.71429px;
 }
 .read-latest{
   font-weight: bold;

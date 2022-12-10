@@ -18,7 +18,7 @@ const Blog = () => {
                             <p className="blog-safety-tips-p2">Dec 20, 2022</p>
                         </div>
                         <div className="col-lg-6">
-                            <div className="rectangle-blog"></div>
+                            <div className="rectangle-blog1"></div>
                         </div>
                     </div>
                 </div>
@@ -28,13 +28,13 @@ const Blog = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4">
-                        <div className="rectangle-blog"></div>
+                        <div className="rectangle-blog2"></div>
                     </div>
                     <div className="col-lg-4">
-                        <div className="rectangle-blog"></div>
+                        <div className="rectangle-blog2"></div>
                     </div>
                     <div className="col-lg-4">
-                        <div className="rectangle-blog"></div>
+                        <div className="rectangle-blog2"></div>
                     </div>
                 </div>
             </div>
