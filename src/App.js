@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
 import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );

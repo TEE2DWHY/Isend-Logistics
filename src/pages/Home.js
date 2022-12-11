@@ -18,7 +18,7 @@ const Home = () => {
                             <button className="cta">Book an Order</button>
                         </div>
                         <div className="col-lg-6">
-                            <div className="rectangle"></div>
+                            <img className="isend-img1" src="images/isend-img1.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ const Home = () => {
                             <button className="partner">Partner with us </button>
                         </div>
                         <div className="col-lg-6">
-                            <div className="rectangle2"></div>
+                            <img className="partner-img" src="images/partner.png" alt="" />
                         </div>
                     </div>
                 </div>

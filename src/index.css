@@ -15,6 +15,21 @@ li{
 }
 
 /* Navbar */
+.logo{
+  width: 100px;
+  height: 40px;
+}
+.sign-in{
+  background: #fff;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  border: 2px solid #F2C040;
+  font-family: Arial;
+  color: #F2C040;
+  padding: 0 40px;
+  text-decoration: none;
+}
 .navbar-collapse{
   justify-content: flex-end;
 }
@@ -43,18 +58,12 @@ li{
   text-decoration: none;
   border-style: none;
 }
-.rectangle{
-  position: absolute;
-  width: 40%;
-  height: 40%;
-  background: #1B1B1B;
-  border-radius: 9.71429px;
-  overflow: hidden;
+.isend-img1{
+  width: 100%;
 }
-
 /* What-We-Offer */
 #what-we-offer{
-  margin: 5% 0;
+  margin: 8% 0;
   text-align: center;
 }
 .what-we-offer{
@@ -95,13 +104,11 @@ li{
   margin-top: 2%;
 }
 
-.rectangle2{
-  position: absolute;
-  width: 40%;
-  height: 40%;
-  background: #FFCD4D;
-  border-radius: 9.71429px;
-  overflow: hidden;
+.partner-img{
+  width: 80%;
+  height: 80%;
+  display: block;
+  margin: auto;
 }
 
 /* FAQ */
@@ -205,4 +212,31 @@ li{
   font-weight: bold;
   text-align: center;
   margin: 60px 0;
+}
+/* Login */
+.header-login{
+  text-align: center;
+  font-weight: 900;
+  margin-top: 35%;
+  font-size: 28px;
+}
+.login-input{
+  border-radius: 7px;
+  border: 2px solid #ADADAD;
+  font-size: 20px;
+  width: 50%;
+}
+.login{
+  background-color: #F2C040;
+  color: #000;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 5px 30px;
+  border: 2px solid #F2C040;
+  width: 50%;
+  font-weight: bold;
+}
+.phase-2{
+  background-color: #F6F6F6;
+  height: 100vh;
 }
