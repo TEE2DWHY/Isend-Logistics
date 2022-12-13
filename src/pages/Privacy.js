@@ -14,13 +14,13 @@ const Privacy = () => {
                             <h1>Privacy Policy</h1>
                             <p className="privacy-policy-p">Please note that your use of and access to the services (as defined below) are subject to the following terms;
                                 if you do not agree to all of these terms, you may not use or access the services in any manner.</p>
+                            <br /> <br />
+                            <p>Last Updated: January 1st, 2023</p>
                         </div>
                         <div className="col-lg-6">
-                            <div className="privacy-rectangle"></div>
+                            <img className="img-fluid terms-privacy" src="images/privacy.png" alt="" />
                         </div>
                     </div>
-                    <br /> <br />
-                    <p>Last Updated: January 1st, 2023</p>
                 </div>
             </section>
             <Footer />

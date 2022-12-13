@@ -5,19 +5,24 @@ import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Terms from "./pages/Terms";
+import ScrollToTop from "./pages/Top";
 
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/privacy-policy" element={<Privacy />} />
-        <Route path="*" element={<NotFound />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign-up" element={<SignUp />} />
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/privacy-policy" element={<Privacy />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/terms-of-use" element={<Terms />} />
+        </Routes>
+      </ScrollToTop>
     </BrowserRouter>
   );
 }

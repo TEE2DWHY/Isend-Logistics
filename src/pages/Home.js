@@ -85,36 +85,9 @@ const Home = () => {
                     <br /> <br />
                     <p className="what-customers-say-p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam tempus ipsum, feugiat urna risus cursus porta dui. Ultrices quis adipiscing pharetra venenatis.
                         In egestas sapien ac mollis adipiscing in auctor.</p>
-                </div>
-            </section>
-            {/* ------------------------------------------------------------------------------------------------ */}
-            {/* Features Section */}
-            <section id="features">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-5">
-                            <h3>Our features you can get </h3>
-                        </div>
-                        <div className="col-lg-7">
-                            <p>Lorem ipsum dolor sit amet consectetur. Ut cursus semper ut lectus. Suspendisse consectetur quisque pellentesque tincidunt massa interdum nisl. </p>
-                        </div>
-                    </div>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-3">
-
-                        </div>
-                        <div className="col-lg-3">
-
-                        </div>
-                        <div className="col-lg-3">
-
-                        </div>
-                        <div className="col-lg-3">
-
-                        </div>
-                    </div>
+                    <p>Mira Culos, <span style={{ opacity: "0.6" }}>Customer</span></p>
+                    <br />
+                    <img src="images/Frame.png" alt="" />
                 </div>
             </section>
             {/* ---------------------------------------------------------------------------------------------- */}
