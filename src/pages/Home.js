@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import offers from "../Data"
 
 const Home = () => {
 
@@ -27,28 +28,63 @@ const Home = () => {
             {/* What We Offer */}
             <section id="what-we-offer">
                 <div className="container">
-                    <h2 className="what-we-offer">What our Customers say</h2>
-                    <p className="what-we-offer-p1">See what our customers, riders, and vendors have to say about us</p>
+                    <h2><b>What We Offer</b></h2>
                     <br /> <br />
-                    <p className="what-we-offer-p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam tempus ipsum, feugiat urna risus cursus porta dui. Ultrices quis adipiscing pharetra venenatis.
-                        In egestas sapien ac mollis adipiscing in auctor.</p>
+                    <div className="row">
+                        {offers.map((items) => (
+                            <div className="col-lg-3 offers-container">
+                                <div>
+                                    <img className="offers-img" src={items.image} alt="" />
+                                </div>
+                                <h5><b>{items.text}</b></h5>
+                                <p>{items.paragraph}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
-            {/* -------------------------------------------------------------------------------------------------------------- */}
+            {/* --------------------------------------------------------------------------------------------- */}
+            {/* Next-Day-Delivery */}
+            <section id="next-day-delivery">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <h1><b>Next-Day Delivery</b></h1>
+                            <br />
+                            <p style={{ opacity: "0.8" }}>Own a car? A motorcycle? A truck?. Are you looking to multiply your source of income? With just 5 steps, begin your journey to financial fulfillment.</p>
+                        </div>
+                        <div className="col-lg-6">
+                            <img className="rectangle img-fluid" src="images/Rectangle 6287.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* ----------------------------------------------------------------------------------------------- */}
             {/* Partner-Section */}
             <section id="partner">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h3>Become a Partner</h3>
-                            <br />
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa amet pulvinar ac nulla risus. Ac nisl enim sodales ut enim bibendum vestibulum.</p>
-                            <button className="partner">Partner with us </button>
-                        </div>
-                        <div className="col-lg-6">
                             <img className="partner-img" src="images/partner.png" alt="" />
                         </div>
+                        <div className="col-lg-6" style={{ paddingLeft: "50px" }}>
+                            <h3>Become a Partner</h3>
+                            <br />
+                            <p>Own a car? A motorcycle? A truck? Are you looking to multiply your source of income? With just 5 steps, begin your journey to financial fulfillment.</p>
+                            <button className="partner">Partner with us </button>
+                        </div>
                     </div>
+                </div>
+            </section>
+            {/* -------------------------------------------------------------------------------------------------------------- */}
+            {/* what-customers-say */}
+            <section id="what-customers-say">
+                <div className="container">
+                    <h2 className="what-customers-say">What our Customers say</h2>
+                    <p className="what-customers-say-p1">See what our customers, riders, and vendors have to say about us</p>
+                    <br /> <br />
+                    <p className="what-customers-say-p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam tempus ipsum, feugiat urna risus cursus porta dui. Ultrices quis adipiscing pharetra venenatis.
+                        In egestas sapien ac mollis adipiscing in auctor.</p>
                 </div>
             </section>
             {/* ------------------------------------------------------------------------------------------------ */}

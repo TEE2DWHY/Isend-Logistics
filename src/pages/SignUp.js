@@ -7,7 +7,7 @@ const SignUp = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <span className="col-lg-6 phase-1">
-                            <img src="images/logo.png" alt="" />
+                            <img className="logo" src="images/logo.png" alt="" />
                             <section id="login-form">
                                 <div className="header-login">
                                     <h1>Welcome back Victor!</h1>
