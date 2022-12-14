@@ -251,8 +251,9 @@ li{
 .login-input{
   border-radius: 7px;
   border: 2px solid #ADADAD;
-  font-size: 20px;
+  font-size: 14px;
   width: 50%;
+  padding: 10px;
 }
 .login{
   background-color: #F2C040;
@@ -278,13 +279,16 @@ li{
 .terms-privacy{
   height: 80%;
 }
-
 /* Pick-Up */
 .pickup-phase2{
   background-color: #F6F6F6;
   height: 100vh;
   position:inherit;
   top: 0;
+}
+/* Our-Centers */
+#our-centers{
+    margin: 5% 0;
 }
 /* Media Query */
 @media(max-width: 1200px){

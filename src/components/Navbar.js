@@ -19,7 +19,7 @@ const Navbar = () => {
                                     <a class="nav-link" href="/#">Get an estimate</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/#"><b>Our centers</b></a>
+                                    <Link to="our-centers" class="nav-link"><b>Our centers</b></Link>
                                 </li>
                                 <li class="nav-item">
                                     <Link to="/sign-up" class="nav-link">Create Account</Link>
