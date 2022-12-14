@@ -69,6 +69,7 @@ li{
   border: 1px solid #FFCd4D;
   padding: 25px;
   border-radius: 7px;
+  margin-bottom: 20px;
 }
 .offers-img{
   width: 50px;
@@ -124,8 +125,6 @@ li{
 .partner-img{
   width: 80%;
   height: 80%;
-  display: block;
-  margin: auto;
 }
 
 /* FAQ */
@@ -154,6 +153,18 @@ li{
 .join-team-p1{
   line-height: 25px;
   letter-spacing: -0.01em;
+}
+.ellipse1{
+  width: 80px;
+  height: 80px;
+  margin-right: 25% ;
+  position: relative;
+}
+.ellipse2{
+  width: 80px;
+  height: 80px;
+  margin-left: 25% ;
+  position: relative;
 }
 .sco-button{
   background: #FFCD4D;
@@ -266,4 +277,22 @@ li{
 }
 .terms-privacy{
   height: 80%;
+}
+
+/* Pick-Up */
+.pickup-phase2{
+  background-color: #F6F6F6;
+  height: 100vh;
+  position:inherit;
+  top: 0;
+}
+/* Media Query */
+@media(max-width: 1200px){
+body{
+  text-align: center;
+}
+.footer{
+  overflow: hidden;
+  width: "80%"
+}
 }

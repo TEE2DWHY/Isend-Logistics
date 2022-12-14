@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Terms from "./pages/Terms";
 import ScrollToTop from "./pages/Top";
+import PickUp from "./pages/PickUp";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/terms-of-use" element={<Terms />} />
+          <Route path="/pick-up" element={<PickUp />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>

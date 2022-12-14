@@ -138,10 +138,12 @@ const Home = () => {
             {/* -------------------------------------------------------------------------------------------------- */}
             <section id="join-team">
                 <br /> <br />
-                <h1 className="join-team-h1">Join Our Team</h1>
+                <h1 className="join-team-h1"><img className="ellipse1" src="images/Ellipse 298.png" alt="" />Join Our Team <img className="ellipse2" src="images/Ellipse 298.png" alt="" /></h1>
                 <p className="join-team-p1">Help us on our quest to make life better for our customers</p>
                 <br />
                 <button className="sco-button">See Current Openings</button>
+                <br /> <br /> <br />
+                <img className="ellipse1" src="images/Ellipse 298.png" alt="" /> <img className="ellipse2" src="images/Ellipse 298.png" alt="" />
             </section>
             {/* ---------------------------------------------------------------------------------------------------- */}
             {/* Footer-Section */}
