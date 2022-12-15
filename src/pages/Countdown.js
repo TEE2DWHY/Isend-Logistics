@@ -13,6 +13,15 @@ const Countdown = () => {
                             <h1 className="countdown-header">We are cooking something for you</h1>
                             <br />
                             <p>Our website launches soon. In the meantime, stay with a panda.</p>
+                            <div className="row">
+                                <div className="col-lg-6">
+                                    <h3>12 : 10 : 46 : 13</h3>
+                                </div>
+                                <div className="col-lg-6">
+                                    <p>12 days left</p>
+                                </div>
+                            </div>
+                            <br /> <br />
                             <form>
                                 <input
                                     type="email"
@@ -26,6 +35,10 @@ const Countdown = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            {/* ---------------------------------------------------------------------------------------------- */}
+            <section id="footer">
+
             </section>
         </>
     )
