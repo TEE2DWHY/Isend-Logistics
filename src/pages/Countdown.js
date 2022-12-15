@@ -21,7 +21,7 @@ const Countdown = () => {
                                     <p>12 days left</p>
                                 </div>
                             </div>
-                            <br /> <br />
+                            <br />
                             <form>
                                 <input
                                     type="email"
