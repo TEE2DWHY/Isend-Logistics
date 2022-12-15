@@ -78,10 +78,11 @@ li{
 }
 /* next-day */
 .rectangle{
-  width: 100%;
+  width: 80%;
   height: 70%;
-  display: block;
-  margin: auto;
+}
+.vector{
+  margin-top: 100px;
 }
 
 /* what-customers-say */
@@ -245,7 +246,7 @@ li{
 .header-login{
   text-align: center;
   font-weight: 900;
-  margin-top: 35%;
+  margin-top: 3%;
   font-size: 28px;
 }
 .login-input{
@@ -290,10 +291,43 @@ li{
 #our-centers{
     margin: 5% 0;
 }
+/* Countdown */
+.nav{
+  margin-bottom: 10%;
+}
+.logo2{
+  width: 120px;
+  height: 54px;
+}
+.countdown-header{
+  font-weight: 700;
+  margin-bottom: 30px 0;
+}
+.countdown-input{
+  height: 35px;
+  border: none;
+  background-color: #F1F0F0;
+}
+.notify-button{
+  border-radius: 0px 8px 8px 0px;
+  background-color: #1D1F22;
+  color: #fff;
+  height: 35px;
+}
+.countdown-rec{
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  width: 80%;
+  border-radius: 12px
+}
 /* Media Query */
 @media(max-width: 1200px){
 body{
   text-align: center;
+}
+.vector{
+  display: none;
 }
 .footer{
   overflow: hidden;

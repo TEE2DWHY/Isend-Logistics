@@ -1,7 +1,7 @@
 import { useState } from "react"
 const PickUp = () => {
     const [formData, setFormData] = useState({
-        phoneNumber: "", password: ""
+        fullName: "", address: "", phoneNumber: "", category: ""
     })
 
     const handleChange = (e) => {
@@ -35,12 +35,22 @@ const PickUp = () => {
                                                 className="login-input"
                                                 type="text"
                                                 required
-                                                placeholder="+234"
-                                                name="phoneNumber"
+                                                placeholder="Enter full name"
+                                                name="fullName"
                                                 onChange={handleChange}
                                             />
                                             <br />
-                                            <p style={{ fontSize: "14px" }}>Senders address</p>
+                                            <p style={{ fontSize: "14px", marginTop: "10px" }}>Senders address</p>
+                                            <input
+                                                className="login-input"
+                                                type="text"
+                                                required
+                                                placeholder="Enter address"
+                                                name="address"
+                                                onChange={handleChange}
+                                            />
+                                            <br />
+                                            <p style={{ fontSize: "14px", marginTop: "10px" }}>Senders phoneNumber</p>
                                             <input
                                                 className="login-input"
                                                 type="text"
@@ -50,35 +60,24 @@ const PickUp = () => {
                                                 onChange={handleChange}
                                             />
                                             <br />
-                                            <p style={{ fontSize: "14px" }}>Senders phoneNumber</p>
-                                            <input
-                                                className="login-input"
-                                                type="text"
-                                                required
-                                                placeholder="+234"
-                                                name="phoneNumber"
-                                                onChange={handleChange}
-                                            />
-                                            <br />
-                                            <p style={{ fontSize: "14px" }}>Category</p>
+                                            <p style={{ fontSize: "14px", marginTop: "10px" }}>Category</p>
                                             <select
                                                 className="login-input"
-                                                type="text"
-                                                required
-                                                placeholder="select category"
-                                                name="phoneNumber"
+                                                name="category"
                                                 onChange={handleChange}
                                             >
                                                 <option disabled selected>select category</option>
                                                 <option>Food</option>
                                                 <option>Cloth</option>
-                                                <option>Furniture</option>
+                                                <option>Product</option>
+                                                <option>Electronics</option>
+                                                <option>Shoes</option>
+                                                <option>Documents</option>
+                                                <option>Health</option>
                                             </select>
                                             <br />
-                                            <p style={{ color: "#FFCD4D", fontSize: "12px" }}>Forgot Password?</p>
-                                            <button className="login">Login</button>
-                                            <br />
-                                            <p style={{ fontSize: "14px" }}>Don’t have an account? <span style={{ color: "#FFCD4D" }}> Sign up</span></p>
+                                            <p style={{ color: "#FFCD4D", fontSize: "12px", marginTop: "2px" }}>Forgot Password?</p>
+                                            <button className="login">Save</button>
                                         </form>
                                     </div>
                                 </section>

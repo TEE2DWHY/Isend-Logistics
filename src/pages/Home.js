@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import offers from "../Data"
 
-const Home = () => {
+function Home() {
 
     return (
         <>
@@ -49,12 +49,31 @@ const Home = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h1><b>Next-Day Delivery</b></h1>
-                            <br />
-                            <p style={{ opacity: "0.8" }}>Own a car? A motorcycle? A truck?. Are you looking to multiply your source of income? With just 5 steps, begin your journey to financial fulfillment.</p>
-                        </div>
-                        <div className="col-lg-6">
                             <img className="rectangle img-fluid" src="images/Rectangle 6287.png" alt="" />
+                        </div>
+                        <div className="col-lg-6 next-delivery">
+                            <div className="row">
+                                <div className="col-lg-2">
+                                    <img className="img-fluid vector" src="images/Vector 291.png" alt="" />
+                                </div>
+                                <div className="col-lg-10">
+                                    <h1><b>Next-Day Delivery</b></h1>
+                                    <br />
+                                    <p style={{ opacity: "0.8" }}>3 easy steps for the next day delivery </p>
+                                    <ul>
+                                        <li>Request and Pickup
+                                            <p style={{ fontSize: "14px" }}>Once we receive your request, our personnel comes to picks it up.</p></li>
+                                    </ul>
+                                    <ul>
+                                        <li>Next day delivery
+                                            <p style={{ fontSize: "14px" }}>Our personnel drops off the package to our closest fulfilment centre.</p></li>
+                                    </ul>
+                                    <ul>
+                                        <li>Request and Pickup
+                                            <p style={{ fontSize: "14px" }}>Our personnel then drops off your package at your desired location.</p></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

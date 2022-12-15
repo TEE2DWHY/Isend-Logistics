@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -25,6 +26,7 @@ const Login = () => {
                     <div className="row">
                         <span className="col-lg-6 phase-1">
                             <img className="logo" src="images/logo.png" alt="" />
+                            <br /> <br />   <br /> <br />
                             <section id="login-form">
                                 <div className="header-login">
                                     <h1>Welcome back Victor!</h1>
@@ -52,7 +54,7 @@ const Login = () => {
                                         <p style={{ color: "#FFCD4D", fontSize: "12px" }}>Forgot Password?</p>
                                         <button className="login">Login</button>
                                         <br />
-                                        <p style={{ fontSize: "14px" }}>Don’t have an account? <span style={{ color: "#FFCD4D" }}> Sign up</span></p>
+                                        <p style={{ fontSize: "14px" }}>Don’t have an account? <Link to="/sign-up"><span style={{ color: "#FFCD4D" }}> Sign up</span></Link></p>
                                     </form>
                                 </div>
                             </section>

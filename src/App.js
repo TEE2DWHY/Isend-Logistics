@@ -9,6 +9,7 @@ import Terms from "./pages/Terms";
 import ScrollToTop from "./pages/Top";
 import PickUp from "./pages/PickUp";
 import OurCenters from "./pages/OurCenters";
+import Countdown from "./pages/Countdown";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/terms-of-use" element={<Terms />} />
           <Route path="/pick-up" element={<PickUp />} />
-          <Route path="/our-centers" element={<OurCenters />} />
+          <Route path="/our-centers" elemeant={<OurCenters />} />
+          <Route path="/countdown" element={<Countdown />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
