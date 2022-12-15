@@ -1,6 +1,22 @@
+import { useState } from "react"
 
 
 const Countdown = () => {
+    const [email, setEmail] = useState("")
+
+    const handleChange = (e) => {
+        setEmail(() => {
+            return (
+                e.target.value
+            )
+        })
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(email)
+    }
+
     return (
         <>
             <section id="countdown">
@@ -14,18 +30,19 @@ const Countdown = () => {
                             <br />
                             <p>Our website launches soon. In the meantime, stay with a panda.</p>
                             <div className="row">
-                                <div className="col-lg-6">
+                                <div className="col-lg-5">
                                     <h3>12 : 10 : 46 : 13</h3>
                                 </div>
-                                <div className="col-lg-6">
+                                <div className="col-lg-7">
                                     <p>12 days left</p>
                                 </div>
                             </div>
                             <br />
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <input
                                     type="email"
                                     className="countdown-input"
+                                    onChange={handleChange}
                                 />
                                 <button className="notify-button">Notify Me</button>
                             </form>
