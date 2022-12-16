@@ -24,16 +24,19 @@ const Countdown = () => {
                     <div className="nav">
                         <img className="logo2" src="images/logo-2.png" alt="" />
                     </div>
+                    <h3 className="launch">We are Launching soon! <img className="launch-img" src="images/launch.gif" alt="" /></h3>
+                    <br />
                     <div className="row">
                         <div className="col-lg-6">
-                            <h1 className="countdown-header">We are Cooking Something for You!</h1>
+                            <h1 className="countdown-header">Get Notified <br />
+                                When we Launch</h1>
                             <br />
-                            <p className="countdown-p1">Our website launches soon. In the meantime, stay with a panda.</p>
-
+                            <p className="countdown-p1">Our website launches soon. In the meantime, stay with us.</p>
+                            <br />
                             <div className="row">
                                 <div className="col-lg-5">
                                     <p style={{ fontSize: "12px" }}>DAYS |  HOURS  | MINUTES |  SECONDS</p>
-                                    <h3>12 : 10 : 46 : 13</h3>
+                                    <h3 style={{ fontWeight: "bold" }}>12 : 10 : 46 : 13</h3>
                                 </div>
                                 <div className="col-lg-7">
                                     <p className="days">12 days left</p>
