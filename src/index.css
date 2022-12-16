@@ -357,6 +357,9 @@ body{
 .days{
   margin-top: 20px;
 }
+.countdown-header{
+  font-size: 40px;
+}
 .countdown-p1{
   font-weight: bold;
 }
