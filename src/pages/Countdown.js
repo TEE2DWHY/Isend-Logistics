@@ -26,7 +26,7 @@ const Countdown = () => {
                     </div>
                     <div className="row">
                         <div className="col-lg-6">
-                            <h1 className="countdown-header">We are cooking something for you</h1>
+                            <h1 className="countdown-header">We are Cooking Something for You!</h1>
                             <br />
                             <p className="countdown-p1">Our website launches soon. In the meantime, stay with a panda.</p>
 
@@ -57,7 +57,7 @@ const Countdown = () => {
             </section>
             {/* ---------------------------------------------------------------------------------------------- */}
             <section id="footer-countdown">
-                <div className="footer-countdown" style={{ textAlign: "center", color: "grey", fontSize: "20px" }}>
+                <div className="footer-countdown" style={{ textAlign: "center", color: "grey", fontSize: "30px" }}>
                     <span><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram" style={{ marginLeft: "30px" }}></i> <i class="fa-brands fa-twitter" style={{ marginLeft: "30px" }}></i></span>
                 </div>
             </section>
