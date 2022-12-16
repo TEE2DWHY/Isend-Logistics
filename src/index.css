@@ -293,7 +293,7 @@ li{
 }
 /* Countdown */
 .nav{
-  margin-bottom: 10%;
+  margin-bottom: 12%;
 }
 .logo2{
   width: 150px;
@@ -307,6 +307,7 @@ li{
   height: 35px;
   border: none;
   background-color: #F1F0F0;
+  margin-bottom: 40px ;
 }
 .notify-button{
   border-radius: 0px 8px 8px 0px;
@@ -316,10 +317,10 @@ li{
 }
 .countdown-rec{
   display: block;
-  margin: auto;
   object-fit: cover;
   width: 80%;
-  border-radius: 12px
+  border-radius: 12px;
+  margin: 10px auto;
 }
 /* Media Query */
 @media(max-width: 1200px){
