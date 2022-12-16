@@ -293,7 +293,7 @@ li{
 }
 /* Countdown */
 .nav{
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   top: 34px;
   position: relative;
 }
@@ -303,6 +303,7 @@ h3.launch{
   font-weight: 900;
   animation: fadeIn;
   animation-duration: 4s;
+  font-family:cursive;
 }
 .launch-img{
   width: 150px;
