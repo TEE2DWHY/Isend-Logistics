@@ -299,7 +299,7 @@ li{
 }
 h3.launch{
   text-align: center;
-  font-size: 30px;
+  /* font-size: 30px; */
   font-weight: 900;
   animation: fadeIn;
   animation-duration: 4s;
@@ -378,5 +378,8 @@ body{
 }
 .countdown-p1{
   font-weight: bold;
+}
+.launch{
+  font-size: 18px;
 }
 }
