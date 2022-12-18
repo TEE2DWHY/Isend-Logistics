@@ -31,7 +31,7 @@ const Countdown = () => {
                             <h1 className="countdown-header">Get Notified <br />
                                 When we Launch.</h1>
                             <br />
-                            <p className="countdown-p1">Our website launches soon. In the meantime, <br /> stay with us.</p>
+                            <p className="countdown-p1">Our website launches soon. In the meantime, stay with us.</p>
                             <br />
                             <div className="row">
                                 <div className="col-lg-5">
