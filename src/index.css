@@ -300,50 +300,61 @@ li{
 }
 h3.launch{
   text-align: center;
-  /* font-size: 30px; */
+  font-size: 20px;
   font-weight: 900;
   animation: fadeIn;
   animation-duration: 4s;
 }
 .launch-img{
-  width: 150px;
-  height: 150px;
+  width: 50px;
+  height: 50px;
 }
 .logo2{
   width: 110px;
 }
 .countdown-header{
-  font-weight: 900;
+  font-weight: bolder;
   margin-bottom: 30px 0;
   font-size: 50px;
 }
+.get-notified{
+  margin-bottom: 10px;
+}
 .countdown-p1{
-  font-size: 20px;
+  font-size: 18px;
   opacity: 0.8;
+  letter-spacing: 0.08rem;
 }
 .countdown-input{
   height: 35px;
   border: none;
-  background-color: #F1F0F0;
+  background-color: #fff;
   margin-bottom: 40px ;
-  width: 40%;
-  height: 40px;
-
+  width: 60%;
+  height: 50px;
+  border: 2px solid #ADADAD;
 }
 .notify-button{
-  border-radius: 0px 8px 8px 0px;
-  background-color: #1D1F22;
+  border-radius: 0px 2px 2px 0px;
+  background-color: #1B1B1B;
   color: #fff;
-  height: 40px;
+  height: 50px;
+  border: none;
+  width: 20%;
+}
+.notify-button:hover{
+  background-color: #000;
 }
 .countdown-rec{
-  display: block;
-  object-fit: cover;
-  width: 90%;
-  border-radius: 12px;
-  margin: 10px auto;
-  animation: bounceInRight;
-  animation-duration: 3s;
+    width: 90%;
+    height: 80%;
+    background-color: #FFCD4D;
+    margin: auto;
+    border-radius: 9.71429px;
+    display: block;
+    object-fit: cover;
+    animation: bounceInRight;
+    animation-duration: 3s;
 }
 .days{
   margin-top: 40px;
@@ -377,11 +388,11 @@ body{
 .countdown-header{
   font-size: 40px;
 }
-.countdown-p1{
-  font-weight: bold;
-}
 .launch{
   font-size: 18px;
   margin-top: 3%;
+}
+.countdown-p1{
+  font-size: 14px;
 }
 }
