@@ -24,8 +24,7 @@ const Countdown = () => {
                     <div className="nav">
                         <img className="logo2" src="images/logo-2.png" alt="" />
                     </div>
-
-                    <h3 className="launch">We are Launching soon! <div className="launch-img" src="images/launch.gif" alt="" /></h3>
+                    <h2 className="launch">We are Launching soon! <img className="launch-img" src="images/launch.gif" alt="" /></h2>
                     <br />
                     <div className="row">
                         <div className="col-lg-6">
@@ -33,11 +32,11 @@ const Countdown = () => {
                                 When we Launch.</h1>
                             <p className="countdown-p1">Our website launches soon. In the meantime, <br />stay with us.</p>
                             <div className="row">
-                                <div className="col-lg-5">
-                                    <p style={{ fontSize: "12px" }}>DAYS |  HOURS  | MINUTES |  SECONDS</p>
-                                    <h3 style={{ fontWeight: "bold" }}>12 : 10 : 46 : 13</h3>
+                                <div className="col-lg-6">
+                                    <p style={{ fontSize: "12px", letterSpacing: "0.08rem" }}>DAYS |  HOURS  | MINUTES |  SECONDS</p>
+                                    <h3 style={{ fontWeight: "bold", letterSpacing: "0.06rem" }}>12 : 10 : 46 : 13</h3>
                                 </div>
-                                <div className="col-lg-7">
+                                <div className="col-lg-6">
                                     <p className="days">12 days left</p>
                                 </div>
                             </div>
@@ -52,28 +51,11 @@ const Countdown = () => {
                             </form>
                         </div>
                         <div className="col-lg-6">
-                            <div className="countdown-rec"></div>
+                            <img className="countdown-img" src="images/countdown-img.png" alt="" />
                         </div>
                     </div>
                 </div>
             </section>
-            {/* Popover */}
-            <div class="modal" tabindex="1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title">Welcome to Isend! <img className="launch-img" src="images/launch.gif" alt="" /></h3>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h3>We are Launching soon</h3>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
             {/* ---------------------------------------------------------------------------------------------- */}
             <section id="footer-countdown">
                 <div className="footer-countdown" style={{ textAlign: "center", color: "grey", fontSize: "30px" }}>
