@@ -426,5 +426,9 @@ body{
 }
 .countdown-input{
   border-radius: 0;
+  height: 50px;
+}
+.notify-button{
+  height: 50px;
 }
 }
