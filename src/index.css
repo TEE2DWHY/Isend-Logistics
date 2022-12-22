@@ -427,6 +427,7 @@ body{
 .countdown-input{
   border-radius: 0;
   height: 50px;
+  padding-left: 10px;
 }
 .notify-button{
   height: 50px;
