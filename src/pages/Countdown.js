@@ -56,7 +56,7 @@ const Countdown = () => {
                                 />
                                 <button className="notify-button">Notify me</button>
                                 <p id="user-success" className="user-success">You will be notified when we launch!</p>
-                                <p id="user-failure" className="user-failure">Error..Please Try Again!😐</p>
+                                <p id="user-failure" className="user-failure">Error..Something is wrong!😐</p>
                             </form>
                             <div className="footer-countdown" style={{ color: "grey", fontSize: "30px" }}>
                                 <span><i className="fa-brands fa-whatsapp"></i> <i className="fa-brands fa-instagram" style={{ marginLeft: "30px" }}></i> <i className="fa-brands fa-twitter" style={{ marginLeft: "30px" }}></i></span>
