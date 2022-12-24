@@ -58,8 +58,8 @@ const Countdown = () => {
                                 <p id="user-success" className="user-success">You will be notified when we launch!</p>
                                 <p id="user-failure" className="user-failure">Error..Something is wrong!😐</p>
                             </form>
-                            <div className="footer-countdown" style={{ color: "grey", fontSize: "30px" }}>
-                                <span><i className="fa-brands fa-whatsapp"></i> <i className="fa-brands fa-instagram" style={{ marginLeft: "30px" }}></i> <i className="fa-brands fa-twitter" style={{ marginLeft: "30px" }}></i></span>
+                            <div className="footer-countdown" style={{ color: "grey" }}>
+                                <span><a href="https://wa.me/message/4P4TWM3MHOEDF1"><i className="fa-brands fa-whatsapp"></i></a> <a href="https://instagram.com/isendhq?igshid=YmMyMTA2M2Y="><i className="fa-brands fa-instagram" style={{ marginLeft: "30px" }}></i> </a> <a href=" https://twitter.com/isendhq"><i className="fa-brands fa-twitter" style={{ marginLeft: "30px" }}></i></a></span>
                             </div>
                         </div>
                         <div className="col-lg-6">
