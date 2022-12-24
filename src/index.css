@@ -341,7 +341,7 @@ h2.launch{
   border: none;
   background-color: #fff;
   margin-bottom: 20px ;
-  width: 60%;
+  width: 55%;
   height: 50px;
   border: 1px solid #1B1B1B;
   margin-right: 0;
@@ -427,6 +427,7 @@ body{
 }
 .countdown-header{
   font-size: 40px;
+  margin-top: 4%;
 }
 .launch{
   font-size: 18px;
