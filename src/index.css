@@ -392,6 +392,11 @@ h2.launch{
   display: none;
   /* font-weight: bold; */
 }
+.user-failure{
+  display: none;
+  color: red;
+  /* font-weight: bold; */
+}
 /* Media Query */
 @media(max-width: 1200px){
 body{

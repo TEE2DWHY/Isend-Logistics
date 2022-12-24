@@ -32,21 +32,21 @@ const Blog = () => {
                         <p>10 Safety tips for Delivery</p>
                         <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Diam tempus ipsum, feu urna risus cursus porta dui. Ultrices quis adipiscing pharetra </p>
                         <p style={{ color: "#ADADAD" }}>Dec 20, 2022</p>
-                        <p style={{ fontWeight: "bold" }}>CONTINUE READING <i class="fa-solid fa-arrow-right"></i></p>
+                        <p style={{ fontWeight: "bold" }}>CONTINUE READING <i className="fa-solid fa-arrow-right"></i></p>
                     </div>
                     <div className="col-lg-4">
                         <div className="rectangle-blog2"></div>
                         <p>10 Safety tips for Delivery</p>
                         <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Diam tempus ipsum, feu urna risus cursus porta dui. Ultrices quis adipiscing pharetra </p>
                         <p style={{ color: "#ADADAD" }}>Dec 20, 2022</p>
-                        <p style={{ fontWeight: "bold" }}>CONTINUE READING <i class="fa-solid fa-arrow-right"></i></p>
+                        <p style={{ fontWeight: "bold" }}>CONTINUE READING <i className="fa-solid fa-arrow-right"></i></p>
                     </div>
                     <div className="col-lg-4">
                         <div className="rectangle-blog2"></div>
                         <p>10 Safety tips for Delivery</p>
                         <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Diam tempus ipsum, feu urna risus cursus porta dui. Ultrices quis adipiscing pharetra </p>
                         <p style={{ color: "#ADADAD" }}>Dec 20, 2022</p>
-                        <p style={{ fontWeight: "bold" }}>CONTINUE READING <i class="fa-solid fa-arrow-right"></i></p>
+                        <p style={{ fontWeight: "bold" }}>CONTINUE READING <i className="fa-solid fa-arrow-right"></i></p>
                     </div>
                 </div>
             </div>

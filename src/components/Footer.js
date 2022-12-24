@@ -28,7 +28,7 @@ const Footer = () => {
                     </ul>
 
                     <ul>
-                        <li><span><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-twitter" style={{ paddingLeft: "20px" }}></i> <i class="fa-brands fa-instagram" style={{ paddingLeft: "20px" }}></i></span></li>
+                        <li><span><i className="fa-brands fa-facebook"></i> <i className="fa-brands fa-twitter" style={{ paddingLeft: "20px" }}></i> <i className="fa-brands fa-instagram" style={{ paddingLeft: "20px" }}></i></span></li>
                         <li><p>support@isendapp.com</p></li>
                         <li><p>+234 703 482 3211</p></li>
                     </ul>

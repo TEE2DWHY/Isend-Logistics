@@ -1,22 +1,37 @@
 import { useState } from "react"
-// import axios from "axios"
+import axios from "axios"
 
 
 const Countdown = () => {
-    const [email, setEmail] = useState("")
+    const [formData, setEmail] = useState({
+        email: ""
+    })
 
     const handleChange = (e) => {
-        setEmail(() => {
-            return (
-                e.target.value
-            )
+        setEmail((prevFormData) => {
+            return {
+                ...prevFormData,
+                [e.target.name]: e.target.value
+            }
         })
     }
+    // console.log(email)
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(email)
-        document.getElementById("user-success").style.display = "block"
+        try {
+            const res = await axios.post("https://isend-dev.onrender.com/api/v1/waitingList", formData)
+            console.log(res)
+            if (res.status === 200) {
+                document.getElementById("user-success").style.display = "block"
+            }
+            else {
+                document.getElementById("user-failure").style.display = "block"
+            }
+        }
+        catch (err) {
+            console.log(err)
+        }
     }
 
     return (
@@ -38,12 +53,15 @@ const Countdown = () => {
                                     className="countdown-input"
                                     placeholder="Enter your email address"
                                     onChange={handleChange}
+                                    required
+                                    name="email"
                                 />
                                 <button className="notify-button">Notify me</button>
                                 <p id="user-success" className="user-success">You will be notified when we launch!</p>
+                                <p id="user-failure" className="user-failure">Error..Please Try Again!</p>
                             </form>
                             <div className="footer-countdown" style={{ color: "grey", fontSize: "30px" }}>
-                                <span><i class="fa-brands fa-whatsapp"></i> <i class="fa-brands fa-instagram" style={{ marginLeft: "30px" }}></i> <i class="fa-brands fa-twitter" style={{ marginLeft: "30px" }}></i></span>
+                                <span><i className="fa-brands fa-whatsapp"></i> <i className="fa-brands fa-instagram" style={{ marginLeft: "30px" }}></i> <i className="fa-brands fa-twitter" style={{ marginLeft: "30px" }}></i></span>
                             </div>
                         </div>
                         <div className="col-lg-6">
