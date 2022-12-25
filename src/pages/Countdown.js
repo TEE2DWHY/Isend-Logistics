@@ -49,15 +49,17 @@ const Countdown = () => {
                                 When we Launch.</h1>
                             <p className="countdown-p1">Our website launches soon. In the meantime, <br />stay with us.</p>
                             <form className="form" onSubmit={handleSubmit}>
-                                <input
-                                    type="email"
-                                    className="countdown-input"
-                                    placeholder="Enter your email address"
-                                    onChange={handleChange}
-                                    required
-                                    name="email"
-                                />
-                                <button className="notify-button" id="notify"><span id="notify-text">Notify me</span>  <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
+                                <div style={{ height: "50px", marginBottom: "20px" }}>
+                                    <input
+                                        type="email"
+                                        className="countdown-input"
+                                        placeholder="Enter your email address"
+                                        onChange={handleChange}
+                                        required
+                                        name="email"
+                                    />
+                                    <button className="notify-button" id="notify"><span id="notify-text">Notify me</span>  <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
+                                </div>
                                 <p id="user-success" className="user-success">You will be notified when we launch!</p>
                                 <p id="user-failure" className="user-failure">Error..Something is wrong!😐</p>
                             </form>
