@@ -403,6 +403,9 @@ h2.launch{
   color: red;
   /* font-weight: bold; */
 }
+#spinner{
+  display: none;
+}
 /* Media Query */
 @media(max-width: 1200px){
 body{

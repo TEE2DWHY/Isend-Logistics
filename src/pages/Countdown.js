@@ -19,11 +19,14 @@ const Countdown = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        document.getElementById("notify-text").style.display = "none"
+        document.getElementById("spinner").style.display = "block"
         try {
             const res = await axios.post("https://isend-dev.onrender.com/api/v1/waitingList", formData)
             console.log(res)
             if (res.status === 200) {
                 document.getElementById("user-success").style.display = "block"
+                document.getElementById("notify").innerHTML = "Subscribed"
             }
         }
         catch (err) {
@@ -54,7 +57,7 @@ const Countdown = () => {
                                     required
                                     name="email"
                                 />
-                                <button className="notify-button">Notify me</button>
+                                <button className="notify-button" id="notify"><span id="notify-text">Notify me</span>  <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
                                 <p id="user-success" className="user-success">You will be notified when we launch!</p>
                                 <p id="user-failure" className="user-failure">Error..Something is wrong!😐</p>
                             </form>
