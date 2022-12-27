@@ -19,6 +19,7 @@ const Countdown = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const input = document.getElementById("email")
         document.getElementById("notify-text").style.display = "none"
         document.getElementById("spinner").style.display = "block"
         try {
@@ -27,11 +28,14 @@ const Countdown = () => {
             if (res.status === 200) {
                 document.getElementById("user-success").style.display = "block"
                 document.getElementById("notify").innerHTML = "Subscribed"
+                input.value = " "
             }
         }
         catch (err) {
             document.getElementById("user-failure").style.display = "block"
             console.log(err)
+            document.getElementById("notify").innerHTML = "Subscribed"
+            input.value = " "
         }
     }
 
@@ -56,6 +60,7 @@ const Countdown = () => {
                                         placeholder="Enter your email address"
                                         onChange={handleChange}
                                         required
+                                        id="email"
                                         name="email"
                                     />
                                     <button className="notify-button" id="notify"><span id="notify-text">Notify me</span>  <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
