@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Blog from "./pages/Blog";
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
 import Login from "./pages/Login";
@@ -10,13 +10,19 @@ import ScrollToTop from "./pages/Top";
 import PickUp from "./pages/PickUp";
 import OurCenters from "./pages/OurCenters";
 import Countdown from "./pages/Countdown";
-
+import Experience from "./pages/Experience";
+// Legediz
+import LoginLegediz from "./pages/Legediz/Login";
+import SignUpLegediz from "./pages/Legediz/SignUp";
+// MotorCycle
+import LoginMotorcycle from "./pages/Motorcycle/Login";
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop>
         <Routes>
-          <Route path="/" element={<Countdown />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/count-down" element={<Countdown />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
@@ -24,8 +30,12 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/terms-of-use" element={<Terms />} />
           <Route path="/pick-up" element={<PickUp />} />
-          <Route path="/our-centers" elemeant={<OurCenters />} />
+          <Route path="/our-centers" element={<OurCenters />} />
           <Route path="/countdown" element={<Countdown />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/legediz/login" element={<LoginLegediz />} />
+          <Route path="/legediz/sign-up" element={<SignUpLegediz />} />
+          <Route path="/motorcycle/login" element={<LoginMotorcycle />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>

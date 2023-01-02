@@ -44,7 +44,7 @@ const Countdown = () => {
             <section id="countdown">
                 <div className="container">
                     <div className="nav">
-                        <img className="logo2" src="images/logo-2.png" alt="" />
+                        <img className="logo2" src="images/logo.png" alt="" />
                     </div>
 
                     <div className="row">

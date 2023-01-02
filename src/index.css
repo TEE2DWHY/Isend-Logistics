@@ -3,7 +3,7 @@ body{
   font-family:  'Plus Jakarta Sans', sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 a{
   text-decoration: none;
@@ -24,8 +24,7 @@ li{
 
 /* Navbar */
 .logo{
-  width: 100px;
-  height: 40px;
+ width: 110px;
 }
 .sign-in{
   background: #fff;
@@ -273,10 +272,20 @@ li{
   border: 2px solid #F2C040;
   width: 50%;
   font-weight: bold;
+  margin-top: 20px;
+}
+.phase-1{
+  height: 100vh;
 }
 .phase-2{
   background-color: #F6F6F6;
   height: 100vh;
+}
+.phase-2-contents{
+  margin-top: 75vh;
+  margin-left: 8%;
+  font-size: 14px;
+  padding: 10px;
 }
 /* Terms-of-Use */
 .terms-h1{
@@ -404,6 +413,25 @@ h2.launch{
 }
 #spinner{
   display: none;
+}
+
+/* Experience */
+.yellow-star{
+  color: #F2C040;
+}
+.experience-rating{
+  margin-top: 20%;
+}
+
+/* Legediz */
+.phase2-legediz{
+  background-color: #FDFCF7;
+  padding-top: 2%;
+}
+.legediz{
+  height: 450px;
+  margin: auto;
+  display: block;
 }
 /* Media Query */
 @media(max-width: 1200px){

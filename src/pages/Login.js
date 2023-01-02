@@ -25,8 +25,9 @@ const Login = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <span className="col-lg-6 phase-1">
+                            <br />
                             <img className="logo" src="images/logo.png" alt="" />
-                            <br /> <br />   <br /> <br />
+                            <br /> <br /> <br />
                             <section id="login-form">
                                 <div className="header-login">
                                     <h1>Welcome back Victor!</h1>
@@ -51,17 +52,19 @@ const Login = () => {
                                             name="password"
                                             onChange={handleChange}
                                         />
-                                        <p style={{ color: "#FFCD4D", fontSize: "12px" }}>Forgot Password?</p>
+                                        <p style={{ color: "#FFCD4D", fontSize: "12px", marginTop: "10px" }}>Forgot Password?</p>
                                         <button className="login">Login</button>
-                                        <br />
-                                        <p style={{ fontSize: "14px" }}>Don’t have an account? <Link to="/sign-up"><span style={{ color: "#FFCD4D" }}> Sign up</span></Link></p>
+                                        <p style={{ fontSize: "14px", marginTop: "20px" }}>Don’t have an account? <Link to="/sign-up"><span style={{ color: "#FFCD4D" }}> Sign up</span></Link></p>
                                     </form>
                                 </div>
                             </section>
                         </span>
-                        <span className="col-lg-6 phase-2">
-
-                        </span>
+                        <div className="col-lg-6 phase-2">
+                            <div className="phase-2-contents">
+                                <p>Powered by <i style={{ fontSize: "12px", marginLeft: "10px", color: "#7065F0" }} class="fa-solid fa-bookmark"></i>
+                                    <br /> <br />
+                                    You agree to Porchplus’s Terms of Use & Privacy Policy. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply. </p></div>
+                        </div>
                     </div>
                 </div>
             </section>

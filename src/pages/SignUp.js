@@ -10,6 +10,7 @@ const SignUp = () => {
                             <img className="logo" src="images/logo.png" alt="" />
                             <section id="login-form">
                                 <div className="header-login">
+                                    <br />
                                     <h1>Welcome back Victor!</h1>
                                     <p style={{ opacity: "0.6", fontSize: "14px", letterSpacing: "0.1em" }}>Please enter your details</p>
                                     <p style={{ fontSize: "14px" }}>First name</p>
@@ -73,9 +74,12 @@ const SignUp = () => {
                                 </div>
                             </section>
                         </span>
-                        <span className="col-lg-6 phase-2">
-
-                        </span>
+                        <div className="col-lg-6 phase-2">
+                            <div className="phase-2-contents">
+                                <p>Powered by <i style={{ fontSize: "12px", marginLeft: "10px", color: "#7065F0" }} class="fa-solid fa-bookmark"></i>
+                                    <br /> <br />
+                                    You agree to Porchplus’s Terms of Use & Privacy Policy. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply. </p></div>
+                        </div>
                     </div>
                 </div>
             </section>
