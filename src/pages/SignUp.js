@@ -4,14 +4,15 @@ const SignUp = () => {
     return (
         <>
             <section>
-                <div className="container-fluid">
+                <div className="container-fluid" style={{ height: "100vh" }}>
                     <div className="row">
                         <span className="col-lg-6 phase-1">
-                            <img className="logo" src="images/logo.png" alt="" />
+                            <br />
+                            <img className="container logo" src="images/logo.png" alt="" />
                             <section id="login-form">
                                 <div className="header-login">
                                     <br />
-                                    <h1>Welcome back Victor!</h1>
+                                    <h1 style={{ fontWeight: "bold" }}>Welcome!</h1>
                                     <p style={{ opacity: "0.6", fontSize: "14px", letterSpacing: "0.1em" }}>Please enter your details</p>
                                     <p style={{ fontSize: "14px" }}>First name</p>
                                     <input
@@ -66,10 +67,10 @@ const SignUp = () => {
                                     <input
                                         type="checkbox"
                                     />
-                                    <span style={{ fontSize: "12px" }}>I agree to <span style={{ color: "#FFCD4D" }}>Term of Use & Privacy Policy</span></span>
+                                    <span style={{ fontSize: "12px", marginLeft: "5px" }}>I agree to <span style={{ color: "#FFCD4D" }}>Term of Use & Privacy Policy</span></span>
                                     <br />
                                     <button className="login">Sign Up</button>
-                                    <br />
+                                    <br /> <br />
                                     <p style={{ fontSize: "14px" }}>Already have an account? <span style={{ color: "#FFCD4D" }}> Sign in</span></p>
                                 </div>
                             </section>

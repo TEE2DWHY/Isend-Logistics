@@ -26,14 +26,15 @@ const Login = () => {
                     <div className="row">
                         <span className="col-lg-6 phase-1">
                             <br />
-                            <img className="logo" src="images/logo.png" alt="" />
-                            <br /> <br /> <br />
+                            <img className="container logo" src="images/logo.png" alt="" />
+                            <br /> <br /> <br /> <br />
                             <section id="login-form">
                                 <div className="header-login">
                                     <h1>Welcome back Victor!</h1>
                                     <form onSubmit={handleSubmit}>
                                         <p style={{ opacity: "0.6", fontSize: "14px", letterSpacing: "0.1em" }}>Please enter your details</p>
-                                        <p style={{ fontSize: "14px" }}>Phone number</p>
+                                        <label style={{ fontSize: "14px" }}>Phone number</label>
+                                        <br />
                                         <input
                                             className="login-input"
                                             type="text"

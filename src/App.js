@@ -11,11 +11,17 @@ import PickUp from "./pages/PickUp";
 import OurCenters from "./pages/OurCenters";
 import Countdown from "./pages/Countdown";
 import Experience from "./pages/Experience";
+import DeliveryDetails from "./pages/DeliveryDetails";
 // Legediz
 import LoginLegediz from "./pages/Legediz/Login";
 import SignUpLegediz from "./pages/Legediz/SignUp";
 // MotorCycle
 import LoginMotorcycle from "./pages/Motorcycle/Login";
+import SignUpMotorcycle from "./pages/Motorcycle/SignUp";
+// Car
+import LoginCar from "./pages/Car/Login";
+import SignUpCar from "./pages/Car/SignUp";
+
 function App() {
   return (
     <BrowserRouter>
@@ -33,9 +39,13 @@ function App() {
           <Route path="/our-centers" element={<OurCenters />} />
           <Route path="/countdown" element={<Countdown />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/delivery-details" element={<DeliveryDetails />} />
           <Route path="/legediz/login" element={<LoginLegediz />} />
           <Route path="/legediz/sign-up" element={<SignUpLegediz />} />
           <Route path="/motorcycle/login" element={<LoginMotorcycle />} />
+          <Route path="/motorcycle/sign-up" element={<SignUpMotorcycle />} />
+          <Route path="/car/login" element={<LoginCar />} />
+          <Route path="/car/sign-up" element={<SignUpCar />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>

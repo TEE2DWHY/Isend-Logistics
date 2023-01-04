@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import offers from "../Data"
+import { Link } from "react-router-dom"
 
 function Home() {
 
@@ -16,7 +17,7 @@ function Home() {
                         <div className="col-lg-6">
                             <h1 className="hero-section-h1"><span className="cheap">Affordable </span>& Trusted delivery service</h1>
                             <p>The fastest and most affordable delivery platform made just for you. Sign up for an efficient and hassle-free experience. </p>
-                            <button className="cta">Book an Order</button>
+                            <Link to="/login"><button className="cta">Book a delivery</button></Link>
                         </div>
                         <div className="col-lg-6">
                             <img className="isend-img1" src="images/isend-img1.png" alt="" />
