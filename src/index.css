@@ -12,6 +12,16 @@ a{
 a:hover{
   color: #F2C040;
 }
+meter::-webkit-meter-optimum-value {
+  background: #F2C040;
+}
+meter::-moz-meter-bar { /* Firefox Pseudo Class */
+  background: #F2C040;
+}
+meter{
+  width: 6rem;
+  height: 20px;
+}
 i{
   font-size: 30px;
 }

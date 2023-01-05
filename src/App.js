@@ -15,6 +15,7 @@ import DeliveryDetails from "./pages/DeliveryDetails";
 // Legediz
 import LoginLegediz from "./pages/Legediz/Login";
 import SignUpLegediz from "./pages/Legediz/SignUp";
+import DocumentsLegediz from "./pages/Legediz/Documents";
 // MotorCycle
 import LoginMotorcycle from "./pages/Motorcycle/Login";
 import SignUpMotorcycle from "./pages/Motorcycle/SignUp";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/delivery-details" element={<DeliveryDetails />} />
           <Route path="/legediz/login" element={<LoginLegediz />} />
           <Route path="/legediz/sign-up" element={<SignUpLegediz />} />
+          <Route path="/legediz/documents" element={<DocumentsLegediz />} />
           <Route path="/motorcycle/login" element={<LoginMotorcycle />} />
           <Route path="/motorcycle/sign-up" element={<SignUpMotorcycle />} />
           <Route path="/car/login" element={<LoginCar />} />
