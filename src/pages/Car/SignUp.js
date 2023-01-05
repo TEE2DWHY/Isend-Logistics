@@ -74,11 +74,11 @@ const SignUpCar = () => {
                             </div>
                         </div>
                         <div className="col-lg-6 phase2-legediz">
-                            <img className="legediz img-fluid" src="../images/Legediz.png" alt="legediz" />
-                            <p style={{ textAlign: "center", margin: "10px 0" }}>Powered by <i style={{ fontSize: "12px", marginLeft: "10px", color: "#7065F0" }} class="fa-solid fa-bookmark"></i>
-                                <br />
-                                <span style={{ marginTop: "30px" }}>You agree to Porchplus’s Terms of Use & Privacy Policy. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</span> </p>
-                            <br /> <br />
+                            <div className="phase-2-contents">
+                                <p>Powered by <i style={{ fontSize: "12px", marginLeft: "10px", color: "#7065F0" }} class="fa-solid fa-bookmark"></i>
+                                    <br /> <br />
+                                    You agree to Porchplus’s Terms of Use & Privacy Policy. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply. </p>
+                            </div>
                         </div>
                     </div>
                 </div>

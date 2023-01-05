@@ -36,13 +36,22 @@ li{
 .logo{
  width: 110px;
 }
+.nav-center{
+  justify-content:space-between;
+  margin-right: 100px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.nav-cta{
+  margin-top: 10px;
+}
 .sign-in{
   background: #fff;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 6px;
   border: 2px solid #FFC24D;
-  font-family: Arial;
   border-color: #FFC24D;
   padding: 0 40px;
   text-decoration: none;
@@ -52,8 +61,8 @@ li{
   background-color: #F2C040;
   color: #000;
   border: none;
-  border-radius: 7px;
-  padding: 4px 16px;
+  border-radius: 6px;
+  padding: 2px 16px;
   font-weight: bold;
 }
 .navbar-collapse{
@@ -316,6 +325,8 @@ li{
 }
 .terms-privacy{
   height: 80%;
+  display: block;
+  margin: auto;
 }
 /* Pick-Up */
 .pickup-phase2{

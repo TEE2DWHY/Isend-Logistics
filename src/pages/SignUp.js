@@ -14,7 +14,7 @@ const SignUp = () => {
                                     <br />
                                     <h1 style={{ fontWeight: "bold" }}>Welcome!</h1>
                                     <p style={{ opacity: "0.6", fontSize: "14px", letterSpacing: "0.1em" }}>Please enter your details</p>
-                                    <p style={{ fontSize: "14px" }}>First name</p>
+                                    <p className="" style={{ fontSize: "14px" }}>First name</p>
                                     <input
                                         className="login-input"
                                         type="text"
@@ -24,7 +24,7 @@ const SignUp = () => {
                                     // onChange={handleChange}
                                     />
                                     <br />
-                                    <p style={{ fontSize: "14px" }}>Last name</p>
+                                    <p className="" style={{ fontSize: "14px" }}>Last name</p>
                                     <input
                                         className="login-input"
                                         type="text"
@@ -34,7 +34,7 @@ const SignUp = () => {
                                     // onChange={handleChange}
                                     />
                                     <br />
-                                    <p style={{ fontSize: "14px" }}>Email</p>
+                                    <p className="" style={{ fontSize: "14px" }}>Email</p>
                                     <input
                                         className="login-input"
                                         type="email"
@@ -44,7 +44,7 @@ const SignUp = () => {
                                     // onChange={handleChange}
                                     />
                                     <br />
-                                    <p style={{ fontSize: "14px" }}>Phone number</p>
+                                    <p className="" style={{ fontSize: "14px" }}>Phone number</p>
                                     <input
                                         className="login-input"
                                         type="text"

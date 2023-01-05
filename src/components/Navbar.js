@@ -12,20 +12,22 @@ const Navbar = () => {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav">
+                                <div className="nav-center">
+                                    <li className="nav-item">
+                                        <a className="nav-link active" aria-current="page" href="/#" style={{ marginRight: "30px" }}>Home</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link nav-center" href="/#" style={{ marginRight: "30px" }}>Track your package</a>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="/our-centers" className="nav-link" style={{ marginRight: "20px" }}><b>Our centers</b></Link>
+                                    </li>
+                                </div>
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="/#">Home</a>
+                                    <Link to="/login"> <span className="nav-link nav-cta"><button className='sign-in'>Sign in</button></span></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/#">Track your package</a>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="our-centers" className="nav-link"><b>Our centers</b></Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/login"> <span className="nav-link"><button className='sign-in'>Sign in</button></span></Link>
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/sign-up" className="nav-link"><button className="create-account">Create Account</button></Link>
+                                    <Link to="/sign-up" className="nav-link nav-cta"><button className="create-account">Create Account</button></Link>
                                 </li>
                             </ul>
                         </div>

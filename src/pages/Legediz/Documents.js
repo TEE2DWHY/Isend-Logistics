@@ -25,7 +25,7 @@ const DocumentsLegediz = () => {
                                     <meter value="100"></meter> <meter value="100"></meter> <meter value="100"></meter> <meter value="0"></meter>
                                 </div>
                                 <br />
-                                <p style={{ fontSize: "14px" }}>First name</p>
+                                <p style={{ fontSize: "14px" }}>NIN Number</p>
                                 <input
                                     className="login-input"
                                     type="text"
@@ -35,7 +35,7 @@ const DocumentsLegediz = () => {
                                 // onChange={handleChange}
                                 />
                                 <br />
-                                <p style={{ fontSize: "14px" }}>Last name</p>
+                                <p style={{ fontSize: "14px" }}>Marital Status</p>
                                 <input
                                     className="login-input"
                                     type="text"
@@ -45,17 +45,17 @@ const DocumentsLegediz = () => {
                                 // onChange={handleChange}
                                 />
                                 <br />
-                                <p style={{ fontSize: "14px" }}>Email</p>
+                                <p style={{ fontSize: "14px" }}>Next of Kin</p>
                                 <input
                                     className="login-input"
-                                    type="email"
+                                    type="text"
                                     required
-                                    placeholder="hi@example.com"
+                                    placeholder="e.g Anthony Sikiru"
                                     name="password"
                                 // onChange={handleChange}
                                 />
                                 <br />
-                                <p style={{ fontSize: "14px" }}>Phone number</p>
+                                <p style={{ fontSize: "14px" }}>Next of Kin Phone number</p>
                                 <input
                                     className="login-input"
                                     type="text"
@@ -65,13 +65,43 @@ const DocumentsLegediz = () => {
                                 // onChange={handleChange}
                                 />
                                 <br />
-                                <p style={{ fontSize: "14px" }}>Password</p>
+                                <p style={{ fontSize: "14px" }}>Guarantor1 Name</p>
                                 <input
                                     className="login-input"
-                                    type="password"
+                                    type="text"
                                     required
-                                    placeholder="Enter password"
-                                    name="password"
+                                    // placeholder="Enter password"
+                                    name="guarantor1 name"
+                                // onChange={handleChange}
+                                />
+                                <br />
+                                <p style={{ fontSize: "14px" }}>Guarantor1 Phone Number</p>
+                                <input
+                                    className="login-input"
+                                    type="text"
+                                    required
+                                    // placeholder="Enter password"
+                                    name="guarantor1 name"
+                                // onChange={handleChange}
+                                />
+                                <br />
+                                <p style={{ fontSize: "14px" }}>Guarantor2 Name</p>
+                                <input
+                                    className="login-input"
+                                    type="text"
+                                    required
+                                    // placeholder="Enter password"
+                                    name="guarantor1Name"
+                                // onChange={handleChange}
+                                />
+                                <br />
+                                <p style={{ fontSize: "14px" }}>Guarantor2 Phone Number</p>
+                                <input
+                                    className="login-input"
+                                    type="text"
+                                    required
+                                    // placeholder="Enter password"
+                                    name="guarantor2Phone"
                                 // onChange={handleChange}
                                 />
                                 <br />
@@ -82,7 +112,6 @@ const DocumentsLegediz = () => {
                                 <br />
                                 <button className="login">Continue</button>
                                 <br />
-                                <p style={{ fontSize: "14px" }}>Already have an account? <span style={{ color: "#FFCD4D" }}> Sign in</span></p>
                             </div>
                         </div>
                         <div className="col-lg-6 phase2-legediz">
