@@ -84,14 +84,14 @@ function Home() {
             <section id="partner">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
-                            <img className="partner-img" src="images/partner.png" alt="" />
-                        </div>
                         <div className="col-lg-6" style={{ paddingLeft: "50px" }}>
                             <h3>Become a Partner</h3>
                             <br />
                             <p>Own a car? A motorcycle? A truck? Are you looking to multiply your source of income? With just 5 steps, begin your journey to financial fulfillment.</p>
                             <button className="partner">Partner with us </button>
+                        </div>
+                        <div className="col-lg-6">
+                            <img className="partner-img" src="images/sync.png" alt="" />
                         </div>
                     </div>
                 </div>
