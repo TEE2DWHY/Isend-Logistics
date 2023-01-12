@@ -39,7 +39,7 @@ li{
 .nav-center{
   justify-content:space-between;
   margin-right: 50px;
-  /* margin-top: 5px; */
+  margin-top: 5px;
   display: flex;
   align-items: center;
 }
@@ -465,6 +465,15 @@ h2.launch{
   height: 450px;
   margin: auto;
   display: block;
+}
+/* 404 */
+.lost-img{
+  display: block;
+  margin: auto;
+}
+.lost-text{
+  color: #FFC24D;
+  text-align: center;
 }
 /* Media Query */
 @media(max-width: 1200px){

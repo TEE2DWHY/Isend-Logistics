@@ -14,13 +14,13 @@ const Navbar = () => {
                             <ul className="navbar-nav">
                                 <div className="nav-center">
                                     <li className="nav-item">
-                                        <a className="nav-link active" aria-current="page" href="/#" style={{ marginRight: "50px" }}>Home</a>
+                                        <a className="nav-link active" aria-current="page" href="/#" style={{ marginRight: "30px" }}>Home</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link nav-center" href="/#">Track your package</a>
+                                        <a className="nav-link nav-center" href="/#" style={{ marginRight: "30px" }}>Track your package</a>
                                     </li>
                                     <li className="nav-item">
-                                        <Link to="/our-centers" className="nav-link"><b>Our centers</b></Link>
+                                        <Link to="/our-centers" className="nav-link" style={{ marginRight: "20px" }}><b>Our centers</b></Link>
                                     </li>
                                 </div>
                                 <li className="nav-item">
