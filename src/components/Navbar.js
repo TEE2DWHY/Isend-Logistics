@@ -17,7 +17,7 @@ const Navbar = () => {
                                         <a className="nav-link active" aria-current="page" href="/#" style={{ marginRight: "30px" }}>Home</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link nav-center" href="/#" style={{ marginRight: "30px" }}>Track your package</a>
+                                        <Link className="nav-link nav-center" to="/track-order" style={{ marginRight: "30px" }}>Track your package</Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link to="/our-centers" className="nav-link" style={{ marginRight: "20px" }}><b>Our centers</b></Link>

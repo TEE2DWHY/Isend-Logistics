@@ -13,6 +13,8 @@ import Countdown from "./pages/Countdown";
 import Experience from "./pages/Experience";
 import DeliveryDetails from "./pages/DeliveryDetails";
 import Guidelines from "./pages/Guidelines";
+import Track from "./pages/Track";
+import TrackOverview from "./pages/TrackOverview.js";
 // Legediz
 import LoginLegediz from "./pages/Legediz/Login";
 import SignUpLegediz from "./pages/Legediz/SignUp";
@@ -51,6 +53,8 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/delivery-details" element={<DeliveryDetails />} />
           <Route path="/guidelines" element={<Guidelines />} />
+          <Route path="/track-order" element={<Track />} />
+          <Route path="/order-overview" element={<TrackOverview />} />
           <Route path="/legediz/login" element={<LoginLegediz />} />
           <Route path="/legediz/sign-up" element={<SignUpLegediz />} />
           <Route path="/legediz/documents" element={<DocumentsLegediz />} />

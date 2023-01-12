@@ -475,6 +475,31 @@ h2.launch{
   color: #FFC24D;
   text-align: center;
 }
+/* Track */
+.order-container{
+  margin-top: 5%;
+  background-color: #FFC24D;
+  text-align: center;
+  border-radius: 0px 67px 75px 0px;
+}
+/* Order-Details */
+.package-details{
+  border: 1px solid #1B1B1B;
+  border-radius: 7px;
+  padding: 20px;
+}
+.d1{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.p1{
+  flex: 1;
+}
+.p2{
+  flex: 2;
+  padding: 0 10px;
+}
 /* Media Query */
 @media(max-width: 1200px){
 body{
