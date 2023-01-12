@@ -34,7 +34,14 @@ const TrackOverview = () => {
                         </div>
                     </div>
                     <div className="col-lg-6">
-
+                        <div className="status">
+                            <h4>Status</h4>
+                            <hr />
+                            <p>Package is out of delivery</p>
+                            <p style={{ fontSize: "12px" }}>Sam is on his way with your package  to no 3 idowu emma street ..</p>
+                            <meter value="1" /> <meter value="1" /> <meter value="1" /> <meter value="0" />
+                            <p style={{ fontSize: "12px", fontStyle: "italic" }}>Estimated delivery time : 4:00PM -  6:00PM</p>
+                        </div>
                     </div>
                 </div>
             </div>
