@@ -505,6 +505,13 @@ h2.launch{
   border-radius: 7px;
   padding: 20px;
 }
+.delivery-updates{
+  overflow-y: scroll;
+  border: 1px solid #1B1B1B;
+  border-radius: 7px;
+  padding: 20px;
+  height: 330.77px;
+}
 /* Media Query */
 @media(max-width: 1200px){
 body{

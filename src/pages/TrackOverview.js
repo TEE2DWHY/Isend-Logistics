@@ -42,6 +42,40 @@ const TrackOverview = () => {
                             <meter value="1" /> <meter value="1" /> <meter value="1" /> <meter value="0" />
                             <p style={{ fontSize: "12px", fontStyle: "italic" }}>Estimated delivery time : 4:00PM -  6:00PM</p>
                         </div>
+                        <br />
+                        {/* Delivery Personnel */}
+                        <div className="status">
+                            <h4>Delivery Personnel</h4>
+                            <hr />
+                            <p style={{ fontWeight: "bold" }}>Waden Warren</p>
+                            <p style={{ fontSize: "12px" }}>Sam is on his way with your package  to no 3 idowu emma street ..</p>
+                            <meter value="1" /> <meter value="1" /> <meter value="1" /> <meter value="0" />
+                            <p style={{ fontSize: "12px", fontStyle: "italic" }}>Estimated delivery time : 4:00PM -  6:00PM</p>
+                        </div>
+                        <br />
+                        {/* Delivery Updates */}
+                        <div className="delivery-updates">
+                            <h4>Delivery Updates</h4>
+                            <hr />
+                            <div className="d1">
+                                <p className="p1">12:32</p> <p className="p2">The agent picked up your package </p>
+                            </div>
+                            <div className="d1">
+                                <p className="p1">01:32</p> <p className="p2">Package reached Ajah fulfillment center</p>
+                            </div>
+                            <div className="d1">
+                                <p className="p1">02:32</p> <p className="p2">Sam picked up your package from ajah</p>
+                            </div>
+                            <div className="d1">
+                                <p className="p1">03:32</p> <p className="p2">Sam is on his way</p>
+                            </div>
+                            <div className="d1">
+                                <p className="p1">03:32</p> <p className="p2">Sam is on his way</p>
+                            </div>
+                            <div className="d1">
+                                <p className="p1">03:32</p> <p className="p2">Sam is on his way</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
