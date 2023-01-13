@@ -282,6 +282,13 @@ li{
   margin: 60px 0;
 }
 /* Login */
+.login-container{
+  display: block;
+  margin: auto;
+  width: 50%;
+  background-color: #ECE9DC;
+  padding: 40px 100px;
+}
 .header-login{
   text-align: center;
   font-weight: 900;
@@ -295,7 +302,7 @@ li{
   width: 50%;
   padding: 10px;
 }
-.login{
+.login-btn{
   background-color: #F2C040;
   color: #000;
   border-radius: 7px;
@@ -304,7 +311,8 @@ li{
   border: 2px solid #F2C040;
   width: 50%;
   font-weight: bold;
-  margin-top: 20px;
+  display: block;
+  margin: auto;
 }
 .phase-1{
   /* height: 100vh; */

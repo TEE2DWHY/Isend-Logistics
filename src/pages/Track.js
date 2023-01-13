@@ -29,6 +29,7 @@ const Track = () => {
                         type="text"
                         name="id"
                         onChange={handleId}
+                        required
                         placeholder="Enter your Tracking ID"
                         style={{ padding: "10px 0px 10px 20px", width: "50%", border: "none" }}
                     />
