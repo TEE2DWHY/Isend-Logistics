@@ -10,7 +10,7 @@ const PickupOverview = () => {
                     <Link to="/"><img className="logo" src="images/logo.png" alt="logo" /></Link>
                 </div>
                 <br />
-                <div className="container-fluid" style={{ backgroundColor: "#F2C040" }}>
+                <div className="container-fluid" style={{ backgroundColor: "#FFC24D" }}>
                     <div className="container">
                         <h2 style={{ fontWeight: "bold", fontSize: "25px", padding: "10px 0" }}>Delivery Overview</h2>
                     </div>
@@ -19,22 +19,26 @@ const PickupOverview = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
+                            <h4>Pickup Details</h4>
+                            <br />
                             <form>
-                                <label style={{ display: "block" }}>Receiver's name</label>
+                                <label style={{ display: "block" }}>Sender's name</label>
                                 <br />
                                 <input
                                     type="text"
+                                    placeholder="Wade Warren"
                                     name="sendersName"
                                     style={{ display: "block", width: "70%", borderRadius: "6px", border: "none", padding: "10px 20px", border: "2px solid #EBE9E5" }}
                                 />
-                                <label style={{ display: "block", marginTop: "20px" }}>Receiver's address</label>
+                                <label style={{ display: "block", marginTop: "20px" }}>Sender's address</label>
                                 <br />
                                 <input
                                     type="text"
+                                    placeholder="2715 Ash Dr. San Jose, South Dakota 83475"
                                     name="sendersAddress"
                                     style={{ display: "block", width: "70%", borderRadius: "6px", border: "none", padding: "10px 20px", border: "2px solid #EBE9E5" }}
                                 />
-                                <label style={{ display: "block", marginTop: "20px" }}>Receiver's Phone Number</label>
+                                <label style={{ display: "block", marginTop: "20px" }}>Sender's Phone Number</label>
                                 <br />
                                 <input
                                     type="text"
@@ -42,18 +46,24 @@ const PickupOverview = () => {
                                     placeholder='+234 810-019-4732'
                                     style={{ display: "block", width: "70%", borderRadius: "6px", border: "none", padding: "10px 20px", border: "2px solid #EBE9E5" }}
                                 />
-                                <label style={{ display: "block", marginTop: "20px" }}>Phone Number</label>
+                                <label style={{ display: "block", marginTop: "20px" }}>Category</label>
                                 <br />
-                                <input
-                                    type="text"
-                                    name="receiversDetails"
-                                    placeholder="Add New Receiver Details"
+                                <select
                                     style={{ display: "block", width: "70%", borderRadius: "6px", border: "none", padding: "10px 20px", border: "2px solid #EBE9E5" }}
-                                />
+                                >
+                                    <option>Electronics</option>
+                                    <option>Health</option>
+                                    <option>Shoe</option>
+                                    <option>Furniture</option>
+                                    <option>Good</option>
+                                    <option>Products</option>
+                                </select>
                                 <br />
                             </form>
                         </div>
                         <div className="col-lg-6">
+                            <h4>Delivery Details</h4>
+                            <br />
                             <form>
                                 <label style={{ display: "block" }}>Receiver's name</label>
                                 <br />
@@ -77,7 +87,7 @@ const PickupOverview = () => {
                                     placeholder='+234 810-019-4732'
                                     style={{ display: "block", width: "70%", borderRadius: "6px", border: "none", padding: "10px 20px", border: "2px solid #EBE9E5" }}
                                 />
-                                <label style={{ display: "block", marginTop: "20px" }}>Phone Number</label>
+                                <label style={{ display: "block", marginTop: "20px" }}>Receiver's Extra Details</label>
                                 <br />
                                 <input
                                     type="text"
