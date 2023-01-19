@@ -56,7 +56,7 @@ function App() {
           <Route path="/guidelines" element={<Guidelines />} />
           <Route path="/track-order" element={<Track />} />
           <Route path="/order-overview" element={<TrackOverview />} />
-          <Route path="pickup-overview" element={<PickupOverview />} />
+          <Route path="/pickup-overview" element={<PickupOverview />} />
           <Route path="/legediz/login" element={<LoginLegediz />} />
           <Route path="/legediz/sign-up" element={<SignUpLegediz />} />
           <Route path="/legediz/documents" element={<DocumentsLegediz />} />

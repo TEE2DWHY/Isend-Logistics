@@ -59,7 +59,8 @@ const Login = () => {
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Don’t have an account? <b><Link to="/sign-up">Sign up</Link> </b></p>
                     </form>
                     <br />
-                    <p>You agree to iSend’s <span style={{ color: "#F2C040", lineHeight: "1.2" }}>Terms of Use & Privacy Policy</span>. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</p>
+                    <p>Powered by <img src="images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p>
+                    <p>You agree to iSend’s <Link to="/privacy-policy"><span style={{ color: "#F2C040", lineHeight: "1.2" }}>Terms of Use & Privacy Policy</span></Link>. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</p>
                 </div>
             </section>
 

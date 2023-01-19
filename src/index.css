@@ -103,10 +103,12 @@ li{
   margin: 10% 0;
 }
 .offers-container{
-  border: 1px solid #FFC24D;
+  /* border: 1px solid #FFC24D; */
   padding: 25px;
+  /* margin-left: 20px; */
   border-radius: 7px;
   margin-bottom: 20px;
+  background-color: #FBFBFB;
 }
 .offers-img{
   width: 50px;

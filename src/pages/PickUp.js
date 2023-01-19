@@ -14,10 +14,11 @@ const PickUp = () => {
     //     })
     // }
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log(formData)
-    // }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // console.log(formData)
+        window.location = "/delivery-details"
+    }
     return (
         <>
             <section>
@@ -29,7 +30,7 @@ const PickUp = () => {
                 <div className="pickup-container">
                     <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Pickup Details</h3>
                     <br />
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <label style={{ display: "block" }}>Sender's name</label>
                         <br />
                         <input

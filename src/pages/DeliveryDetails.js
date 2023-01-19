@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const DeliveryDetails = () => {
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        window.location = "/pickup-overview"
+    }
     return (
         <>
             <section>
@@ -13,7 +17,7 @@ const DeliveryDetails = () => {
                 <div className="pickup-container">
                     <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Delivery Details</h3>
                     <br />
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <label style={{ display: "block" }}>Receiver's name</label>
                         <br />
                         <input

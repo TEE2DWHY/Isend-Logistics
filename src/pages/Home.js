@@ -17,7 +17,7 @@ function Home() {
                         <div className="col-lg-6">
                             <h1 className="hero-section-h1"><span className="cheap">Affordable </span>& Trusted delivery service</h1>
                             <p>The fastest and most affordable delivery platform made just for you. Sign up for an efficient and hassle-free experience. </p>
-                            <Link to="/login"><button className="cta">Book a delivery</button></Link>
+                            <Link to="/pick-up"><button className="cta">Book a delivery</button></Link>
                         </div>
                         <div className="col-lg-6">
                             <img className="isend-img1" src="images/isend-img1.png" alt="" />
@@ -29,11 +29,16 @@ function Home() {
             {/* What We Offer */}
             <section id="what-we-offer">
                 <div className="container">
+                <div className="row">
+                    <div className="col-lg-6" style={{display:"block", margin:"auto 0"}}>
                     <h2><b>What We Offer</b></h2>
+                    <p>Get your orders dispatched and delivered within 24 hours. </p>
                     <br /> <br />
+                    </div>
+                    <div className="col-lg-6">
                     <div className="row">
                         {offers.map((items) => (
-                            <div className="col-lg-3 offers-container">
+                            <div className="col-lg-6 offers-container">
                                 <div>
                                     <img className="offers-img" src={items.image} alt="" />
                                 </div>
@@ -41,7 +46,9 @@ function Home() {
                                 <p>{items.paragraph}</p>
                             </div>
                         ))}
-                    </div>
+                    </div>  
+                        </div>
+                </div>   
                 </div>
             </section>
             {/* --------------------------------------------------------------------------------------------- */}
