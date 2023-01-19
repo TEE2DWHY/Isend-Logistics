@@ -52,46 +52,11 @@ function Home() {
                 </div>
             </section>
             {/* --------------------------------------------------------------------------------------------- */}
-            {/* Next-Day-Delivery */}
-            <section id="next-day-delivery">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <img className="rectangle img-fluid" src="images/Rectangle 6287.png" alt="" />
-                        </div>
-                        <div className="col-lg-6 next-delivery">
-                            <div className="row">
-                                <div className="col-lg-2">
-                                    <img className="img-fluid vector" src="images/Vector 291.png" alt="" />
-                                </div>
-                                <div className="col-lg-10">
-                                    <h1><b>Next-Day Delivery</b></h1>
-                                    <br />
-                                    <p style={{ opacity: "0.8" }}>3 easy steps for the next day delivery </p>
-                                    <ul>
-                                        <li>Request and Pickup
-                                            <p style={{ fontSize: "14px" }}>Once we receive your request, our personnel comes to picks it up.</p></li>
-                                    </ul>
-                                    <ul>
-                                        <li>Next day delivery
-                                            <p style={{ fontSize: "14px" }}>Our personnel drops off the package to our closest fulfilment centre.</p></li>
-                                    </ul>
-                                    <ul>
-                                        <li>Request and Pickup
-                                            <p style={{ fontSize: "14px" }}>Our personnel then drops off your package at your desired location.</p></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            {/* ----------------------------------------------------------------------------------------------- */}
             {/* Partner-Section */}
             <section id="partner">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6" style={{ paddingLeft: "50px" }}>
+                        <div className="col-lg-6">
                             <h3>Become a Partner</h3>
                             <br />
                             <p>Own a car? A motorcycle? A truck? Are you looking to multiply your source of income? With just 5 steps, begin your journey to financial fulfillment.</p>
@@ -165,7 +130,7 @@ function Home() {
             {/* -------------------------------------------------------------------------------------------------- */}
             <section id="join-team">
                 <br /> <br />
-                <h1 className="join-team-h1"><img className="ellipse1" src="images/Ellipse 298.png" alt="" />Join Our Team <img className="ellipse2" src="images/Ellipse 298.png" alt="" /></h1>
+                <img className="ellipse1" src="images/Ellipse 298.png" alt="" /><h1 className="join-team-h1">Join Our Team </h1><img className="ellipse2" src="images/Ellipse 298.png" alt="" />
                 <p className="join-team-p1">Help us on our quest to make life better for our customers</p>
                 <br />
                 <button className="sco-button">See Current Openings</button>
