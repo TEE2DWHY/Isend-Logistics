@@ -16,6 +16,7 @@ import Guidelines from "./pages/Guidelines";
 import Track from "./pages/Track";
 import TrackOverview from "./pages/TrackOverview.js";
 import PickupOverview from "./pages/PickupOverview";
+import ForgotPassword from "./pages/ForgotPassword";
 // Legediz
 import LoginLegediz from "./pages/Legediz/Login";
 import SignUpLegediz from "./pages/Legediz/SignUp";
@@ -57,6 +58,7 @@ function App() {
           <Route path="/track-order" element={<Track />} />
           <Route path="/order-overview" element={<TrackOverview />} />
           <Route path="/pickup-overview" element={<PickupOverview />} />
+          <Route path="/forgot-password" element={<ForgotPassword/>}/>
           <Route path="/legediz/login" element={<LoginLegediz />} />
           <Route path="/legediz/sign-up" element={<SignUpLegediz />} />
           <Route path="/legediz/documents" element={<DocumentsLegediz />} />

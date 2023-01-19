@@ -530,6 +530,20 @@ h2.launch{
   height: 330.77px;
 }
 /* Pickup-Overview */
+/* Forgot Password */
+.fp-container{
+  display: block;
+  margin: auto;
+  width: 50%;
+  background-color: #faedd8;
+  padding: 40px 100px;
+}
+.password-confirmation{
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
 /* Media Query */
 @media(max-width: 1200px){
 body{

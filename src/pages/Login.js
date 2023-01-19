@@ -53,7 +53,7 @@ const Login = () => {
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <br />
-                        <p style={{ textAlign: "center" }}>Forgot password?</p>
+                        <Link to="/forgot-password"><p style={{ textAlign: "center" }}>Forgot password?</p></Link>
                         <br />
                         <button className="login-btn">Login</button>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Don’t have an account? <b><Link to="/sign-up">Sign up</Link> </b></p>
