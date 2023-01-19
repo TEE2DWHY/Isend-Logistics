@@ -537,6 +537,11 @@ h2.launch{
   border-radius: 6px;
   border: none;
 }
+.copy{
+  cursor: pointer;
+  margin-left: 20px;
+}
+
 /* Pickup-Overview */
 /* Forgot Password */
 .fp-container{
