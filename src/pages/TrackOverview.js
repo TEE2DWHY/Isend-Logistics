@@ -3,6 +3,10 @@ import Navbar from "../components/Navbar"
 
 
 const TrackOverview = () => {
+    const copy = ()=>{
+        var copyId = document.getElementById("id");
+        alert("Tracking Id copied")
+    }
     return (
         <>
             <Navbar />
@@ -10,6 +14,12 @@ const TrackOverview = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">
+                    <div className="status">
+                            <h4>Payment Status <button className="pending-btn">Pending</button></h4>
+                            <hr />
+                            <p style={{ fontWeight: "bold" }}>Tracking ID: <span style={{marginLeft:"10px"}} id="id">18309485DNKFSMJWK</span> <span style={{marginLeft:"20px", cursor:"pointer"}} onClick={copy}><i class="fa-regular fa-copy" style={{fontSize:"15px"}}></i></span></p>
+                     </div>
+                        <br/>
                         <div className="package-details">
                             <h4>Package Details</h4>
                             <hr />

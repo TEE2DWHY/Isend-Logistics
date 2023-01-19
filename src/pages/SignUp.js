@@ -1,6 +1,26 @@
+import { useState } from "react";
 import { Link } from "react-router-dom"
 
+
 const SignUp = () => {
+
+    const [formData, setFormData] = useState({
+        fullName:"", email:"", phoneNumber:"", password:""
+    })
+
+    const handleChange = (e)=>{
+        setFormData((prevFormData)=>{
+          return{
+            ...prevFormData,
+            [e.target.name] : e.target.value
+        } 
+        })
+        }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(formData)
+        window.location = "/delivery-details"
+    }
     return (
         <>
             <section>
@@ -14,13 +34,14 @@ const SignUp = () => {
                     <h3 style={{ fontWeight: "bold" }}>Welcome Back!!</h3>
                     <p>Let get you back into your account</p>
                     <br />
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <label style={{ display: "block" }}>Full name</label>
                         <br />
                         <input
                             type="text"
                             name="fullName"
                             placeholder="First name and Last name"
+                            onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <label style={{ display: "block", marginTop: "20px" }}>Email</label>
@@ -29,22 +50,25 @@ const SignUp = () => {
                             type="text"
                             name="email"
                             placeholder="hi@example.com"
+                            onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
-                        <label style={{ display: "block", marginTop: "20px" }}>Email</label>
+                        <label style={{ display: "block", marginTop: "20px" }}>Phone Number</label>
                         <br />
                         <input
                             type="text"
                             name="phoneNumber"
                             placeholder="+234"
+                            onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
-                        <label style={{ display: "block", marginTop: "20px" }}>Email</label>
+                        <label style={{ display: "block", marginTop: "20px" }}>Password</label>
                         <br />
                         <input
                             type="text"
                             name="password"
                             placeholder="password"
+                            onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <br />

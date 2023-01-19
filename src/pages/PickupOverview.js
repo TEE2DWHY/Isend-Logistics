@@ -130,7 +130,7 @@ const PickupOverview = () => {
                                 <p>N3,000.00</p>
                             </div>
                             <br />
-                            <button className="login-btn">Make Payment</button>
+                            <Link to="/order-overview"><button className="login-btn">Make Payment</button></Link>
                         </div>
                     </div>
                 </div>

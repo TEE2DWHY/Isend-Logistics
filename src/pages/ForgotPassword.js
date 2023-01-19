@@ -23,6 +23,7 @@ const ForgotPassword = () => {
                             type="text"
                             name="email"
                             placeholder="Email"
+                            required
                             // onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
