@@ -4,8 +4,10 @@ import Navbar from "../components/Navbar"
 
 const TrackOverview = () => {
     const copy = ()=>{
-        var copyId = document.getElementById("id");
-        alert("Tracking Id copied")
+        var copyId = document.getElementById("id").innerHTML;
+        // console.log(copyId)
+        navigator.clipboard.writeText(copyId)
+        alert("Tracking Id: " + copyId + " is copied.")
     }
     return (
         <>
