@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
+import axios from "axios";
 
 
 const SignUp = () => {
 
     const [formData, setFormData] = useState({
-        fullName:"", email:"", phoneNumber:"", password:""
+        full_name:"", email:"", phone_number:"", password:""
     })
 
     const handleChange = (e)=>{
@@ -16,11 +17,20 @@ const SignUp = () => {
         } 
         })
         }
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData)
-        window.location = "/delivery-details"
+        const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/signup", formData)
+        console.log(res)
+        try{
+        if (res.status === 200){
+            window.location = "/delivery-details"
+        }
+        }catch (err){
+            console.log(err)
+        }
+        
     }
+    console.log(formData)  
     return (
         <>
             <section>
@@ -37,31 +47,43 @@ const SignUp = () => {
                     <form onSubmit={handleSubmit}>
                         <label style={{ display: "block" }}>Full name</label>
                         <br />
-                        <input
+                        <div>
+                            <input
                             type="text"
-                            name="fullName"
+                            name="full_name"
                             placeholder="First name and Last name"
                             onChange={handleChange}
+                            required
+                            pattern="^[A-Za-z\s]*$"
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
-                        />
+                            />
+                            <span></span>
+                        </div>
                         <label style={{ display: "block", marginTop: "20px" }}>Email</label>
                         <br />
                         <input
-                            type="text"
+                            type="email"
                             name="email"
                             placeholder="hi@example.com"
                             onChange={handleChange}
+                            required
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <label style={{ display: "block", marginTop: "20px" }}>Phone Number</label>
                         <br />
+                        <div>
                         <input
+                            className="input"
                             type="text"
-                            name="phoneNumber"
-                            placeholder="+234"
+                            name="phone_number"
+                            placeholder="+2348100000000"
                             onChange={handleChange}
+                            required
+                            pattern="^(?:\+|00)(1|7|2[07]|3[0123469]|4[013456789]|5[12345678]|6[0123456]|8[1246]|9[0123458]|(?:2[12345689]|3[578]|42|5[09]|6[789]|8[035789]|9[679])\d)*$"
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
+                        <span className="user-err">Phone Numbers should start with +234 and should be a minimum of 13 characters</span>
+                        </div>
                         <label style={{ display: "block", marginTop: "20px" }}>Password</label>
                         <br />
                         <input
@@ -69,10 +91,10 @@ const SignUp = () => {
                             name="password"
                             placeholder="password"
                             onChange={handleChange}
+                            required
+                            pattern=".{8,}"
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
-                        <br />
-                        <p style={{ textAlign: "center" }}>Forgot password</p>
                         <br />
                         <button className="login-btn">Sign up</button>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Already have an account? <Link to="/login"><b>Sign in </b></Link></p>

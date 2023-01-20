@@ -1,7 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 const ForgotPassword = () => {
+  const [email, setEmail] = useState({
+    email: ""
+  })
+  const handleChange = (e) =>{
+    setEmail ((prevFormData) =>{
+      return{
+        ...prevFormData,
+        [e.target.name] : e.target.value
+      }
+    })
+  }
+
+  const handleSubmit = async (e) =>{
+    e.preventDefault();
+    const res = await axios.post("http://localhost:4000/v1/users/forgotPassword", email);
+    console.log(res)
+    try{
+        if (res.status === 200){
+          alert("head back to login page")
+        }
+    }
+    catch(err){
+      console.log(err)
+    }
+  }
   return (
    <>
          <section>
@@ -16,7 +42,7 @@ const ForgotPassword = () => {
                     <h3 style={{ fontWeight: "bold" }}>Forgot Password?</h3>
                     <p style={{ color: "#9EA3AE" }}>Insert your email address</p>
                     <br />
-                    <form>
+                    <form on onSubmit={handleSubmit}>
                         <label style={{ display: "block", fontWeight: "bold" }}>Email</label>
                         <br />
                         <input
@@ -24,6 +50,7 @@ const ForgotPassword = () => {
                             name="email"
                             placeholder="Email"
                             required
+                            onChange={handleChange}
                             // onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />

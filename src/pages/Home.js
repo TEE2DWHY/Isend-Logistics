@@ -135,7 +135,7 @@ function Home() {
                 <br />
                 <button className="sco-button">See Current Openings</button>
                 <br /> <br /> <br />
-                <img className="ellipse1" src="images/Ellipse 298.png" alt="" /> <img className="ellipse2" src="images/Ellipse 298.png" alt="" />
+                <img className="ellipse1" src="images/Ellipse 298.png" alt="" /> <img className="ellipse4" src="images/Ellipse 298.png" alt="" />
             </section>
             {/* ---------------------------------------------------------------------------------------------------- */}
             {/* Footer-Section */}

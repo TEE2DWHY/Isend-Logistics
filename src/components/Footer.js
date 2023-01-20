@@ -1,39 +1,55 @@
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
         <>
-            <div className="container">
-                <div className="footer">
-                    <h1>Logo</h1>
+            <div class="container">
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
 
-                    <ul>
-                        <li>Our Centers </li>
-                        <li> Surulere</li>
-                        <li>Ikorodu</li>
-                        <li>Ajah </li>
-                    </ul>
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
 
-                    <ul>
-                        <li> Company  </li>
-                        <li>About </li>
-                        <li>FAQs </li>
-                        <Link to="/blog"><li> Blog</li></Link>
-                    </ul>
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="/#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
 
-                    <ul>
-                        <li>Legal</li>
-                        <Link to="/privacy-policy"><li>Privacy policy </li></Link>
-                        <Link to="/terms-of-use"><li>Terms of Use</li></Link>
-                    </ul>
+      <div class="col-md-5 offset-md-1 mb-3">
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="/#">Facebook</a></li>
+        <li class="ms-3"><a class="link-dark" href="/#">Instagram</a></li>
+        <li class="ms-3"><a class="link-dark" href="/#">Twitter</a></li>
+      </ul>
+      </div>
+    </div>
 
-                    <ul>
-                        <li><span><i className="fa-brands fa-facebook"></i> <i className="fa-brands fa-twitter" style={{ paddingLeft: "20px" }}></i> <i className="fa-brands fa-instagram" style={{ paddingLeft: "20px" }}></i></span></li>
-                        <li><p>support@isendapp.com</p></li>
-                        <li><p>+234 703 482 3211</p></li>
-                    </ul>
-                </div>
-            </div>
+  </footer>
+</div>
         </>
     )
 }

@@ -10,14 +10,14 @@ const Login = () => {
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
-                [e.target.name]: e.target.value
+               [e.target.name]: e.target.value
             }
         })
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData)
+         console.log(formData)
         window.location = "/delivery-details"
     }
     return (
