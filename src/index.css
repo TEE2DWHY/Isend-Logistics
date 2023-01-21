@@ -78,6 +78,14 @@ li {
   font-weight: bold;
 }
 
+.signup-confirmation {
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+  display: none;
+}
 .navbar-collapse {
   justify-content: flex-end;
 }
@@ -384,6 +392,10 @@ li {
   width: 50%;
   background-color: #F6F6F6;
   padding: 40px 100px;
+}
+
+.welcome-h1{
+  font-weight: bold;
 }
 
 .header-login {
@@ -794,4 +806,16 @@ h2.launch {
   .footer-logo {
     display: block;
   }
+  .login-container {
+    width: 95%;
+    padding: 40px 60px;
+}
+.pickup-container {
+  width: 95%;
+  padding: 40px 60px;
+}
+.welcome-h1{
+  font-style: 20px;
+  /* display: ; */
+}
 }

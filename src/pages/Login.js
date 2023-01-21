@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import axios from "axios"
 
 const Login = () => {
     const [formData, setFormData] = useState({
-        phoneNumber: "", password: ""
+        email: "", password: ""
     })
 
     const handleChange = (e) => {
@@ -15,10 +16,19 @@ const Login = () => {
         })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-         console.log(formData)
-        window.location = "/delivery-details"
+        try{
+            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/login", formData);
+            if (res.status === 200){
+                console.log(res);
+            }
+        }
+        catch (err){
+            console.log(err)
+        }
+        //  console.log(formData)
+        // window.location = "/delivery-details"
     }
     return (
         <>
@@ -35,12 +45,12 @@ const Login = () => {
                     <p style={{ color: "#9EA3AE" }}>Let get you back into your account</p>
                     <br />
                     <form onSubmit={handleSubmit}>
-                        <label style={{ display: "block", fontWeight: "bold" }}>Phone Number</label>
+                        <label style={{ display: "block", fontWeight: "bold" }}>Email</label>
                         <br />
                         <input
                             type="text"
-                            name="phoneNumber"
-                            placeholder="+234"
+                            name="email"
+                            placeholder="Email"
                             onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />

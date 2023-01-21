@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import axios from "axios";
-
-
+// const dotenv = require("dotenv")
+// dotenv.config()
 const SignUp = () => {
 
     const [formData, setFormData] = useState({
@@ -16,21 +16,25 @@ const SignUp = () => {
             [e.target.name] : e.target.value
         } 
         })
+
         }
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/signup", formData)
-        console.log(res)
         try{
-        if (res.status === 200){
-            window.location = "/delivery-details"
+            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/signup", formData)
+            console.log(res)
+            if (res.status === 200){
+            document.getElementById("signup-confirmation").style.display = "block"
         }
         }catch (err){
             console.log(err)
         }
-        
+        console.log(formData)  
     }
-    console.log(formData)  
+
+    // const userEmail = document.getElementById("email").innerHTML
+    
     return (
         <>
             <section>
@@ -41,7 +45,7 @@ const SignUp = () => {
                 <br /> <br /> <br />
                 <div className="login-container">
                     <Link to="/"><p><i class="fa-solid fa-arrow-left" style={{ fontSize: "14px", marginRight: "10px" }}></i> Home</p></Link>
-                    <h3 style={{ fontWeight: "bold" }}>Welcome Back!!</h3>
+                    <h3 className="welcome-h1">Welcome Back!!</h3>
                     <p>Let get you back into your account</p>
                     <br />
                     <form onSubmit={handleSubmit}>
@@ -87,7 +91,7 @@ const SignUp = () => {
                         <label style={{ display: "block", marginTop: "20px" }}>Password</label>
                         <br />
                         <input
-                            type="text"
+                            type="password"
                             name="password"
                             placeholder="password"
                             onChange={handleChange}
@@ -96,8 +100,10 @@ const SignUp = () => {
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <br />
+
                         <button className="login-btn">Sign up</button>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Already have an account? <Link to="/login"><b>Sign in </b></Link></p>
+                        <p className='signup-confirmation' id="signup-confirmation">An  email verification link has been sent to your email</p>
                     </form>
                     <br />
                     <p>Powered by <img src="images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p>
