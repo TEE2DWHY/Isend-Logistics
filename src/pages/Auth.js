@@ -38,7 +38,7 @@ const Auth = () => {
                     <Link to="/"><img className="logo" src="images/logo.png" alt="logo" /></Link>
                 </div>
                 <br /> <br /> <br />
-                <h3 className="h3-auth">Your Email has been successfully verified!<i class="fa-solid fa-check"></i></h3>
+                <h5 className="h3-auth">Your Email has been successfully verified!</h5>
                 <div className="login-container">
                     <Link to="/"><p><i class="fa-solid fa-arrow-left" style={{ fontSize: "14px", marginRight: "10px" }}></i> Home</p></Link>
                     <br /> <br />
