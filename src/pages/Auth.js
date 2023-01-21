@@ -38,12 +38,13 @@ const Auth = () => {
                     <Link to="/"><img className="logo" src="images/logo.png" alt="logo" /></Link>
                 </div>
                 <br /> <br /> <br />
-                <h3 style={{textAlign:"center"}}>Your Email has been successfully verified!</h3>
+                <h3 className="h3-auth">Your Email has been successfully verified!<i class="fa-solid fa-check"></i></h3>
                 <div className="login-container">
                     <Link to="/"><p><i class="fa-solid fa-arrow-left" style={{ fontSize: "14px", marginRight: "10px" }}></i> Home</p></Link>
-                    <br /> <br /> <br />
+                    <br /> <br />
                     <h3 style={{ fontWeight: "bold" }}>Welcome Back!!</h3>
-                    <p style={{ color: "#9EA3AE" }}>Let get you back into your account</p>
+                    <br/>
+                    <p style={{ color: "#9EA3AE" }}>Let's get you back into your account</p>
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label style={{ display: "block", fontWeight: "bold" }}>Email</label>

@@ -721,6 +721,11 @@ h2.launch {
   display: none;
 }
 
+/* Auth Page */
+.h3-auth{
+  text-align: center;
+}
+
 /* Media Query */
 @media(max-width: 1200px) {
   body {
@@ -817,5 +822,9 @@ h2.launch {
 .welcome-h1{
   font-style: 20px;
   /* display: ; */
+}
+.h3-auth{
+  text-align: center;
+  font-style: 14px;
 }
 }
