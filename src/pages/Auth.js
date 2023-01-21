@@ -28,7 +28,7 @@ const Auth = () => {
             console.log(err)
         }
         //  console.log(formData)
-        // window.location = "/delivery-details"
+        window.location = "/delivery-details"
     }
     return (
         <>
