@@ -17,11 +17,11 @@ const ForgotPassword = () => {
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
-    const res = await axios.post("http://localhost:4000/v1/users/forgotPassword", email);
-    console.log(res)
     try{
+      const res = await axios.post("http://localhost:4000/v1/users/forgotPassword", email);
+      console.log(res)
         if (res.status === 200){
-          alert("head back to login page")
+         document.getElementById("password-confirmation").style.display = "block"
         }
     }
     catch(err){
@@ -56,7 +56,7 @@ const ForgotPassword = () => {
                         />
                         <br />
                         <button className="login-btn">Login</button>
-                        <p className='password-confirmation'>An  email will be sent to  arinzechi@gmail.com if the account exist</p>
+                        <p className='password-confirmation' id='password-confirmation'>An  email will be sent to  arinzechi@gmail.com if the account exist</p>
                    </form>
               </div>
                 </section>
