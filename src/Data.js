@@ -9,7 +9,7 @@ const offers = [
         id: 2,
         image: "images/offer-img.png",
         text: "Next-Day Delivery",
-        paragraph: "Tick your delivery request off tomorrow’s To-do list."
+        paragraph: "Tick your delivery request off tomorrow’s To-do list.."
     },
     {
         id: 3,
