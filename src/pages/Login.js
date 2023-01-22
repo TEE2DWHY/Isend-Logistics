@@ -22,13 +22,13 @@ const Login = () => {
             const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/login", formData);
             if (res.status === 200){
                 console.log(res);
+                window.location = "/pick-up"
             }
         }
         catch (err){
             console.log(err)
         }
         //  console.log(formData)
-        window.location = "/pick-up"
     }
     return (
         <>

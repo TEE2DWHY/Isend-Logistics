@@ -49,7 +49,7 @@ const SignUp = () => {
                 <div className="login-container">
                     <Link to="/"><p><i class="fa-solid fa-arrow-left" style={{ fontSize: "14px", marginRight: "10px" }}></i> Home</p></Link>
                     <h3 className="welcome-h1">Welcome Back!!</h3>
-                    <p>Let get you back into your account</p>
+                    <p>Let's get you back into your account</p>
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label style={{ display: "block" }}>Full name</label>

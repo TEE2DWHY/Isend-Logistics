@@ -1,8 +1,9 @@
+import axios from "axios"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 const PickUp = () => {
     const [formData, setFormData] = useState({
-        sendersName: "", sendersAddress: "", phoneNumber: "", category: ""
+        delivery_personnel: "", sendersAddress: "", sendersphoneNumber: "", category: ""
     })
 
     const handleChange = (e) => {
@@ -14,10 +15,24 @@ const PickUp = () => {
         })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData)
-        window.location = "/delivery-details"
+        try{
+            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData,{
+                headers :{
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer '
+                }
+            });
+            console.log(res);
+            if (res.status === 200){
+                window.location = "/delivery-details"
+            }
+        }
+        catch(err){
+            console.log(err)
+        }
+        // console.log(formData)
     }
     return (
         <>
@@ -35,7 +50,7 @@ const PickUp = () => {
                         <br />
                         <input
                             type="text"
-                            name="sendersName"
+                            name="delivery_personnel"
                             onChange={handleChange }
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
@@ -44,13 +59,14 @@ const PickUp = () => {
                         <input
                             type="text"
                             name="sendersAddress"
+                            onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <label style={{ display: "block", marginTop: "20px" }}>Phone Number</label>
                         <br />
                         <input
                             type="text"
-                            name="phoneNumber"
+                            name="sendersphoneNumber"
                             placeholder="+234"
                             onChange={handleChange }
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
