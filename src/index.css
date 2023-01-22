@@ -872,8 +872,9 @@ h2.launch {
     padding: 40px 60px;
 }
 .pickup-container {
-  width: 95%;
+  width: 90%;
   padding: 40px 60px;
+  margin-bottom: 20px;
 }
 .welcome-h1{
   font-style: 20px;

@@ -133,6 +133,13 @@ console.log(formData)
                                     style={{ display: "block", width: "70%", borderRadius: "6px", padding: "10px 20px", border: "2px solid #EBE9E5" }}
                                 />
                                 <br /> */}
+                                <br/> <br/>
+                                <label style={{ display: "block", marginTop: "20px" }}>Payment Method</label>
+                                <br/>
+                                <div>
+                                    <h6><i class="fa-solid fa-money-check-dollar" style={{fontSize:"16px"}}></i> Cash</h6>
+                                    <hr/>
+                                </div>
                             </form>
                         </div>
                     </div>
