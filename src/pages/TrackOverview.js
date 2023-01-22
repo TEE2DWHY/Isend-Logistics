@@ -3,6 +3,10 @@ import Navbar from "../components/Navbar"
 
 
 const TrackOverview = () => {
+    const paymentStatus = () =>{
+        document.getElementById("pending").style.display = "none"
+        document.getElementById("confirmed").style.display = "inline"
+    }
     const copy = ()=>{
         var copyId = document.getElementById("id").innerHTML;
         // console.log(copyId)
@@ -17,7 +21,7 @@ const TrackOverview = () => {
                 <div className="row">
                     <div className="col-lg-6">
                     <div className="status">
-                            <h4>Payment Status <button className="pending-btn">Pending</button></h4>
+                            <h4>Payment Status <button className="pending-btn" id="pending" onClick={paymentStatus}>Pending</button> <button className="confirmed-btn" id="confirmed">Confirmed</button></h4>
                             <hr />
                             <p style={{ fontWeight: "bold" }}>Tracking ID: <span style={{marginLeft:"10px"}} id="id">18309485DNKFSMJWK</span> <span className="copy" onClick={copy}><i class="fa-regular fa-copy" style={{fontSize:"15px"}}></i></span></p>
                      </div>

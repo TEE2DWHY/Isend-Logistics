@@ -21,11 +21,14 @@ const SignUp = () => {
     
     const handleSubmit = async (e) => {
         e.preventDefault();
+        document.getElementById("sign-up").style.display = "none"
+        document.getElementById("spinner").style.display = "block"
         try{
             const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/signup", formData)
             console.log(res)
             if (res.status === 200){
             document.getElementById("signup-confirmation").style.display = "block"
+            document.getElementById("signup").innerHTML = "Email Sent"
         }
         }catch (err){
             console.log(err)
@@ -97,11 +100,13 @@ const SignUp = () => {
                             onChange={handleChange}
                             required
                             pattern=".{8,}"
-                            style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
+                            style={{ display:"block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
+                              {/* <i className="fa-solid fa-eye password-icons" id="password-reveal"></i> */}
+
                         <br />
 
-                        <button className="login-btn">Sign up</button>
+                        <button className="login-btn" id="signup"><span id="sign-up">Sign up</span> <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Already have an account? <Link to="/login"><b>Sign in </b></Link></p>
                         <p className='signup-confirmation' id="signup-confirmation">An  email verification link has been sent to your email</p>
                     </form>

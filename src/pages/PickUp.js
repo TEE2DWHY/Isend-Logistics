@@ -1,22 +1,22 @@
-// import { useState } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 const PickUp = () => {
-    // const [formData, setFormData] = useState({
-    //     fullName: "", address: "", phoneNumber: "", category: ""
-    // })
+    const [formData, setFormData] = useState({
+        sendersName: "", sendersAddress: "", phoneNumber: "", category: ""
+    })
 
-    // const handleChange = (e) => {
-    //     setFormData(prevFormData => {
-    //         return {
-    //             ...prevFormData,
-    //             [e.target.name]: e.target.value
-    //         }
-    //     })
-    // }
+    const handleChange = (e) => {
+        setFormData(prevFormData => {
+            return {
+                ...prevFormData,
+                [e.target.name]: e.target.value
+            }
+        })
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log(formData)
+        console.log(formData)
         window.location = "/delivery-details"
     }
     return (
@@ -36,6 +36,7 @@ const PickUp = () => {
                         <input
                             type="text"
                             name="sendersName"
+                            onChange={handleChange }
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <label style={{ display: "block", marginTop: "20px" }}>Sender's address</label>
@@ -51,11 +52,15 @@ const PickUp = () => {
                             type="text"
                             name="phoneNumber"
                             placeholder="+234"
+                            onChange={handleChange }
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <label style={{ display: "block", marginTop: "20px" }}>Category</label>
                         <br />
-                        <select style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}>
+                        <select 
+                        name="category"
+                        onChange={handleChange }
+                        style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}>
                             <option disabled selected>Select Category</option>
                             <option>Electronics</option>
                             <option>Documents</option>

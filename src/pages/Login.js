@@ -28,7 +28,7 @@ const Login = () => {
             console.log(err)
         }
         //  console.log(formData)
-        // window.location = "/delivery-details"
+        window.location = "/pick-up"
     }
     return (
         <>

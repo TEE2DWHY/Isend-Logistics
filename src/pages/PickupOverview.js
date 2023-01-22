@@ -1,8 +1,35 @@
-// import React from 'react'
+import axios from "axios"
+import { useState } from "react"
 import { Link } from "react-router-dom"
+// import DeliveryDetails from "./DeliveryDetails"
 
 const PickupOverview = () => {
+const [formData, setFormData] = useState({
+    delivery_personnel: "", sendersAddress:"", category:"Electronics", sendersphoneNumber:"", receivers_name:"",receivers_address:"", receivers_phoneNumber:""
+})
 
+const handleChange = (e) =>{
+    setFormData((prevFormData)=>{
+        return{
+            ...prevFormData,
+            [e.target.name]: e.target.value
+        }
+    })
+}
+const handleSubmit = async (e) =>{
+    e.preventDefault();
+try{
+    const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData);
+    console.log(res)
+    if (res.status === 200){
+        window.location = "/order-overview"
+    }
+}
+catch(err){
+console.log(err)
+}
+}
+console.log(formData)
  
     return (
         <>
@@ -21,16 +48,17 @@ const PickupOverview = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h4>Pickup Details</h4>
+                            <h4 style={{fontWeight:"bold"}}>Pickup Details</h4>
                             <br />
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <label style={{ display: "block" }}>Sender's name</label>
                                 <br />
                                 <input
                                     type="text"
                                     placeholder="Wade Warren"
-                                    name="sendersName"
-                                    style={{ display: "block", width: "70%", borderRadius: "6px", padding: "10px 20px", border: "2px solid #EBE9E5" }}
+                                    name="delivery_personnel"
+                                    onChange={handleChange}
+                                    className= "pickup-input"
                                 />
                                 <label style={{ display: "block", marginTop: "20px" }}>Sender's address</label>
                                 <br />
@@ -38,20 +66,24 @@ const PickupOverview = () => {
                                     type="text"
                                     placeholder="2715 Ash Dr. San Jose, South Dakota 83475"
                                     name="sendersAddress"
-                                    style={{ display: "block", width: "70%", borderRadius: "6px", padding: "10px 20px", border: "2px solid #EBE9E5" }}
-                                />
+                                    onChange={handleChange}
+                                    className= "pickup-input"
+                                     />
                                 <label style={{ display: "block", marginTop: "20px" }}>Sender's Phone Number</label>
                                 <br />
                                 <input
                                     type="text"
-                                    name="sendersPhoneNumber"
+                                    name="sendersphoneNumber"
+                                    onChange={handleChange}
                                     placeholder='+234 810-019-4732'
-                                    style={{ display: "block", width: "70%", borderRadius: "6px",padding: "10px 20px", border: "2px solid #EBE9E5" }}
-                                />
+                                    className= "pickup-input"
+                                     />
                                 <label style={{ display: "block", marginTop: "20px" }}>Category</label>
                                 <br />
                                 <select
-                                    style={{ display: "block", width: "70%", borderRadius: "6px",padding: "10px 20px", border: "2px solid #EBE9E5" }}
+                               className= "pickup-input"
+                               name="category"
+                                onChange={handleChange}
                                 >
                                     <option>Electronics</option>
                                     <option>Health</option>
@@ -64,40 +96,43 @@ const PickupOverview = () => {
                             </form>
                         </div>
                         <div className="col-lg-6">
-                            <h4>Delivery Details</h4>
+                        <br/>
+                            <h4 style={{fontWeight:"bold"}}>Delivery Details</h4>
                             <br />
                             <form>
                                 <label style={{ display: "block" }}>Receiver's name</label>
                                 <br />
                                 <input
                                     type="text"
-                                    name="sendersName"
-                                    style={{ display: "block", width: "70%", borderRadius: "6px", padding: "10px 20px", border: "2px solid #EBE9E5" }}
-                                />
+                                    name="receivers_name"
+                                    onChange={handleChange}
+
+                                    className= "pickup-input"
+                                     />
                                 <label style={{ display: "block", marginTop: "20px" }}>Receiver's address</label>
                                 <br />
                                 <input
                                     type="text"
-                                    name="sendersAddress"
-                                    style={{ display: "block", width: "70%", borderRadius: "6px", padding: "10px 20px", border: "2px solid #EBE9E5" }}
-                                />
+                                    name="receivers_address"
+                                    onChange={handleChange}
+                                    className= "pickup-input"
+                                    />
                                 <label style={{ display: "block", marginTop: "20px" }}>Receiver's Phone Number</label>
                                 <br />
                                 <input
                                     type="text"
-                                    name="sendersPhoneNumber"
+                                    name="receivers_phoneNumber"
+                                    onChange={handleChange}
                                     placeholder='+234 810-019-4732'
-                                    style={{ display: "block", width: "70%", borderRadius: "6px", padding: "10px 20px", border: "2px solid #EBE9E5" }}
-                                />
-                                <label style={{ display: "block", marginTop: "20px" }}>Receiver's Extra Details</label>
-                                <br />
-                                <input
+                                    className= "pickup-input"
+                                    />
+                                {/* <input
                                     type="text"
                                     name="receiversDetails"
                                     placeholder="Add New Receiver Details"
                                     style={{ display: "block", width: "70%", borderRadius: "6px", padding: "10px 20px", border: "2px solid #EBE9E5" }}
                                 />
-                                <br />
+                                <br /> */}
                             </form>
                         </div>
                     </div>
