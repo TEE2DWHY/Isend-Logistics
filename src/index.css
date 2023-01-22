@@ -1,6 +1,7 @@
 /* General */
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  /* font-family: 'Plus Jakarta Sans', sans-serif; */
+  font-family: Montserrat, sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   /* overflow: hidden; */
@@ -45,17 +46,33 @@ li {
   width: 110px;
 }
 
+.nav-link{
+  /* display: inline; */
+}
+
 .nav-center {
   justify-content: space-between;
-  margin-right: 50px;
-  margin-top: 5px;
+  margin-right: 100px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
+  /* font-style: 50px; */
+}
+
+.package:hover{
+  text-decoration: underline;
+  animation-duration: 4s;
 }
 
 .nav-cta {
-  margin-top: 10px;
+  margin-top: 20px;
 }
+
+.sign-in:hover{
+  background-color: #FFC24D;
+  /* color: #ffff; */
+}
+
 
 .sign-in {
   background: #fff;
@@ -97,10 +114,16 @@ li {
 
 .hero-section-h1 {
   font-size: 50.9087px;
-  line-height: 65px;
+  line-height: 55px;
   font-weight: bold;
 }
 
+.hero-paragraph{
+  letter-spacing: 0.05rem;
+  line-height: 1.5;
+  font-size: 17px;
+  padding: 0  20px 0  0;
+}
 .cheap {
   color: #FFC24D;
 }
@@ -114,14 +137,16 @@ li {
   color: #1B1B1B;
   font-weight: bold;
   font-size: 20px;
-  padding: 16px 32px;
+  padding: 16px 35px;
   text-decoration: none;
   border-style: none;
-  margin-top: 7%;
+  margin-top: 4%;
 }
 
 .isend-img1 {
   width: 100%;
+  animation: fadeIn;
+  animation-duration: 2s;
 }
 
 /* what-we-offer */
@@ -136,6 +161,12 @@ li {
   border-radius: 7px;
   margin-bottom: 20px;
   background-color: #FBFBFB;
+}
+.offers-container:hover{
+  animation: pulse;
+  animation-duration: 3s;
+  background-color:  #000;
+  color: #fff;
 }
 
 .offers-img {
@@ -161,8 +192,9 @@ li {
 }
 
 .what-customers-say {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
+  /* padding: 0 5px; */
 }
 
 .what-customers-say-p1 {
@@ -200,7 +232,7 @@ li {
   width: 80%;
   height: 80%;
   display: block;
-  margin: 40px auto;
+  margin: 10px auto;
 }
 
 /* FAQ */
@@ -844,5 +876,11 @@ h2.launch {
 .h3-auth{
   text-align: center;
   font-style: 12px;
+}
+.partner-img {
+  width: 100%;
+}
+.what-customers-say{
+  font-style: 25px;
 }
 }

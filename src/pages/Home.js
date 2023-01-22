@@ -16,7 +16,7 @@ function Home() {
                     <div className="row">
                         <div className="col-lg-6">
                             <h1 className="hero-section-h1"><span className="cheap">Affordable </span>& Trusted delivery service</h1>
-                            <p>The fastest and most affordable delivery platform made just for you. Sign up for an efficient and hassle-free experience. </p>
+                            <p className="hero-paragraph">Your sure plug for swift and affordable deliveries. Sign up for an efficient and hassle-free experience.</p>
                             <Link to="/login"><button className="cta">Book a delivery</button></Link>
                         </div>
                         <div className="col-lg-6">
@@ -57,9 +57,9 @@ function Home() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h3>Become a Partner</h3>
+                            <h3 style={{fontWeight:"bold"}}>Become a Partner</h3>
                             <br />
-                            <p>Own a car? A motorcycle? A truck? Are you looking to multiply your source of income? With just 5 steps, begin your journey to financial fulfillment.</p>
+                            <p style={{letterSpacing:"0.05rem"}}>Own a car? A motorcycle? A truck? Are you looking to multiply your source of income? With just 5 steps, begin your journey to financial fulfillment.</p>
                             <button className="partner">Partner with us </button>
                         </div>
                         <div className="col-lg-6">
@@ -72,12 +72,10 @@ function Home() {
             {/* what-customers-say */}
             <section id="what-customers-say">
                 <div className="container">
-                    <h2 className="what-customers-say">What our Customers say</h2>
-                    <p className="what-customers-say-p1">See what our customers, riders, and vendors have to say about us</p>
-                    <br /> <br />
+                    <h4 className="what-customers-say">What our Customers say</h4>
                     <p className="what-customers-say-p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam tempus ipsum, feugiat urna risus cursus porta dui. Ultrices quis adipiscing pharetra venenatis.
                         In egestas sapien ac mollis adipiscing in auctor.</p>
-                    <p>Mira Culos, <span style={{ opacity: "0.6" }}>Customer</span></p>
+                    <p>Seyi Makinde, <span style={{ opacity: "0.6" }}>Customer</span></p>
                     <br />
                     <img src="images/Frame.png" alt="" />
                 </div>
