@@ -48,7 +48,7 @@ console.log(formData)
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h4 style={{fontWeight:"bold"}}>Pickup Details</h4>
+                            <h4 style={{fontWeight:"bold", justifyContent:"space-between", display:"flex", alignItems:"center"}}>Pickup Details <i class="fa-solid fa-pen-to-square" style={{fontSize:"20px", marginRight:"20px"}}></i></h4>
                             <br />
                             <form onSubmit={handleSubmit}>
                                 <label style={{ display: "block" }}>Sender's name</label>
@@ -84,6 +84,7 @@ console.log(formData)
                                className= "pickup-input"
                                name="category"
                                 onChange={handleChange}
+                                style={{marginBottom:"30px"}}
                                 >
                                     <option>Electronics</option>
                                     <option>Health</option>
@@ -96,8 +97,7 @@ console.log(formData)
                             </form>
                         </div>
                         <div className="col-lg-6">
-                        <br/>
-                            <h4 style={{fontWeight:"bold"}}>Delivery Details</h4>
+                            <h4 style={{fontWeight:"bold", justifyContent:"space-between", display:"flex", alignItems:"center"}}>Delivery Details <i class="fa-solid fa-pen-to-square" style={{fontSize:"20px"}}></i></h4>
                             <br />
                             <form>
                                 <label style={{ display: "block" }}>Receiver's name</label>
@@ -139,6 +139,9 @@ console.log(formData)
                                 <div>
                                     <h6><i class="fa-solid fa-money-check-dollar" style={{fontSize:"16px"}}></i> Cash</h6>
                                     <hr/>
+                                </div>
+                                <div>
+                                    <h6><i class="fa-solid fa-building-columns" style={{fontSize:"16px"}}></i> Bank Transfer</h6>
                                 </div>
                             </form>
                         </div>

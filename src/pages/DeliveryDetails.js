@@ -29,7 +29,7 @@ const DeliveryDetails = () => {
                 </div>
                 <br /> <br /> <br />
                 <div className="pickup-container">
-                    <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Delivery Details</h3>
+                    <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Delivery Details </h3>
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label style={{ display: "block" }}>Receiver's name</label>
@@ -48,7 +48,7 @@ const DeliveryDetails = () => {
                             onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
-                        <label style={{ display: "block", marginTop: "20px" }}>Receiver's Phone Number</label>
+                       <label style={{ display: "block", marginTop: "20px" }}>Receiver's Phone Number</label>
                         <br />
                         <input
                             type="text"
@@ -57,8 +57,21 @@ const DeliveryDetails = () => {
                             onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
-                        <label style={{ display: "block", marginTop: "20px" }}>Phone Number</label>
+                           <label style={{ display: "block", marginTop: "20px" }}>Category</label>
                         <br />
+                        <select 
+                        name="category"
+                        onChange={handleChange }
+                        style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}>
+                            <option disabled selected>Select Category</option>
+                            <option>Electronics</option>
+                            <option>Documents</option>
+                            <option>Clothings</option>
+                            <option>Food</option>
+                            <option>Health</option>
+                            <option>Shoes</option>
+                        </select>
+                        <br /> <br/>
                         <input
                             type="text"
                             name="receiversDetails"

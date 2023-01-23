@@ -498,7 +498,7 @@ li {
 .pickup-container {
   display: block;
   margin: auto;
-  width: 50%;
+  width: 100%;
   padding: 40px 100px;
   background-color: #F6F6F6;
 }

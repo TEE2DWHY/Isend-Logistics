@@ -46,14 +46,15 @@ const PickUp = () => {
                     <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Pickup Details</h3>
                     <br />
                     <form onSubmit={handleSubmit}>
-                        <label style={{ display: "block" }}>Sender's name</label>
+                    <label style={{ display: "block", marginTop: "20px" }}>Hub Location</label>
+                    <br/>
+                        <select
+                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
+                        >
+                        <option disabled selected>Select Hub</option>
+                        <option>Ikoyi</option>
+                        </select>
                         <br />
-                        <input
-                            type="text"
-                            name="delivery_personnel"
-                            onChange={handleChange }
-                            style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
-                        />
                         <label style={{ display: "block", marginTop: "20px" }}>Sender's address</label>
                         <br />
                         <input
@@ -62,7 +63,7 @@ const PickUp = () => {
                             onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
-                        <label style={{ display: "block", marginTop: "20px" }}>Phone Number</label>
+                        <label style={{ display: "block", marginTop: "20px" }}>Sender's PhoneNumber</label>
                         <br />
                         <input
                             type="text"
@@ -70,22 +71,8 @@ const PickUp = () => {
                             placeholder="+234"
                             onChange={handleChange }
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
-                        />
-                        <label style={{ display: "block", marginTop: "20px" }}>Category</label>
-                        <br />
-                        <select 
-                        name="category"
-                        onChange={handleChange }
-                        style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}>
-                            <option disabled selected>Select Category</option>
-                            <option>Electronics</option>
-                            <option>Documents</option>
-                            <option>Clothings</option>
-                            <option>Food</option>
-                            <option>Health</option>
-                            <option>Shoes</option>
-                        </select>
-                        <br /> <br /> <br />
+                        /> 
+                        <br /> <br />
                         <button className="login-btn">Next</button>
                     </form>
                 </div>

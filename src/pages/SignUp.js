@@ -86,10 +86,10 @@ const SignUp = () => {
                             placeholder="+2348100000000"
                             onChange={handleChange}
                             required
-                            pattern="^(?:\+|00)(1|7|2[07]|3[0123469]|4[013456789]|5[12345678]|6[0123456]|8[1246]|9[0123458]|(?:2[12345689]|3[578]|42|5[09]|6[789]|8[035789]|9[679])\d)*$"
+                            // pattern="^(?:\+|00)(1|7|2[07]|3[0123469]|4[013456789]|5[12345678]|6[0123456]|8[1246]|9[0123458]|(?:2[12345689]|3[578]|42|5[09]|6[789]|8[035789]|9[679])\d)*$"
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
-                        <span className="user-err">Phone Numbers should start with +234 and should be a minimum of 13 characters</span>
+                        {/* <span className="user-err">Phone Numbers should start with +234 and should be a minimum of 13 characters</span> */}
                         </div>
                         <label style={{ display: "block", marginTop: "20px" }}>Password</label>
                         <br />
