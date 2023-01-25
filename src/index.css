@@ -46,7 +46,7 @@ li {
   width: 110px;
 }
 
-.nav-link{
+.nav-link {
   /* display: inline; */
 }
 
@@ -59,7 +59,7 @@ li {
   /* font-style: 50px; */
 }
 
-.package:hover{
+.package:hover {
   text-decoration: underline;
   animation-duration: 4s;
 }
@@ -68,7 +68,7 @@ li {
   margin-top: 20px;
 }
 
-.sign-in:hover{
+.sign-in:hover {
   background-color: #FFC24D;
   /* color: #ffff; */
   transition: all 4s ease;
@@ -109,6 +109,7 @@ li {
   font-size: 14px;
   display: none;
 }
+
 .navbar-collapse {
   justify-content: flex-end;
 }
@@ -124,12 +125,13 @@ li {
   font-weight: bold;
 }
 
-.hero-paragraph{
+.hero-paragraph {
   letter-spacing: 0.05rem;
   line-height: 1.5;
   font-size: 17px;
   /* padding: 0  20px 0  0; */
 }
+
 .cheap {
   color: #FFC24D;
 }
@@ -168,10 +170,11 @@ li {
   margin-bottom: 20px;
   background-color: #FBFBFB;
 }
-.offers-container:hover{
+
+.offers-container:hover {
   animation: pulse;
   animation-duration: 3s;
-  background-color:  #000;
+  background-color: #000;
   color: #fff;
 }
 
@@ -278,12 +281,27 @@ li {
   position: relative;
 }
 
+.ellipse1 {
+  animation: pulse;
+  animation-duration: 5s;
+  cursor: pointer;
+}
+
 .ellipse2 {
   width: 80px;
   height: 80px;
   margin-left: 65%;
   margin-top: -28%;
   position: relative;
+  animation: pulse;
+  animation-duration: 5s;
+  cursor: pointer;
+}
+
+.ellipse2:hover {
+  animation: pulse;
+  animation-duration: 5s;
+  cursor: pointer;
 }
 
 .ellipse4 {
@@ -292,6 +310,11 @@ li {
   margin-left: 65%;
   margin-top: -10%;
   position: relative;
+}
+
+.ellipse4:hover {
+  animation: pulse;
+  animation-duration: 3s;
 }
 
 .sco-button {
@@ -432,7 +455,7 @@ li {
   padding: 40px 100px;
 }
 
-.welcome-h1{
+.welcome-h1 {
   font-weight: bold;
 }
 
@@ -722,7 +745,8 @@ h2.launch {
   border-radius: 6px;
   border: none;
 }
-.confirmed-btn{
+
+.confirmed-btn {
   background-color: #59A65C;
   font-size: 16px;
   padding: 10px 30px;
@@ -739,13 +763,14 @@ h2.launch {
 }
 
 /* Pickup-Overview */
-.pickup-input{
-   /* display: "block"; */
-   width: 80%; 
-   border-radius: 6px;
-   padding: 10px 20px;
-   border: 2px solid #EBE9E5
+.pickup-input {
+  /* display: "block"; */
+  width: 80%;
+  border-radius: 6px;
+  padding: 10px 20px;
+  border: 2px solid #EBE9E5
 }
+
 /* Forgot Password */
 .fp-container {
   display: block;
@@ -777,7 +802,7 @@ h2.launch {
 }
 
 /* Auth Page */
-.h3-auth{
+.h3-auth {
   text-align: center;
   padding: 0 5px;
 }
@@ -867,27 +892,36 @@ h2.launch {
   .footer-logo {
     display: block;
   }
+
   .login-container {
     width: 95%;
     padding: 40px 60px;
-}
-.pickup-container {
-  width: 90%;
-  padding: 40px 60px;
-  margin-bottom: 20px;
-}
-.welcome-h1{
-  font-style: 20px;
-  /* display: ; */
-}
-.h3-auth{
-  text-align: center;
-  font-style: 12px;
-}
-.partner-img {
-  width: 100%;
-}
-.what-customers-say{
-  font-style: 25px;
-}
+  }
+
+  .pickup-container {
+    width: 90%;
+    padding: 40px 60px;
+    margin-bottom: 20px;
+  }
+
+  .welcome-h1 {
+    font-style: 20px;
+    /* display: ; */
+  }
+
+  .h3-auth {
+    text-align: center;
+    font-style: 12px;
+  }
+
+  .partner-img {
+    width: 100%;
+  }
+
+  .what-customers-say {
+    font-style: 25px;
+  }
+  .fp-container{
+    width: 95%;
+  }
 }

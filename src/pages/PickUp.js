@@ -3,8 +3,20 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 const PickUp = () => {
     const [formData, setFormData] = useState({
-        delivery_personnel: "", sendersAddress: "", sendersphoneNumber: "", category: ""
+        hub_location:"Ikeja", sendersAddress: "", sendersphoneNumber: "",
     })
+
+    // GENERIC METHOD FOR SENDING JWT TOKEN
+    // axios.interceptors.request.use(
+    //     config =>{
+    //         config.headers.authorization = `Bearer ${localStorage.token}`; 
+    //         return config;
+    //     },
+    //     error =>{
+    //         return Promise.reject(error);
+    //     }
+    // )
+    // const token = localStorage.getItem("token");
 
     const handleChange = (e) => {
         setFormData(prevFormData => {
@@ -19,20 +31,17 @@ const PickUp = () => {
         e.preventDefault();
         try{
             const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData,{
-                headers :{
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer '
-                }
+                headers:{Authorization: `Bearer ${localStorage.token}`}
             });
             console.log(res);
-            if (res.status === 200){
+            if (res.status === 201){
                 window.location = "/delivery-details"
             }
         }
         catch(err){
             console.log(err)
         }
-        // console.log(formData)
+        console.log(formData)
     }
     return (
         <>
@@ -50,9 +59,11 @@ const PickUp = () => {
                     <br/>
                         <select
                              style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
+                        name="hub_location"
+                        required
+                        onChange={handleChange}
                         >
-                        <option disabled selected>Select Hub</option>
-                        <option>Ikoyi</option>
+                        <option disabled selected>Ikeja</option>
                         </select>
                         <br />
                         <label style={{ display: "block", marginTop: "20px" }}>Sender's address</label>
@@ -60,6 +71,7 @@ const PickUp = () => {
                         <input
                             type="text"
                             name="sendersAddress"
+                            required
                             onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
@@ -70,6 +82,7 @@ const PickUp = () => {
                             name="sendersphoneNumber"
                             placeholder="+234"
                             onChange={handleChange }
+                            required
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         /> 
                         <br /> <br />

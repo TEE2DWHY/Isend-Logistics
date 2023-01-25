@@ -19,10 +19,11 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/login", formData);
+            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/login", formData)
+            console.log(res, `localStorage set with token value:${res.data.token}`);
             if (res.status === 200){
-                console.log(res);
                 window.location = "/pick-up"
+                localStorage.setItem("token", res.data.token)
             }
         }
         catch (err){
