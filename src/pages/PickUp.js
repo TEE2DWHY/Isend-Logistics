@@ -64,6 +64,7 @@ const PickUp = () => {
                         onChange={handleChange}
                         >
                         <option disabled selected>Ikeja</option>
+                        <option>Ikorodu</option>
                         </select>
                         <br />
                         <label style={{ display: "block", marginTop: "20px" }}>Sender's address</label>

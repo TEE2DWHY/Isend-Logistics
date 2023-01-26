@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 // import { useNavigate } from "react-router-dom";
 
 const DeliveryDetails = () => {
     const [formData, setFormData] = useState({
-        sendersName: "", sendersAddress: "", sendersPhoneNumber: "", receiversDetails:""
+        receivers_name: "", receivers_address: "", receivers_phoneNumber: "", category: ""
     })
     // const navigate = useNavigate();
     const handleChange = (e) =>{
@@ -15,9 +16,20 @@ const DeliveryDetails = () => {
             }
         })
     }
-    const handleSubmit = (e) =>{
+    const handleSubmit = async (e) =>{
         e.preventDefault();
-       window.location = "/pickup-overview"
+        try{
+            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData, {
+                headers:{Authorization:`Bearer ${localStorage.token}`}
+            })
+            console.log(res)
+            if (res.status === 201){  
+                window.location = "/pickup-overview"
+            }
+        }catch(err){
+            console.log(err)
+        }
+    
     }
     console.log(formData)
     return (
@@ -36,7 +48,7 @@ const DeliveryDetails = () => {
                         <br />
                         <input
                             type="text"
-                            name="sendersName"
+                            name="receivers_name"
                             onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
@@ -44,19 +56,19 @@ const DeliveryDetails = () => {
                         <br />
                         <input
                             type="text"
-                            name="sendersAddress"
+                            name="receivers_address"
                             onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
-                       <label style={{ display: "block", marginTop: "20px" }}>Receiver's Phone Number</label>
+                       {/* <label style={{ display: "block", marginTop: "20px" }}>Receiver's Phone Number</label>
                         <br />
                         <input
                             type="text"
-                            name="sendersPhoneNumber"
+                            name="receivers_phoneNumber"
                             placeholder='+234 810-019-4732'
                             onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
-                        />
+                        /> */}
                            <label style={{ display: "block", marginTop: "20px" }}>Category</label>
                         <br />
                         <select 
@@ -64,21 +76,21 @@ const DeliveryDetails = () => {
                         onChange={handleChange }
                         style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}>
                             <option disabled selected>Select Category</option>
-                            <option>Electronics</option>
-                            <option>Documents</option>
-                            <option>Clothings</option>
-                            <option>Food</option>
-                            <option>Health</option>
-                            <option>Shoes</option>
+                            <option>electronics</option>
+                            <option>documents</option>
+                            <option>clothings</option>
+                            <option>food</option>
+                            <option>health</option>
+                            <option>shoes</option>
                         </select>
-                        <br /> <br/>
+                        {/* <br /> <br/>
                         <input
                             type="text"
                             name="receiversDetails"
                             onChange={handleChange}
                             placeholder="Add New Receiver Details"
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
-                        />
+                        /> */}
                         <br /> <br /> <br />
                         <button className="login-btn">Next</button>
                     </form>
