@@ -34,7 +34,7 @@ const LoginMotorcycle = () => {
                                     />
                                     <p style={{ color: "#FFCD4D", fontSize: "12px", marginTop: "10px" }}>Forgot Password?</p>
                                     <button className="login">Login</button>
-                                    <p style={{ fontSize: "14px", marginTop: "20px" }}>Don’t have an account? <Link to="/sign-up"><span style={{ color: "#FFCD4D" }}> Sign up</span></Link></p>
+                                    <p style={{ fontSize: "14px", marginTop: "20px" }}>Don’t have an account? <Link to="/auth/sign-up"><span style={{ color: "#FFCD4D" }}> Sign up</span></Link></p>
                                 </form>
                             </div>
                         </div>

@@ -1,8 +1,8 @@
-import axios from "axios"
+// import axios from "axios"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 const PickUp = () => {
-    const [formData, setFormData] = useState({
+    const [data, setData] = useState({
         hub_location:"Ikeja", sendersAddress: "", sendersphoneNumber: "",
     })
 
@@ -19,7 +19,7 @@ const PickUp = () => {
     // const token = localStorage.getItem("token");
 
     const handleChange = (e) => {
-        setFormData(prevFormData => {
+        setData(prevFormData => {
             return {
                 ...prevFormData,
                 [e.target.name]: e.target.value
@@ -29,19 +29,20 @@ const PickUp = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try{
-            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData,{
-                headers:{Authorization: `Bearer ${localStorage.token}`}
-            });
-            console.log(res);
-            if (res.status === 201){
-                window.location = "/delivery-details"
-            }
-        }
-        catch(err){
-            console.log(err)
-        }
-        console.log(formData)
+       
+        // try{
+        //     const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData,{
+        //         headers:{Authorization: `Bearer ${localStorage.token}`}
+        //     });
+        //     console.log(res);
+        //     if (res.status === 201){
+        //         window.location = "/delivery-details"
+        //     }
+        // }
+        // catch(err){
+        //     console.log(err)
+        // }
+        // console.log(formData)
     }
     return (
         <>
@@ -87,7 +88,9 @@ const PickUp = () => {
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         /> 
                         <br /> <br />
-                        <button className="login-btn">Next</button>
+                        <Link
+                         to="/delivery-details"
+                         state= {{data: data}}><button className="login-btn">Next</button></Link>
                     </form>
                 </div>
             </section>

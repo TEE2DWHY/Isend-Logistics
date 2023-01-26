@@ -17,7 +17,7 @@ function Home() {
                         <div className="col-lg-6">
                             <h1 className="hero-section-h1"><span className="cheap">Affordable </span>& Trusted delivery service</h1>
                             <p className="hero-paragraph">Your sure plug for swift and affordable deliveries. Sign up for an efficient and hassle-free experience.</p>
-                            <Link to="/login"><button className="cta">Book a delivery</button></Link>
+                            <Link to="/auth/login"><button className="cta">Book a delivery</button></Link>
                         </div>
                         <div className="col-lg-6">
                             <img className="isend-img1" src="images/isend-img1.png" alt="" />

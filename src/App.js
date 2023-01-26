@@ -49,8 +49,8 @@ function App() {
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/auth" element={<Auth/>}/>
-          <Route path="/login" element={<Login />} />
-          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/auth/login" element={<Login />} />
+          <Route path="/auth/sign-up" element={<SignUp />} />
           <Route path="/terms-of-use" element={<Terms />} />
           <Route path="/pick-up" element={<PickUp />} />
           <Route path="/our-centers" element={<OurCenters />} />

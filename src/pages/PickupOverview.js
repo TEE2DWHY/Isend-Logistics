@@ -19,7 +19,7 @@ const handleChange = (e) =>{
 const handleSubmit = async (e) =>{
     e.preventDefault();
 try{
-    const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData);
+    const res = await axios.get("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData);
     console.log(res)
     if (res.status === 200){
         window.location = "/order-overview"

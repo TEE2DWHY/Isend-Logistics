@@ -24,10 +24,10 @@ const Navbar = () => {
                                     </li>
                                 </div>
                                 <li className="nav-item">
-                                    <Link to="/login"> <span className="nav-link nav-cta"><button className='sign-in'>Sign in</button></span></Link>
+                                    <Link to="/auth/login"> <span className="nav-link nav-cta"><button className='sign-in'>Sign in</button></span></Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="/sign-up" className="nav-link nav-cta"><button className="create-account">Create Account</button></Link>
+                                    <Link to="/auth/sign-up" className="nav-link nav-cta"><button className="create-account">Create Account</button></Link>
                                 </li>
                             </ul>
                         </div>

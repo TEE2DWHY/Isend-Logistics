@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import axios from 'axios'
-// import { useNavigate } from "react-router-dom";
 
-const DeliveryDetails = () => {
+const DeliveryDetails = (props) => {
+    const location = useLocation("/pick-up");
+    const data = location.state?.data;
+    console.log(props, "props")
+    console.log(location, "useLocation Hook")
+
     const [formData, setFormData] = useState({
-        receivers_name: "", receivers_address: "", receivers_phoneNumber: "", category: ""
+         hub_location: data ? data.hub_location:"",sendersAddress: data ? data.sendersAddress:"", sendersphoneNumber: data ? data.sendersphoneNumber:"", receivers_name: "", receivers_address: "", receivers_phoneNumber: "", category: ""
     })
     // const navigate = useNavigate();
     const handleChange = (e) =>{
@@ -24,7 +28,7 @@ const DeliveryDetails = () => {
             })
             console.log(res)
             if (res.status === 201){  
-                window.location = "/pickup-overview"
+                // window.location = "/pickup-overview"
             }
         }catch(err){
             console.log(err)
@@ -44,7 +48,7 @@ const DeliveryDetails = () => {
                     <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Delivery Details </h3>
                     <br />
                     <form onSubmit={handleSubmit}>
-                        <label style={{ display: "block" }}>Receiver's name</label>
+                        <label style={{ display: "block" }}>Receiver Name</label>
                         <br />
                         <input
                             type="text"

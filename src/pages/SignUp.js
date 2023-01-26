@@ -43,7 +43,7 @@ const SignUp = () => {
             <section>
                 <br />
                 <div className="container">
-                    <Link to="/"><img className="logo" src="images/logo.png" alt="logo" /></Link>
+                    <Link to="/"><img className="logo" src="/images/logo.png" alt="logo" /></Link>
                 </div>
                 <br /> <br /> <br />
                 <div className="login-container">
@@ -107,11 +107,11 @@ const SignUp = () => {
                         <br />
 
                         <button className="login-btn" id="signup"><span id="sign-up">Sign up</span> <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
-                        <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Already have an account? <Link to="/login"><b>Sign in </b></Link></p>
+                        <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Already have an account? <Link to="/auth/login"><b>Sign in </b></Link></p>
                         <p className='signup-confirmation' id="signup-confirmation">An  email verification link has been sent to your email</p>
                     </form>
                     <br />
-                    <p>Powered by <img src="images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p>
+                    <p>Powered by <img src="/images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p>
                     <p>You agree to iSend’s <Link to="/privacy-policy"><span style={{ color: "#F2C040", lineHeight: "1.2" }}>Terms of Use & Privacy Policy</span></Link>. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</p>
                 </div>
             </section>
