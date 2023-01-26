@@ -25,11 +25,19 @@ const Login = () => {
                 window.location = "/pick-up"
                 localStorage.setItem("token", res.data.token)
             }
+            else if (res.status === 401){
+               
+            }
         }
-        catch (err){
-            console.log(err)
+        catch{
+          document.getElementById("login-err").style.display = "block"
         }
         //  console.log(formData)
+    }
+
+    //User Error Manager
+    const loginError = () =>{
+        document.getElementById("login-err").style.display = "none"
     }
     return (
         <>
@@ -49,10 +57,11 @@ const Login = () => {
                         <label style={{ display: "block", fontWeight: "bold" }}>Email</label>
                         <br />
                         <input
-                            type="text"
+                            type="email"
                             name="email"
                             placeholder="Email"
                             onChange={handleChange}
+                            onClick= {loginError}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <label style={{ display: "block", marginTop: "20px", fontWeight: "bold" }}>Password</label>
@@ -62,11 +71,13 @@ const Login = () => {
                             name="password"
                             placeholder="Enter password"
                             onChange={handleChange}
+                            onClick= {loginError}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <br />
                         <Link to="/forgot-password"><p style={{ textAlign: "center" }}>Forgot password?</p></Link>
                         <br />
+                        <p className="login-err" id="login-err">User Authorization Failed. Pls ensure user details are correct🙄.</p>
                         <button className="login-btn">Login</button>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Don’t have an account? <b><Link to="/sign-up">Sign up</Link> </b></p>
                     </form>
