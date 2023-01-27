@@ -3,10 +3,10 @@ import { Link, useLocation } from 'react-router-dom'
 import axios from 'axios'
 
 const DeliveryDetails = (props) => {
-    const location = useLocation("/pick-up");
+    const location = useLocation();
     const data = location.state?.data;
     console.log(props, "props")
-    console.log(location, "useLocation Hook")
+    // console.log(location, "useLocation Hook")
 
     const [formData, setFormData] = useState({
          hub_location: data ? data.hub_location:"",sendersAddress: data ? data.sendersAddress:"", sendersphoneNumber: data ? data.sendersphoneNumber:"", receivers_name: "", receivers_address: "", receivers_phoneNumber: "", category: ""
@@ -22,6 +22,10 @@ const DeliveryDetails = (props) => {
     }
     const handleSubmit = async (e) =>{
         e.preventDefault();
+        if (formData.hub_location === "" || formData.sendersAddress === ""|| formData.sendersphoneNumber === ""){
+            alert("Details from pickup page aren't completed, head back to pickup page and update🙄.")
+            window.location = "/pick-up"
+        }
         try{
             const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData, {
                 headers:{Authorization:`Bearer ${localStorage.token}`}
@@ -54,6 +58,7 @@ const DeliveryDetails = (props) => {
                             type="text"
                             name="receivers_name"
                             onChange={handleChange}
+                            required
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <label style={{ display: "block", marginTop: "20px" }}>Receiver's address</label>
@@ -62,6 +67,7 @@ const DeliveryDetails = (props) => {
                             type="text"
                             name="receivers_address"
                             onChange={handleChange}
+                            required
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                        {/* <label style={{ display: "block", marginTop: "20px" }}>Receiver's Phone Number</label>
@@ -78,11 +84,11 @@ const DeliveryDetails = (props) => {
                         <select 
                         name="category"
                         onChange={handleChange }
+                        required
                         style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}>
                             <option disabled selected>Select Category</option>
                             <option>electronics</option>
                             <option>documents</option>
-                            <option>clothings</option>
                             <option>food</option>
                             <option>health</option>
                             <option>shoes</option>

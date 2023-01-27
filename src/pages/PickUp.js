@@ -27,23 +27,23 @@ const PickUp = () => {
         })
     }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
        
-        // try{
-        //     const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData,{
-        //         headers:{Authorization: `Bearer ${localStorage.token}`}
-        //     });
-        //     console.log(res);
-        //     if (res.status === 201){
-        //         window.location = "/delivery-details"
-        //     }
-        // }
-        // catch(err){
-        //     console.log(err)
-        // }
-        // console.log(formData)
-    }
+    //     try{
+    //         const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData,{
+    //             headers:{Authorization: `Bearer ${localStorage.token}`}
+    //         });
+    //         console.log(res);
+    //         if (res.status === 201){
+    //             window.location = "/delivery-details"
+    //         }
+    //     }
+    //     catch(err){
+    //         console.log(err)
+    //     }
+    //     console.log(formData)
+    // }
     return (
         <>
             <section>
@@ -55,7 +55,7 @@ const PickUp = () => {
                 <div className="pickup-container">
                     <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Pickup Details</h3>
                     <br />
-                    <form onSubmit={handleSubmit}>
+                    <form>
                     <label style={{ display: "block", marginTop: "20px" }}>Hub Location</label>
                     <br/>
                         <select
