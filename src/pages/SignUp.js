@@ -28,7 +28,8 @@ const SignUp = () => {
             console.log(res)
             if (res.status === 200){
             document.getElementById("signup-confirmation").style.display = "block"
-            document.getElementById("signup").innerHTML = "Email Sent...Proceed to sign in"
+            alert("Email Sent...Proceed to sign in") 
+            window.location = "/login"
         }
         }catch (err){
             console.log(err)
