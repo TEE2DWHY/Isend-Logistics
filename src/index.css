@@ -798,6 +798,12 @@ h2.launch {
   font-size: 14px;
   display: none;
 }
+#no-account{
+  text-align: center;
+  color: red;
+  font-size: 12px;
+  display: none;
+}
 
 /* User-Error */
 .input:invalid:focus~.user-err {

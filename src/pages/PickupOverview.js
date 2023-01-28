@@ -59,6 +59,7 @@ console.log(formData)
                                     name="delivery_personnel"
                                     onChange={handleChange}
                                     className= "pickup-input"
+                                    value="love"
                                 />
                                 <label style={{ display: "block", marginTop: "20px" }}>Sender's address</label>
                                 <br />

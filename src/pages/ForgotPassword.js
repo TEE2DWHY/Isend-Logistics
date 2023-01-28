@@ -3,30 +3,32 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState({
-    email: ""
-  })
+  const [email, setEmail] = useState("")
   const handleChange = (e) =>{
-    setEmail ((prevFormData) =>{
-      return{
-        ...prevFormData,
-        [e.target.name] : e.target.value
-      }
+    setEmail (() =>{
+      return(
+        e.target.name = e.target.value
+      )
     })
   }
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
     try{
-      const res = await axios.post("http://localhost:4000/v1/users/forgotPassword", email);
+      const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/forgot-password", email);
       console.log(res)
         if (res.status === 200){
-         document.getElementById("password-confirmation").style.display = "block"
+         document.getElementById("password-confirmation").style.display = "inline"
         }
     }
     catch(err){
-      console.log(err)
+        document.getElementById("no-account").style.display = "block"
+        console.log(err)
     }
+    // console.log(email)
+  }
+  const change = () =>{
+    document.getElementById("no-account").style.display = "none"
   }
   return (
    <>
@@ -50,12 +52,15 @@ const ForgotPassword = () => {
                             name="email"
                             placeholder="Email"
                             required
+                            id='email'
+                            onClick={change}
                             onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         <br />
+                        <p id='no-account'>"{email}" does not have an account with us.</p>
                         <button className="login-btn">Login</button>
-                        <p className='password-confirmation' id='password-confirmation'>An  email will be sent to  arinzechi@gmail.com if the account exist</p>
+                        <p className='password-confirmation' id='password-confirmation'>An email will be sent to {email}</p>
                    </form>
               </div>
                 </section>

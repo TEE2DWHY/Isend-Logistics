@@ -28,12 +28,12 @@ const SignUp = () => {
             console.log(res)
             if (res.status === 200){
             document.getElementById("signup-confirmation").style.display = "block"
-            document.getElementById("signup").innerHTML = "Email Sent"
+            document.getElementById("signup").innerHTML = "Email Sent...Proceed to sign in"
         }
         }catch (err){
             console.log(err)
         }
-        console.log(formData)  
+        // console.log(formData)  
     }
 
     // const userEmail = document.getElementById("email").innerHTML

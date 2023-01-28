@@ -5,7 +5,7 @@ import axios from 'axios'
 const DeliveryDetails = (props) => {
     const location = useLocation();
     const data = location.state?.data;
-    console.log(props, "props")
+    // console.log(props, "props")
     // console.log(location, "useLocation Hook")
 
     const [formData, setFormData] = useState({
@@ -32,7 +32,7 @@ const DeliveryDetails = (props) => {
             })
             console.log(res)
             if (res.status === 201){  
-                // window.location = "/pickup-overview"
+                window.location = "/pickup-overview"
             }
         }catch(err){
             console.log(err)
@@ -87,11 +87,11 @@ const DeliveryDetails = (props) => {
                         required
                         style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}>
                             <option disabled selected>Select Category</option>
-                            <option>electronics</option>
-                            <option>documents</option>
-                            <option>food</option>
-                            <option>health</option>
-                            <option>shoes</option>
+                            <option>Electronics</option>
+                            <option>Documents</option>
+                            <option>Food</option>
+                            <option>Health</option>
+                            <option>Shoes</option>
                         </select>
                         {/* <br /> <br/>
                         <input

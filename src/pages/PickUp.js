@@ -6,18 +6,6 @@ const PickUp = () => {
         hub_location:"Ikeja", sendersAddress: "", sendersphoneNumber: "",
     })
 
-    // GENERIC METHOD FOR SENDING JWT TOKEN
-    // axios.interceptors.request.use(
-    //     config =>{
-    //         config.headers.authorization = `Bearer ${localStorage.token}`; 
-    //         return config;
-    //     },
-    //     error =>{
-    //         return Promise.reject(error);
-    //     }
-    // )
-    // const token = localStorage.getItem("token");
-
     const handleChange = (e) => {
         setData(prevFormData => {
             return {
@@ -26,24 +14,7 @@ const PickUp = () => {
             }
         })
     }
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-       
-    //     try{
-    //         const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData,{
-    //             headers:{Authorization: `Bearer ${localStorage.token}`}
-    //         });
-    //         console.log(res);
-    //         if (res.status === 201){
-    //             window.location = "/delivery-details"
-    //         }
-    //     }
-    //     catch(err){
-    //         console.log(err)
-    //     }
-    //     console.log(formData)
-    // }
+    
     return (
         <>
             <section>

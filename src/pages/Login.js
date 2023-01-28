@@ -25,9 +25,6 @@ const Login = () => {
                 window.location = "/pick-up"
                 localStorage.setItem("token", res.data.token)
             }
-            else if (res.status === 401){
-               
-            }
         }
         catch{
           document.getElementById("login-err").style.display = "block"
