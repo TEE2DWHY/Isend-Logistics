@@ -344,6 +344,7 @@ li {
 .about{
   background-color:#F2C040;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 .about-us-img{

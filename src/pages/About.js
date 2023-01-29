@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
         <Navbar/>
-        <section style={{overflow:"none"}}>
+        <section>
             <div className="about">
             <h4 className="container">About us </h4>
             </div>

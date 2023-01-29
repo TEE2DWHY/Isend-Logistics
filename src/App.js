@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import About from "./pages/About";
 import Blog from "./pages/Blog";
+import Continue from "./pages/Continue";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
@@ -78,6 +79,7 @@ function App() {
           <Route path="/car/success" element={<SuccessCar />} />
           <Route path="/car/type" element={<TypeCar />} />
           <Route path="/about" element={<About/>} />
+          <Route path="/continue" element={<Continue/>} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
