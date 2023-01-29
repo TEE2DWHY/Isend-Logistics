@@ -9,7 +9,7 @@ const DeliveryDetails = (props) => {
     // console.log(location, "useLocation Hook")
 
     const [formData, setFormData] = useState({
-         hub_location: data ? data.hub_location:"",sendersAddress: data ? data.sendersAddress:"", sendersphoneNumber: data ? data.sendersphoneNumber:"", receivers_name: "", receivers_address: "", receivers_phoneNumber: "", category: ""
+         hub_location: data ? data.hub_location:"",senders_address: data ? data.senders_address:"", senders_phonenumber: data ? data.senders_phonenumber:"", receivers_name: "", receivers_address: "", category: ""
     })
     // const navigate = useNavigate();
     const handleChange = (e) =>{
@@ -22,7 +22,7 @@ const DeliveryDetails = (props) => {
     }
     const handleSubmit = async (e) =>{
         e.preventDefault();
-        if (formData.hub_location === "" || formData.sendersAddress === ""|| formData.sendersphoneNumber === ""){
+        if (formData.hub_location === "" || formData.senders_address === ""|| formData.sendersphoneNumber === ""){
             alert("Details from pickup page aren't completed, head back to pickup page and update🙄.")
             window.location = "/pick-up"
         }
@@ -32,7 +32,7 @@ const DeliveryDetails = (props) => {
             })
             console.log(res)
             if (res.status === 201){  
-                window.location = "/pickup-overview"
+                // window.location = "/pickup-overview"
             }
         }catch(err){
             console.log(err)
@@ -87,11 +87,11 @@ const DeliveryDetails = (props) => {
                         required
                         style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}>
                             <option disabled selected>Select Category</option>
-                            <option>Electronics</option>
-                            <option>Documents</option>
-                            <option>Food</option>
-                            <option>Health</option>
-                            <option>Shoes</option>
+                            <option>electronics</option>
+                            <option>documents</option>
+                            <option>food</option>
+                            <option>health</option>
+                            <option>shoes</option>
                         </select>
                         {/* <br /> <br/>
                         <input

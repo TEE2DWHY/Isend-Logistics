@@ -131,7 +131,7 @@ function Home() {
                 <img className="ellipse1" src="images/Ellipse 298.png" alt="" /><h1 className="join-team-h1">Join Our Team </h1><img className="ellipse2" src="images/Ellipse 298.png" alt="" />
                 <p className="join-team-p1">Help us on our quest to make life better for our customers</p>
                 <br />
-                <button className="sco-button">See Current Openings</button>
+                <button className="sco-button"><b>See Current Openings</b></button>
                 <br /> <br /> <br />
                 <img className="ellipse1" src="images/Ellipse 298.png" alt="" /> <img className="ellipse4" src="images/Ellipse 298.png" alt="" />
             </section>

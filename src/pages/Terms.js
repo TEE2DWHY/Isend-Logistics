@@ -23,6 +23,7 @@ const Terms = () => {
                     </div>
                 </div>
             </section>
+            <br/> <br/>
             <Footer />
         </>
     )

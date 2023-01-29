@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-// require('dotenv').config()
+import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -77,6 +77,7 @@ function App() {
           <Route path="/car/document" element={<DocumentsCar />} />
           <Route path="/car/success" element={<SuccessCar />} />
           <Route path="/car/type" element={<TypeCar />} />
+          <Route path="/about" element={<About/>} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>

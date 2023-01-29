@@ -17,7 +17,7 @@ const handleChange = (e) =>{
     })
 }
 const handleSubmit = async (e) =>{
-    e.preventDefault();
+    // e.preventDefault();
 try{
     const res = await axios.get("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData);
     console.log(res)
@@ -50,7 +50,7 @@ console.log(formData)
                         <div className="col-lg-6">
                             <h4 style={{fontWeight:"bold", justifyContent:"space-between", display:"flex", alignItems:"center"}}>Pickup Details <i class="fa-solid fa-pen-to-square" style={{fontSize:"20px", marginRight:"20px"}}></i></h4>
                             <br />
-                            <form onSubmit={handleSubmit}>
+                            <form>
                                 <label style={{ display: "block" }}>Sender's name</label>
                                 <br />
                                 <input
@@ -177,7 +177,8 @@ console.log(formData)
                                 <p>N3,000.00</p>
                             </div>
                             <br />
-                            <Link to="/order-overview"><button className="login-btn">Make Payment</button></Link>
+                            <button className="login-btn" onClick={handleSubmit}>Make Payment</button>
+                            {/* <Link to="/order-overview"><button className="login-btn" >Make Payment</button></Link> */}
                         </div>
                     </div>
                 </div>

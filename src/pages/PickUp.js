@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 const PickUp = () => {
     const [data, setData] = useState({
-        hub_location:"Ikeja", sendersAddress: "", sendersphoneNumber: "",
+        hub_location:"Ikeja", senders_phonenumber: "", senders_address: "",
     })
 
     const handleChange = (e) => {
@@ -43,7 +43,7 @@ const PickUp = () => {
                         <br />
                         <input
                             type="text"
-                            name="sendersAddress"
+                            name="senders_address"
                             required
                             onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
@@ -52,7 +52,7 @@ const PickUp = () => {
                         <br />
                         <input
                             type="text"
-                            name="sendersphoneNumber"
+                            name="senders_phonenumber"
                             placeholder="+234"
                             onChange={handleChange }
                             required

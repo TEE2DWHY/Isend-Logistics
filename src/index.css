@@ -329,6 +329,46 @@ li {
   border-style: none;
 }
 
+/* About */
+.join-us-button {
+  background: #FFC24D;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  border-style: 2px #0000 solid;
+  color: #1B1B1B;
+  padding: 8px 100px;
+  text-decoration: none;
+  border-style: none;
+}
+.about{
+  background-color:#F2C040;
+  padding: 20px;
+}
+
+.about-us-img{
+  margin: auto;
+  display: block;
+  height: 300px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.about-join{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-style: 40px; */
+}
+
+.join-underline{
+  text-decoration-color: #F2C040;
+}
+
+u{
+  text-decoration-color: #F2C040;
+}
+
 /* Footer */
 .bd-placeholder-img {
   font-size: 1.125rem;
