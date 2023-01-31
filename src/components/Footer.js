@@ -32,13 +32,13 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div class="col-md-5 offset-md-1 col-6 col-md-2 mb-">
+      {/* <div class="col-md-5 offset-md-1 col-6 col-md-2 mb-">
       <ul class="d-flex">
         <li class="ms-3"><span class="link-dark">Facebook</span></li>
         <li class="ms-3"><span class="link-dark">Instagram</span></li>
         <li class="ms-3"><span class="link-dark">Twitter</span></li>
       </ul>
-      </div>
+      </div> */}
     </div>
 
   </footer>

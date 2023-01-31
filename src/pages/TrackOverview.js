@@ -6,6 +6,8 @@ const TrackOverview = () => {
     const paymentStatus = () =>{
         document.getElementById("pending").style.display = "none"
         document.getElementById("confirmed").style.display = "inline"
+        document.getElementById("order-note-confirmed").style.display = "block"
+        document.getElementById("order-note").style.display = "none"
     }
     const copy = ()=>{
         var copyId = document.getElementById("id").innerHTML;
@@ -94,6 +96,10 @@ const TrackOverview = () => {
                         </div>
                     </div>
                 </div>
+                <br/> <br/>
+                <p className="order-note" id="order-note">Please note that you can only cancel your order before the package is picked up by the delivery rider. <button className="btn btn-outline-danger" style={{marginLeft:"40px"}}>Cancel order</button>  </p>
+                <br/> <br/>
+                <p id="order-note-confirmed">Please contact our customer support for any other issue  at  08023458368 </p>
             </div>
             <Footer />
         </>

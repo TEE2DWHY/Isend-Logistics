@@ -31,7 +31,7 @@ const Track = () => {
                         onChange={handleId}
                         required
                         placeholder="Enter your Tracking ID"
-                        style={{ padding: "10px 0px 10px 20px", width: "50%", border: "none" }}
+                        className="id-input"
                     />
                     <button style={{ border: "none", height: "44px", backgroundColor: "#1B1B1B", color: "#fff", borderRadius: "0px 6px 6px 0px", padding: "0 20px" }}>Search</button>
                 </form>

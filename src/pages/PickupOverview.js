@@ -8,6 +8,7 @@ const [formData, setFormData] = useState({
     delivery_personnel: "", sendersAddress:"", category:"Electronics", sendersphoneNumber:"", receivers_name:"",receivers_address:"", receivers_phoneNumber:""
 })
 
+
 const handleChange = (e) =>{
     setFormData((prevFormData)=>{
         return{
@@ -17,12 +18,14 @@ const handleChange = (e) =>{
     })
 }
 const handleSubmit = async (e) =>{
-    // e.preventDefault();
+    e.preventDefault();
 try{
-    const res = await axios.get("https://isend-api-v1.herokuapp.com/api/v1/dispatch/", formData);
+    const res = await axios.get("https://isend-api-v1.herokuapp.com/api/v1/dispatch/",{
+        headers:{Authorization: `Bearer ${localStorage.token}`}
+    });
     console.log(res)
     if (res.status === 200){
-        window.location = "/order-overview"
+        // window.location = "/order-overview"
     }
 }
 catch(err){
@@ -158,7 +161,7 @@ console.log(formData)
                                 <span style={{ color: "#EA2525" }}>Orders containing alcohol or other restricted items may not be eligible for leave at door and will be returned to the shop if you are not available.</span>
                             </p>
                         </div>
-                        <div className="col-lg-6" style={{ paddingLeft: "120px" }}>
+                        <div className="col-lg-6" style={{ marginTop: "10px" }}>
                             <div className="d1">
                                 <p>Subtotal</p>
                                 <p>N 2,500.00</p>

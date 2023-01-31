@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+
 
 const DeliveryDetails = (props) => {
     const location = useLocation();
@@ -11,7 +12,7 @@ const DeliveryDetails = (props) => {
     const [formData, setFormData] = useState({
          hub_location: data ? data.hub_location:"",senders_address: data ? data.senders_address:"", senders_phonenumber: data ? data.senders_phonenumber:"", receivers_name: "", receivers_address: "", category: ""
     })
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const handleChange = (e) =>{
         setFormData((prevFormData)=>{
             return{
@@ -32,14 +33,14 @@ const DeliveryDetails = (props) => {
             })
             console.log(res)
             if (res.status === 201){  
-                // window.location = "/pickup-overview"
+                navigate('/download-pdf', {state: formData})
             }
         }catch(err){
             console.log(err)
         }
     
     }
-    console.log(formData)
+    // console.log(formData)
     return (
         <>
             <section>
