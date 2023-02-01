@@ -51,6 +51,7 @@ const TrackOverview = () => {
                             </div>
                         </div>
                     </div>
+        
                     <div className="col-lg-6">
                         <div className="status">
                             <h4>Status</h4>

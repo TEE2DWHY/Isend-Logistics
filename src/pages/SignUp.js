@@ -21,23 +21,20 @@ const SignUp = () => {
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        document.getElementById("sign-up").style.display = "none"
         document.getElementById("spinner").style.display = "block"
+        document.getElementById("sign-up").style.display = "none"
         try{
             const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/signup", formData)
-            console.log(res)
             if (res.status === 200){
             document.getElementById("signup-confirmation").style.display = "block"
-            alert("Email Sent...Proceed to sign in") 
-            window.location = "/continue"
-        }
+         }
         }catch (err){
-            console.log(err)
+            alert(err.response.data.message)
+            // window.location.reload()
+            document.getElementById("spinner").style.display = "none"
+            document.getElementById("sign-up").style.display = "block"
         }
-        // console.log(formData)  
     }
-
-    // const userEmail = document.getElementById("email").innerHTML
     
     return (
         <>
@@ -77,6 +74,7 @@ const SignUp = () => {
                             required
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
+                        <span className="user-err" id="user-err" style={{fontSize:"14px"}}>{formData.email} is already used. Pls try another</span>
                         <label style={{ display: "block", marginTop: "20px" }}>Phone Number</label>
                         <br />
                         <div>
@@ -109,7 +107,8 @@ const SignUp = () => {
 
                         <button className="login-btn" id="signup"><span id="sign-up">Sign up</span> <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Already have an account? <Link to="/auth/login"><b>Sign in </b></Link></p>
-                        <p className='signup-confirmation' id="signup-confirmation">An  email verification link has been sent to your email</p>
+                        <p className='signup-confirmation' id="signup-confirmation">An  email verification has been sent to {formData.email}</p>
+                        {/* {error.data.message} */}
                     </form>
                     <br />
                     <p>Powered by <img src="/images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p>

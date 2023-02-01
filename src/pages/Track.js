@@ -22,7 +22,7 @@ const Track = () => {
             <Navbar />
             <div className="order-container container">
                 <br /> <br />
-                <h1 style={{ fontSize: "25px", fontWeight: "bold" }}>Track your Package</h1>
+                <h1 style={{ fontSize: "25px", fontWeight: "bold", letterSpacing: "0.05em" }}>Track your Package</h1>
                 <br />
                 <form onSubmit={handleSubmit}>
                     <input
@@ -33,7 +33,7 @@ const Track = () => {
                         placeholder="Enter your Tracking ID"
                         className="id-input"
                     />
-                    <button style={{ border: "none", height: "44px", backgroundColor: "#1B1B1B", color: "#fff", borderRadius: "0px 6px 6px 0px", padding: "0 20px" }}>Search</button>
+                    <button className="search-id">Search</button>
                 </form>
                 <br /> <br />
                 <p style={{ color: "#F35A5A", fontStyle: "italic", paddingBottom: "8%" }}>* This tracking id does not exist</p>
