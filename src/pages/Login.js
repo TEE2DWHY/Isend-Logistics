@@ -18,16 +18,25 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        document.getElementById("spinner").style.display = "block"
+        document.getElementById("login").style.display = "none"
         try{
             const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/login", formData)
-            console.log(res, `localStorage set with token value:${res.data.token}`);
+            localStorage.setItem("token", res.data.token)
+            localStorage.setItem("isLoggedIn", true);
+            console.log(res.status);
             if (res.status === 200){
                 window.location = "/pick-up"
-                localStorage.setItem("token", res.data.token)
             }
         }
-        catch{
-          document.getElementById("login-err").style.display = "block"
+        //Handling Login Error
+        catch (err){
+            if(err){
+                document.getElementById("login-err").style.display = "block"
+                document.getElementById("login").style.display = "block"
+                document.getElementById("spinner").style.display = "none"
+            }
+         
         }
         //  console.log(formData)
     }
@@ -75,7 +84,7 @@ const Login = () => {
                         <Link to="/forgot-password"><p style={{ textAlign: "center" }}>Forgot password?</p></Link>
                         <br />
                         <p className="login-err" id="login-err">User Authorization Failed. Pls ensure user details are correct🙄.</p>
-                        <button className="login-btn">Login</button>
+                        <button className="login-btn" ><span id="login">Login</span> <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Don’t have an account? <b><Link to="/auth/sign-up">Sign up</Link> </b></p>
                     </form>
                     <br />

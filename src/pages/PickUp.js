@@ -1,6 +1,7 @@
 // import axios from "axios"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import UserNavbar from "../components/UserNavbar"
 const PickUp = () => {
     const [data, setData] = useState({
         hub_location:"Ikeja", senders_phonenumber: "", senders_address: "",
@@ -19,9 +20,7 @@ const PickUp = () => {
         <>
             <section>
                 <br />
-                <div className="container">
-                    <Link to="/"><img className="logo" src="images/logo.png" alt="logo" /></Link>
-                </div>
+              <UserNavbar/>
                 <br /> <br /> <br />
                 <div className="pickup-container">
                     <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Pickup Details</h3>

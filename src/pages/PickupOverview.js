@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
+import UserNavbar from "../components/UserNavbar"
 // import DeliveryDetails from "./DeliveryDetails"
 
 const PickupOverview = () => {
@@ -38,9 +39,7 @@ console.log(formData)
         <>
             <section>
                 <br />
-                <div className="container">
-                    <Link to="/"><img className="logo" src="images/logo.png" alt="logo" /></Link>
-                </div>
+              <UserNavbar/>
                 <br />
                 <div className="container-fluid" style={{ backgroundColor: "#FFC24D" }}>
                     <div className="container">

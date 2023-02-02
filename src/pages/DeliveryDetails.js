@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import UserNavbar from '../components/UserNavbar'
 
 
 const DeliveryDetails = (props) => {
@@ -45,9 +46,7 @@ const DeliveryDetails = (props) => {
         <>
             <section>
                 <br />
-                <div className="container">
-                    <Link to="/"><img className="logo" src="images/logo.png" alt="logo" /></Link>
-                </div>
+               <UserNavbar/>
                 <br /> <br /> <br />
                 <div className="pickup-container">
                     <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Delivery Details </h3>
