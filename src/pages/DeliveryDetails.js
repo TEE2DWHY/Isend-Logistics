@@ -34,7 +34,7 @@ const DeliveryDetails = (props) => {
             })
             console.log(res)
             if (res.status === 201){  
-                navigate('/download-pdf', {state: formData})
+                window.location = "/pickup-overview"
             }
         }catch(err){
             console.log(err)
