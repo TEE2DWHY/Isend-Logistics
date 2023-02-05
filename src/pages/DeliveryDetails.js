@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation} from 'react-router-dom'
 import axios from 'axios'
 import UserNavbar from '../components/UserNavbar'
 
@@ -13,7 +13,6 @@ const DeliveryDetails = (props) => {
     const [formData, setFormData] = useState({
          hub_location: data ? data.hub_location:"",senders_address: data ? data.senders_address:"", senders_phonenumber: data ? data.senders_phonenumber:"", receivers_name: "", receivers_address: "", category: ""
     })
-    const navigate = useNavigate();
     const handleChange = (e) =>{
         setFormData((prevFormData)=>{
             return{

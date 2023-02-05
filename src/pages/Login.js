@@ -21,8 +21,10 @@ const Login = () => {
         document.getElementById("spinner").style.display = "block"
         document.getElementById("login").style.display = "none"
         try{
-            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/login", formData)
-            localStorage.setItem("token", res.data.token)
+            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/login", formData,{
+                headers:{Authorization: `Bearer ${localStorage.token}`}
+            })
+            localStorage.setItem("token", res.data.token);
             localStorage.setItem("isLoggedIn", true);
             console.log(res.status);
             if (res.status === 200){
@@ -32,9 +34,10 @@ const Login = () => {
         //Handling Login Error
         catch (err){
             if(err){
-                document.getElementById("login-err").style.display = "block"
-                document.getElementById("login").style.display = "block"
-                document.getElementById("spinner").style.display = "none"
+                // document.getElementById("login-err").style.display = "block"
+                // document.getElementById("login").style.display = "block"
+                // document.getElementById("spinner").style.display = "none"
+                console.log(err)
             }
          
         }

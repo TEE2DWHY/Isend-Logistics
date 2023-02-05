@@ -40,7 +40,7 @@ import SuccessCar from "./pages/Car/Success";
 import TypeCar from "./pages/Car/Type";
 
 function App() {
-  const loggedIn = localStorage.getItem("isLoggedIn")
+  const loggedIn = window.localStorage.getItem("isLoggedIn")
   console.log('loggedIn:', loggedIn)
   return (
     <BrowserRouter>

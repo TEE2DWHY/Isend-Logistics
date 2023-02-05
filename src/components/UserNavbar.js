@@ -7,18 +7,17 @@ const UserNavbar = () => {
         e.preventDefault()
         try{
             const res = await axios.get("https://isend-api-v1.herokuapp.com/api/v1/users/logout",{
-                headers:{Authorization : `Bearer ${localStorage.token}`}
-            })
-            // console.log(res.data)
-            alert(res.data.message)
-            localStorage.removeItem("token");
-            localStorage.removeItem("isLoggedIn");
+                headers:{Authorization:`Bearer ${localStorage.token}`}
+            });
+            console.log(res.data)
+            window.localStorage.removeItem("token");
+            window.localStorage.removeItem("isLoggedIn");
             window.location = "/"
         } 
         catch(err){
-        if (err){
-            alert(err)
-        }
+            if (err){
+            console.log(err)
+            }
         }
     }
   return (
