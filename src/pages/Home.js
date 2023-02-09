@@ -15,7 +15,7 @@ function Home() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h1 className="hero-section-h1"><span className="cheap">Affordable </span>& Trusted delivery service</h1>
+                            <h1 className="hero-section-h1"><span className="">Affordable </span>& Trusted delivery service</h1>
                             <p className="hero-paragraph">Your sure plug for swift and affordable deliveries. Sign up for an efficient and hassle-free experience.</p>
                             <Link to="/auth/login"><button className="cta">Book a delivery</button></Link>
                         </div>
@@ -31,7 +31,7 @@ function Home() {
                 <div className="container">
                 <div className="row">
                     <div className="col-lg-6" style={{display:"block", margin:"auto 0"}}>
-                    <h2><b>What We Offer</b></h2>
+                    <h2 className="wwo-header"><b>What We Offer</b></h2>
                     <p>Get your orders dispatched and delivered within 24 hours. </p>
                     <br /> <br />
                     </div>
@@ -57,9 +57,9 @@ function Home() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <h3 style={{fontWeight:"bold"}}>Become a Partner</h3>
+                            <h3 className="b-p-header">Become a Partner</h3>
                             <br />
-                            <p style={{letterSpacing:"0.05rem"}}>Own a car? A motorcycle? A truck? Are you looking to multiply your source of income? With just 5 steps, begin your journey to financial fulfillment.</p>
+                            <p style={{letterSpacing:"0.05rem"}}>Are you looking to multiply your source of income? With just 5 steps, begin your journey to financial fulfillment.</p>
                             <button className="partner">Partner with us </button>
                         </div>
                         <div className="col-lg-6">
@@ -72,9 +72,12 @@ function Home() {
             {/* what-customers-say */}
             <section id="what-customers-say">
                 <div className="container">
-                    <h4 className="what-customers-say">What our Customers say</h4>
+                    <h4 className="what-customers-say">What Our Customers Say</h4>
+                    <p className="what-customers-say-p2" style={{opacity:"0.6"}}>See what our customers, riders, and vendors have to say about us.</p>
+                            <br/>
                     <p className="what-customers-say-p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam tempus ipsum, feugiat urna risus cursus porta dui. Ultrices quis adipiscing pharetra venenatis.
                         In egestas sapien ac mollis adipiscing in auctor.</p>
+                        <br/>
                     <p>Seyi Makinde, <span style={{ opacity: "0.6" }}>Customer</span></p>
                     <br />
                     <img src="images/Frame.png" alt="" />
@@ -84,7 +87,7 @@ function Home() {
             {/* FAQ */}
             <section id="faq">
                 <div className="container">
-                    <h3>Frequently Asked Questions</h3>
+                    <h3 className="FAQ-h1">Frequently Asked Questions</h3>
                     <br />
                     <div className="accordion" id="accordionPanelsStayOpenExample">
                         <div className="accordion-item">

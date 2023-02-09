@@ -107,7 +107,7 @@ const SignUp = () => {
 
                         <button className="login-btn" id="signup"><span id="sign-up">Sign up</span> <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Already have an account? <Link to="/auth/login"><b>Sign in </b></Link></p>
-                        {/* <p className='signup-confirmation' id="signup-confirmation">An  email verification has been sent to {formData.email}</p> */}
+                        <p className='signup-confirmation' id="signup-confirmation">An  email verification has been sent to {formData.email}</p>
                         {/* {error.data.message} */}
                     </form>
                     <br />

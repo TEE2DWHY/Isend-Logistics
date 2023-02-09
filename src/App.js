@@ -51,19 +51,19 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/auth" element={<Auth/>}/>
+          <Route path="/auth" element={loggedIn ? <Auth/> : <Home/> }/>
           <Route path="/auth/login" element={loggedIn ? <PickUp/> : <Login/>}/>
           <Route path="/auth/sign-up" element={<SignUp />} />
           <Route path="/terms-of-use" element={<Terms />} />
-          <Route path="/pick-up" element={<PickUp />} />
+          <Route path="/pick-up" element={loggedIn ? <PickUp /> : <Home/>} />
           <Route path="/our-centers" element={<OurCenters />} />
           <Route path="/countdown" element={<Countdown />} />
           <Route path="/experience" element={<Experience />} />
-          <Route path="/delivery-details" element={<DeliveryDetails />} />
+          <Route path="/delivery-details" element={loggedIn ? <DeliveryDetails /> : <Home/>} />
           <Route path="/guidelines" element={<Guidelines />} />
           <Route path="/track-order" element={<Track />} />
           <Route path="/order-overview" element={<TrackOverview />} />
-          <Route path="/pickup-overview" element={<PickupOverview />} />
+          <Route path="/pickup-overview" element={loggedIn ? <PickupOverview /> : <Home/>} />
           <Route path="/forgot-password" element={<ForgotPassword/>}/>
           <Route path="/legediz/login" element={<LoginLegediz />} />
           <Route path="/legediz/sign-up" element={<SignUpLegediz />} />

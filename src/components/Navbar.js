@@ -14,13 +14,13 @@ const Navbar = () => {
                             <ul className="navbar-nav">
                                 <div className="nav-center">
                                     <li className="nav-item">
-                                        <a className="nav-link" href="/#"><b>Home</b></a>
+                                        <a className="nav-link home" href="/#"><b>Home</b></a>
                                     </li>
                                     <li className="nav-item">
-                                        <Link to="/track-order" className="nav-link package"><b>Track Package</b></Link>
+                                        <Link to="/track-order" className="nav-link package"><b>Track your Package</b></Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link to="/our-centers" className="nav-link"><b>Our centers</b></Link>
+                                        <Link to="/our-centers" className="nav-link centers" style={{letterSpacing:"0.02em"}}><b>Company</b></Link>
                                     </li>
                                 </div>
                                 <li className="nav-item">

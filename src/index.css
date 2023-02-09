@@ -46,17 +46,20 @@ li {
   width: 110px;
 }
 
-.nav-link {
-  /* display: inline; */
+.nav-link.home {
+  margin-right:50px
+}
+
+.nav-link.centers {
+  margin-left:50px
 }
 
 .nav-center {
   justify-content: space-between;
-  margin-right: 100px;
+  margin-right: 130px;
   margin-top: 20px;
   display: flex;
   align-items: center;
-  /* font-style: 50px; */
 }
 
 .package:hover {
@@ -171,6 +174,11 @@ li {
   background-color: #FBFBFB;
 }
 
+.wwo-header{
+  font-size: 60px;
+}
+
+
 .offers-container:hover {
   animation: pulse;
   animation-duration: 3s;
@@ -201,9 +209,8 @@ li {
 }
 
 .what-customers-say {
-  font-size: 30px;
+  font-size: 60px;
   font-weight: bold;
-  /* padding: 0 5px; */
 }
 
 .what-customers-say-p1 {
@@ -217,11 +224,18 @@ li {
   letter-spacing: 0.02em;
   line-height: 29px;
   font-weight: 400;
+  width: 70%;
+  display: block;
+  margin: auto;
 }
 
 /* Partner */
 #partner {
   margin: 2% 0;
+}
+
+.b-p-header{
+  font-size: 50px;
 }
 
 .partner {
@@ -250,12 +264,25 @@ li {
   margin: 3% 0;
 }
 
+.FAQ-h1{
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.accordion{
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
 .accordion-body {
   text-align: left;
 }
 
-.accordion-button {
+.accordion-button:not(.collapsed) {
   font-weight: bold;
+  background-color: #fff;
+  color: #000;
 }
 
 
@@ -291,7 +318,7 @@ li {
   width: 80px;
   height: 80px;
   margin-left: 65%;
-  margin-top: -28%;
+  margin-top: -27%;
   position: relative;
   animation: pulse;
   animation-duration: 5s;
@@ -308,7 +335,7 @@ li {
   width: 80px;
   height: 80px;
   margin-left: 65%;
-  margin-top: -10%;
+  margin-top: -7.5%;
   position: relative;
 }
 
@@ -904,6 +931,22 @@ h2.launch {
     margin: 5px 40px;
   }
 
+  .nav-link.home {
+    margin-right: 0
+  }
+  
+  .nav-link.centers{
+    margin-left: 0
+  }
+
+  .wwo-header{
+    font-size: 30px;
+  }
+
+  .b-p-header{
+    font-size: 30px;
+  }
+
   .vector {
     display: none;
   }
@@ -1005,7 +1048,8 @@ h2.launch {
   }
 
   .what-customers-say {
-    font-style: 25px;
+    font-size: 30px;
+    /* font-weight: bold; */
   }
   .fp-container{
     width: 95%;
