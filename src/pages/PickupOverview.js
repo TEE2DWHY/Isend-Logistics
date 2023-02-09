@@ -34,6 +34,12 @@ console.log(err)
 }
 }
 console.log(formData)
+
+const copyPaymentId = () =>{
+    var paymentId = document.getElementById("payment-id").innerHTML
+    navigator.clipboard.writeText(paymentId)
+    alert(paymentId + " copied successfully.");
+}
  
     return (
         <>
@@ -179,7 +185,27 @@ console.log(formData)
                                 <p>N3,000.00</p>
                             </div>
                             <br />
-                            <button className="login-btn" onClick={handleSubmit}>Make Payment</button>
+                            <button className="login-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Make Payment</button>
+                            {/* Modal  */}
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title" id="exampleModalLabel">Make payment in the next : 05:00:00mins</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <p>Kindly make payment to  the account below</p>
+                                    <p className="payment-note">Ensure you add the below code to your bank narration.</p>
+                                    <p style={{fontSize:"12px", fontWeight:"bold", display:"inline"}} id="payment-id">SEND12467</p> <span><i class="fa-regular fa-copy" style={{fontSize:"15px", cursor:"pointer"}} onClick={copyPaymentId}></i></span>
+                                    </div>
+                                    <div class="modal-footer" style={{display:"flex", justifyContent:"space-between"}}>
+                                        <button type="button" className="having-issues" data-bs-dismiss="modal">Having issues</button>
+                                        <button type="button" className="made-payment">I have made payment</button>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
                             {/* <Link to="/order-overview"><button className="login-btn" >Make Payment</button></Link> */}
                         </div>
                     </div>

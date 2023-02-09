@@ -154,6 +154,14 @@ li {
   margin-top: 4%;
 }
 
+.cta:hover{
+  background-color: #000;
+  color: #fff;
+  transition: all 2s ease; 
+  animation: pulse;
+  animation-duration: 3s;
+}
+
 .isend-img1 {
   width: 100%;
   animation: fadeIn;
@@ -856,6 +864,45 @@ h2.launch {
   border-radius: 6px;
   padding: 10px 20px;
   border: 2px solid #EBE9E5
+}
+
+.modal-dialog {
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-title{
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 45px;
+}
+
+.modal-header{
+  border-bottom: none;
+}
+
+button.having-issues{
+  background-color: #F1F1F1;
+  border: none;
+  border-radius: 13.53px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+button.made-payment{
+  background-color:#F2C040;
+  border: none;
+  border-radius: 13.53px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.payment-note{
+  color: #FC2020;
+  font-style: italic;
+  margin-top: 20px;
+  line-height: 18.9px;
+  font-size: 15px;
 }
 
 /* Track-Overview */

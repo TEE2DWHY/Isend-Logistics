@@ -3,6 +3,8 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import UserNavbar from "../components/UserNavbar"
 const PickUp = () => {
+    const loggedIn = window.localStorage.getItem("isLoggedIn")
+
     const [data, setData] = useState({
         hub_location:"Ikeja", senders_phonenumber: "", senders_address: "",
     })
@@ -22,6 +24,8 @@ const PickUp = () => {
                 <br />
               <UserNavbar/>
                 <br /> <br /> <br />
+                {/* <h1 id="already-login" style={{textAlign:"center"}}>{loggedIn ? "Welcome Back" : ""}</h1> */}
+                <br/>
                 <div className="pickup-container">
                     <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Pickup Details</h3>
                     <br />
@@ -34,7 +38,8 @@ const PickUp = () => {
                         required
                         onChange={handleChange}
                         >
-                        <option disabled selected>Ikeja</option>
+                        <option disabled selected>Hub</option>
+                        <option>Ikeja</option>
                         <option>Ikorodu</option>
                         </select>
                         <br />
