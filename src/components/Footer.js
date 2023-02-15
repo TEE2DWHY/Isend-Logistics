@@ -21,16 +21,16 @@ const Footer = () => {
                 <div>
                   <ul>
                     <li className="footer-header">Legal</li>
-                    <li>Privacy Policy</li>
-                    <li>Terms of Use</li>
+                    <a href="/privacy-policy"><li>Privacy Policy</li></a>
+                    <a href="/terms-of-use"><li>Terms of Use</li></a>
                   </ul>
                 </div>
                 {/* Social Media */}
                 <div>
                   <ul>
                     <li className="footer-header">Socials</li>
-                    <li>support@isendapp.com</li>
-                    <li>+234 703 482 3211</li>
+                    <a href="mailto:support@isendapp.com"><li>support@isendapp.com</li></a>
+                    <a href="tel:07034823211"><li>+234 703 482 3211</li></a>
                   </ul>
                 </div>
             </div>
