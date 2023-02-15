@@ -2,13 +2,19 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import UserNavbar from "../components/UserNavbar"
-const PickUp = () => {
-    const loggedIn = window.localStorage.getItem("isLoggedIn")
+// import PlacesAutocomplete,{
+//     geocodeByAddress,
+//     getLatLng
+//   } from 'react-places-autocomplete';
 
+const PickUp = () => {
     const [data, setData] = useState({
         hub_location:"Ikeja", senders_phonenumber: "", senders_address: "",
     })
 
+    // const [address, setAddress] = useState("");
+
+    // const handleSelect = async value =>{};
     const handleChange = (e) => {
         setData(prevFormData => {
             return {
@@ -20,7 +26,7 @@ const PickUp = () => {
     
     return (
         <>
-            <section>
+       <section>
                 <br />
               <UserNavbar/>
                 <br /> <br /> <br />
@@ -48,10 +54,12 @@ const PickUp = () => {
                         <input
                             type="text"
                             name="senders_address"
+                            placeholder=""
+                            onChange={handleChange }
                             required
-                            onChange={handleChange}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
-                        />
+                           />
+                           <br/>
                         <label style={{ display: "block", marginTop: "20px" }}>Sender's PhoneNumber</label>
                         <br />
                         <input
@@ -69,7 +77,6 @@ const PickUp = () => {
                     </form>
                 </div>
             </section>
-
         </>
     )
 }

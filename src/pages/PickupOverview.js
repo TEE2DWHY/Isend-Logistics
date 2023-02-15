@@ -58,7 +58,7 @@ const copyPaymentId = () =>{
                         <div className="col-lg-6">
                             <h4 style={{fontWeight:"bold", justifyContent:"space-between", display:"flex", alignItems:"center"}}>Pickup Details <i class="fa-solid fa-pen-to-square" style={{fontSize:"20px", marginRight:"20px"}}></i></h4>
                             <br />
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <label style={{ display: "block" }}>Sender's name</label>
                                 <br />
                                 <input

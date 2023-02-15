@@ -7,11 +7,8 @@ import UserNavbar from '../components/UserNavbar'
 const DeliveryDetails = (props) => {
     const location = useLocation();
     const data = location.state?.data;
-    // console.log(props, "props")
-    // console.log(location, "useLocation Hook")
-
     const [formData, setFormData] = useState({
-         hub_location: data ? data.hub_location:"",senders_address: data ? data.senders_address:"", senders_phonenumber: data ? data.senders_phonenumber:"", receivers_name: "", receivers_address: "", category: ""
+         hub_location: data ? data.hub_location:"",senders_address: data ? data.senders_address:"", senders_phonenumber: data ? data.senders_phonenumber:"", receivers_name: "", recievers_address:"", receivers_phonenumber: "" , category: ""
     })
     const handleChange = (e) =>{
         setFormData((prevFormData)=>{
@@ -38,9 +35,8 @@ const DeliveryDetails = (props) => {
         }catch(err){
             console.log(err)
         }
-    
+          console.log(formData)
     }
-    // console.log(formData)
     return (
         <>
             <section>
@@ -56,6 +52,15 @@ const DeliveryDetails = (props) => {
                         <input
                             type="text"
                             name="receivers_name"
+                            onChange={handleChange}
+                            required
+                            style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
+                        />
+                         <label style={{ display: "block", marginTop: "20px" }}>Receiver's PhoneNumber</label>
+                        <br />
+                        <input
+                            type="text"
+                            name="receivers_phonenumber"
                             onChange={handleChange}
                             required
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
