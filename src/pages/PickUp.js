@@ -23,6 +23,8 @@ const PickUp = () => {
             }
         })
     }
+
+    const name = localStorage.getItem("user")
     
     return (
         <>
@@ -30,7 +32,7 @@ const PickUp = () => {
                 <br />
               <UserNavbar/>
                 <br /> <br /> <br />
-                {/* <h1 id="already-login" style={{textAlign:"center"}}>{loggedIn ? "Welcome Back" : ""}</h1> */}
+                <h4 style={{textAlign:"center"}}>Fill your Orders <span className="username" style={{color:"#F2C040"}}>{name}! <i class="fa-solid fa-truck-fast"></i></span> </h4>
                 <br/>
                 <div className="pickup-container">
                     <h3 style={{ fontWeight: "bold", textAlign: "center" }}>Pickup Details</h3>

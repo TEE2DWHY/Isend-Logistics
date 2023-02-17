@@ -2,13 +2,15 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import offers from "../Data"
 import { Link } from "react-router-dom"
+import UserNavbar from "../components/UserNavbar"
 
 function Home() {
-
+        const loggedIn = localStorage.getItem("isLoggedIn")
+        // const name = localStorage.getItem("user")
     return (
         <>
             {/* Navbar Section */}
-            <Navbar />
+            <div>{loggedIn ? <UserNavbar/> :<Navbar />}</div>
             {/* ---------------------------------------------------------------------------------------------------- */}
             {/* Hero Section */}
             <section id="hero-section">
@@ -17,7 +19,7 @@ function Home() {
                         <div className="col-lg-6">
                             <h1 className="hero-section-h1"><span className="">Affordable </span>& Trusted delivery service</h1>
                             <p className="hero-paragraph">Your sure plug for swift and affordable deliveries. Sign up for an efficient and hassle-free experience.</p>
-                            <Link to="/auth/login"><button className="cta">Book a delivery</button></Link>
+                            <Link to="/continue"><button className="cta">Book a delivery</button></Link>
                         </div>
                         <div className="col-lg-6">
                             <img className="isend-img1" src="images/isend-img1.png" alt="" />

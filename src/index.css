@@ -7,6 +7,11 @@ body {
   /* overflow: hidden; */
 }
 
+.username{
+  animation: fadeIn;
+  animation-duration: 4s;
+}
+
 a {
   text-decoration: none;
   color: grey;
@@ -483,6 +488,10 @@ u{
 }
 
 /* Login */
+.login-loading{
+   /* display: flex; */
+}
+
 .login-err{
   font-size: 12px;
   color: red;
@@ -705,6 +714,23 @@ h2.launch {
 
 #spinner {
   display: none;
+  margin: auto;
+  margin-left: 5px;
+  width: 0.6rem;
+}
+
+#spinner1 {
+  display: none;
+  margin: auto;
+  margin-left: 5px;
+  width: 0.6rem;
+}
+
+#spinner2 {
+  display: none;
+  margin: auto;
+  margin-left: 5px;
+  width: 0.6rem;
 }
 
 /* Experience */

@@ -85,7 +85,6 @@ const SignUp = () => {
                             placeholder="+2348100000000"
                             onChange={handleChange}
                             required
-                            // pattern="^(?:\+|00)(1|7|2[07]|3[0123469]|4[013456789]|5[12345678]|6[0123456]|8[1246]|9[0123458]|(?:2[12345689]|3[578]|42|5[09]|6[789]|8[035789]|9[679])\d)*$"
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
                         {/* <span className="user-err">Phone Numbers should start with +234 and should be a minimum of 13 characters</span> */}
@@ -111,8 +110,8 @@ const SignUp = () => {
                         {/* {error.data.message} */}
                     </form>
                     <br />
-                    <p>Powered by <img src="/images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p>
-                    <p>You agree to iSend’s <Link to="/privacy-policy"><span style={{ color: "#F2C040", lineHeight: "1.2" }}>Terms of Use & Privacy Policy</span></Link>. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</p>
+                    {/* <p>Powered by <img src="/images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p> */}
+                    <p>You agree to iSend’s <span style={{ color: "#F2C040", lineHeight: "1.2" }}><Link to="/terms-of-use">Terms of Use </Link> & <Link to="/privacy-policy">Privacy Policy</Link></span>. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</p>
                 </div>
             </section>
         </>

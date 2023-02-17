@@ -18,7 +18,9 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        document.getElementById("spinner").style.display = "block"
+        document.getElementById("spinner").style.display = "inline-block"
+        document.getElementById("spinner1").style.display = "inline-block"
+        document.getElementById("spinner2").style.display = "inline-block"
         document.getElementById("login").style.display = "none"
         try{
             const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/login", formData,{
@@ -26,6 +28,8 @@ const Login = () => {
             })
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("isLoggedIn", true);
+            localStorage.setItem("user", res.data.data.user.full_name);
+            localStorage.setItem("userEmail", res.data.data.user.email)
             console.log(res.status);
             if (res.status === 200){
                 window.location = "/pick-up"
@@ -37,6 +41,8 @@ const Login = () => {
                 document.getElementById("login-err").style.display = "block"
                 document.getElementById("login").style.display = "block"
                 document.getElementById("spinner").style.display = "none"
+                document.getElementById("spinner1").style.display = "none"
+                document.getElementById("spinner2").style.display = "none"
                 console.log(err)
             }
          
@@ -69,6 +75,7 @@ const Login = () => {
                             type="email"
                             name="email"
                             placeholder="Email"
+                            required
                             onChange={handleChange}
                             onClick= {loginError}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
@@ -78,6 +85,7 @@ const Login = () => {
                         <input
                             type="password"
                             name="password"
+                            required
                             placeholder="Enter password"
                             onChange={handleChange}
                             onClick= {loginError}
@@ -87,12 +95,16 @@ const Login = () => {
                         <Link to="/forgot-password"><p style={{ textAlign: "center" }}>Forgot password?</p></Link>
                         <br />
                         <p className="login-err" id="login-err">User Authorization Failed. Pls ensure user details are correct🙄.</p>
-                        <button className="login-btn" ><span id="login">Login</span> <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
+                        <button className="login-btn" ><span id="login">Login </span> 
+                            <span class="spinner-grow spinner-grow-sm" role="status" id="spinner"></span> 
+                            <span class="spinner-grow spinner-grow-sm" role="status" id="spinner1"></span> 
+                            <span class="spinner-grow spinner-grow-sm" role="status" id="spinner2"></span>
+                        </button>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Don’t have an account? <b><Link to="/auth/sign-up">Sign up</Link> </b></p>
                     </form>
                     <br />
-                    <p>Powered by <img src="/images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p>
-                    <p>You agree to iSend’s <Link to="/privacy-policy"><span style={{ color: "#F2C040", lineHeight: "1.2" }}>Terms of Use & Privacy Policy</span></Link>. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</p>
+                    {/* <p>Powered by <img src="/images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p> */}
+                    <p>You agree to iSend’s <span style={{ color: "#F2C040", lineHeight: "1.2" }}><Link to="/terms-of-use">Terms of Use </Link> & <Link to="/privacy-policy">Privacy Policy</Link></span>. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</p>
                 </div>
             </section>
 

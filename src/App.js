@@ -55,7 +55,7 @@ function App() {
           <Route path="/auth/login" element={loggedIn ? <PickUp/> : <Login/>}/>
           <Route path="/auth/sign-up" element={<SignUp />} />
           <Route path="/terms-of-use" element={<Terms />} />
-          <Route path="/pick-up" element={loggedIn ? <PickUp /> : <Home/>} />
+          <Route path="/pick-up" element={loggedIn ? <PickUp /> : <Login/>} />
           <Route path="/our-centers" element={<OurCenters />} />
           <Route path="/countdown" element={<Countdown />} />
           <Route path="/experience" element={<Experience />} />

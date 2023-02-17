@@ -10,8 +10,7 @@ const UserNavbar = () => {
                 headers:{Authorization:`Bearer ${localStorage.token}`}
             });
             console.log(res.data)
-            window.localStorage.removeItem("token");
-            window.localStorage.removeItem("isLoggedIn");
+            localStorage.clear();
             window.location = "/"
         } 
         catch(err){
