@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import axios from "axios"
 import {loginUrl} from "../config/urls"
 import setToken from "../config/session"
-import {userName, isLoggedIn} from "../config/session"
+import {userName, isLoggedIn, email} from "../config/session"
 const Login = () => {
 
     const [formData, setFormData] = useState({
@@ -27,6 +27,7 @@ const Login = () => {
             const res = await axios.post(loginUrl, formData)
             setToken("token", res.data.token);
             userName("user", res.data.data.user.full_name);
+            email("email", res.data.data.user.email);
             isLoggedIn("loggedIn", true);
             // console.log(res.status);
             if (res.status === 200){
@@ -82,7 +83,7 @@ const Login = () => {
                             type="password"
                             name="password"
                             required
-                            placeholder="Enter password"
+                            placeholder="........"
                             onChange={handleChange}
                             onClick= {loginError}
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}

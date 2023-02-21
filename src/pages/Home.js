@@ -1,23 +1,31 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import offers from "../Data"
+import offers from "../data/Offers"
 import { Link } from "react-router-dom"
 import UserNavbar from "../components/UserNavbar"
+import TextChange from "../libs/ReactSpring"
+import { useEffect } from "react"
+import Slide from "../libs/Slider"
 
 function Home() {
-        const loggedIn = sessionStorage.getItem("loggedIn")
+    // Get state of current user
+        const loggedIn = sessionStorage.getItem("loggedIn");
+        //Slider Animation for Homepage
+        useEffect(() =>{
+            Slide()
+        })
     return (
         <>
             {/* Navbar Section */}
             <div>{loggedIn ? <UserNavbar/> :<Navbar />}</div>
             {/* ---------------------------------------------------------------------------------------------------- */}
             {/* Hero Section */}
-            <section id="hero-section">
+            <section id="hero-section" data-aos="zoom-in">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
                             <h1 className="hero-section-h1"><span className="">Affordable </span>& Trusted delivery service</h1>
-                            <p className="hero-paragraph">Your sure plug for swift and affordable deliveries. Sign up for an efficient and hassle-free experience.</p>
+                            <p className="hero-paragraph">Your sure plug for swift and affordable deliveries. Sign up for an efficient and hassle-free <TextChange/>.</p>
                             <Link to="/continue"><button className="cta">Book a delivery</button></Link>
                         </div>
                         <div className="col-lg-6">
@@ -28,7 +36,7 @@ function Home() {
             </section>
             {/* --------------------------------------------------------------------------------------------------------------------- */}
             {/* What We Offer */}
-            <section id="what-we-offer">
+            <section id="what-we-offer" data-aos="fade-in">
                 <div className="container">
                 <div className="row">
                     <div className="col-lg-6" style={{display:"block", margin:"auto 0"}}>
@@ -39,12 +47,14 @@ function Home() {
                     <div className="col-lg-6">
                     <div className="row">
                         {offers.map((items) => (
-                            <div className="col-lg-6 offers-container">
-                                <div>
-                                    <img className="offers-img" src={items.image} alt="" />
+                            <div className="col-lg-6">
+                                <div className="offers-container"> 
+                                 <div>
+                                     <img className="offers-img" src={items.image} alt="" />
+                                    </div>
+                                    <h5><b>{items.text}</b></h5>
+                                    <p>{items.paragraph}</p>
                                 </div>
-                                <h5><b>{items.text}</b></h5>
-                                <p>{items.paragraph}</p>
                             </div>
                         ))}
                     </div>  
@@ -54,7 +64,7 @@ function Home() {
             </section>
             {/* --------------------------------------------------------------------------------------------- */}
             {/* Partner-Section */}
-            <section id="partner">
+            <section id="partner" data-aos="fade-in">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
@@ -71,7 +81,7 @@ function Home() {
             </section>
             {/* -------------------------------------------------------------------------------------------------------------- */}
             {/* what-customers-say */}
-            <section id="what-customers-say">
+            <section id="what-customers-say" data-aos="fade-in">
                 <div className="container">
                     <h4 className="what-customers-say">What Our Customers Say</h4>
                     <p className="what-customers-say-p2" style={{opacity:"0.6"}}>See what our customers, riders, and vendors have to say about us.</p>
@@ -86,7 +96,7 @@ function Home() {
             </section>
             {/* ---------------------------------------------------------------------------------------------- */}
             {/* FAQ */}
-            <section id="faq">
+            <section id="faq" data-aos="fade-in">
                 <div className="container">
                     <h3 className="FAQ-h1">Frequently Asked Questions</h3>
                     <br />
@@ -130,7 +140,7 @@ function Home() {
                 </div>
             </section>
             {/* -------------------------------------------------------------------------------------------------- */}
-            <section id="join-team">
+            <section id="join-team" data-aos="fade-in">
                 <br /> <br />
                 <img className="ellipse1" src="images/Ellipse 298.png" alt="" /><h1 className="join-team-h1">Join Our Team </h1><img className="ellipse2" src="images/Ellipse 298.png" alt="" />
                 <p className="join-team-p1">Help us on our quest to make life better for our customers</p>

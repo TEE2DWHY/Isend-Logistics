@@ -4,8 +4,8 @@ import Footer from "../components/Footer";
 const Continue = () => {
 
     const user = sessionStorage.getItem("user");
-    const loggedIn = sessionStorage.getItem("isLoggedIn");
-    const userEmail = sessionStorage.getItem("userEmail");
+    const loggedIn = sessionStorage.getItem("loggedIn");
+    const userEmail = sessionStorage.getItem("email");
   return (
     <>
            <section style={{marginBottom:"15%"}}>
