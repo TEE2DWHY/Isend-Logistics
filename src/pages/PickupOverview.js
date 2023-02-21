@@ -22,7 +22,7 @@ const handleSubmit = async (e) =>{
     e.preventDefault();
 try{
     const res = await axios.get("https://isend-api-v1.herokuapp.com/api/v1/dispatch/",{
-        headers:{Authorization: `Bearer ${localStorage.token}`}
+        headers:{Authorization: `Bearer ${sessionStorage.token}`}
     });
     console.log(res)
     if (res.status === 200){

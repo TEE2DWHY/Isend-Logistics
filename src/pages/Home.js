@@ -5,8 +5,7 @@ import { Link } from "react-router-dom"
 import UserNavbar from "../components/UserNavbar"
 
 function Home() {
-        const loggedIn = localStorage.getItem("isLoggedIn")
-        // const name = localStorage.getItem("user")
+        const loggedIn = sessionStorage.getItem("loggedIn")
     return (
         <>
             {/* Navbar Section */}

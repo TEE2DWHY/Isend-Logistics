@@ -24,7 +24,7 @@ const PickUp = () => {
         })
     }
 
-    const name = localStorage.getItem("user")
+    const name = sessionStorage.getItem("user")
     
     return (
         <>

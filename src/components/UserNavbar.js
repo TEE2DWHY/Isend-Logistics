@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import { logOutUrl } from '../config/urls'
 
 const UserNavbar = () => {
     const Logout = async (e) =>{
         e.preventDefault()
         try{
-            const res = await axios.get("https://isend-api-v1.herokuapp.com/api/v1/users/logout",{
-                headers:{Authorization:`Bearer ${localStorage.token}`}
+            const res = await axios.get(logOutUrl,{
+                headers:{Authorization:`Bearer ${sessionStorage.token}`}
             });
             console.log(res.data)
-            localStorage.clear();
+            sessionStorage.clear();
             window.location = "/"
         } 
         catch(err){

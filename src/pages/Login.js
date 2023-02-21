@@ -1,8 +1,11 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import axios from "axios"
-
+import {loginUrl} from "../config/urls"
+import setToken from "../config/session"
+import {userName, isLoggedIn} from "../config/session"
 const Login = () => {
+
     const [formData, setFormData] = useState({
         email: "", password: ""
     })
@@ -18,19 +21,14 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        document.getElementById("spinner").style.display = "inline-block"
-        document.getElementById("spinner1").style.display = "inline-block"
-        document.getElementById("spinner2").style.display = "inline-block"
-        document.getElementById("login").style.display = "none"
+        document.querySelector(".spinner-border").classList.toggle("spinner")
+        document.querySelector(".login-btn").classList.toggle("btn-visibility")
         try{
-            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/login", formData,{
-                headers:{Authorization: `Bearer ${localStorage.token}`}
-            })
-            localStorage.setItem("token", res.data.token);
-            localStorage.setItem("isLoggedIn", true);
-            localStorage.setItem("user", res.data.data.user.full_name);
-            localStorage.setItem("userEmail", res.data.data.user.email)
-            console.log(res.status);
+            const res = await axios.post(loginUrl, formData)
+            setToken("token", res.data.token);
+            userName("user", res.data.data.user.full_name);
+            isLoggedIn("loggedIn", true);
+            // console.log(res.status);
             if (res.status === 200){
                 window.location = "/pick-up"
             }
@@ -39,10 +37,8 @@ const Login = () => {
         catch (err){
             if(err){
                 document.getElementById("login-err").style.display = "block"
-                document.getElementById("login").style.display = "block"
-                document.getElementById("spinner").style.display = "none"
-                document.getElementById("spinner1").style.display = "none"
-                document.getElementById("spinner2").style.display = "none"
+                document.querySelector(".login-btn").classList.toggle("btn-visibility")
+                document.querySelector(".spinner-border").classList.toggle("spinner")
                 console.log(err)
             }
          
@@ -95,11 +91,8 @@ const Login = () => {
                         <Link to="/forgot-password"><p style={{ textAlign: "center" }}>Forgot password?</p></Link>
                         <br />
                         <p className="login-err" id="login-err">User Authorization Failed. Pls ensure user details are correct🙄.</p>
-                        <button className="login-btn" ><span id="login">Login </span> 
-                            <span class="spinner-grow spinner-grow-sm" role="status" id="spinner"></span> 
-                            <span class="spinner-grow spinner-grow-sm" role="status" id="spinner1"></span> 
-                            <span class="spinner-grow spinner-grow-sm" role="status" id="spinner2"></span>
-                        </button>
+                        <button className="login-btn" >Login  </button>
+                        <div class="spinner-border text-warning" role="status" id="spinner"></div>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Don’t have an account? <b><Link to="/auth/sign-up">Sign up</Link> </b></p>
                     </form>
                     <br />

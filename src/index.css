@@ -542,6 +542,7 @@ u{
   margin: auto;
 }
 
+
 .phase-1 {
   /* height: 100vh; */
 }
@@ -712,13 +713,27 @@ h2.launch {
   /* font-weight: bold; */
 }
 
-
-#spinner1, #spinner2, #spinner {
+.login-spinner {
   display: none;
   margin: auto;
-  margin-left: 5px;
-  width: 1rem;
 }
+
+
+
+.btn-visibility{
+  display: none;
+}
+
+.spinner-border{
+  display: none;
+  margin: auto;
+}
+
+.spinner{
+  display: block;
+}
+
+
 
 /* Experience */
 .yellow-star {
