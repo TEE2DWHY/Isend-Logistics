@@ -23,19 +23,23 @@ const SignUp = () => {
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        document.getElementById("spinner").style.display = "block"
-        document.getElementById("sign-up").style.display = "none"
+        document.querySelector(".spinner-border").classList.toggle("spinner")
+        document.getElementById("signup").style.display = "none"
         try{
             const res = await axios.post(signUpUrl, formData)
             if (res.status === 200){
             document.getElementById("signup-confirmation").style.display = "block"
          }
         }catch (err){
-            alert(err.response.data.message)
-            // window.location.reload()
-            document.getElementById("spinner").style.display = "none"
-            document.getElementById("sign-up").style.display = "block"
+            document.querySelector(".signup-err").classList.add("err-visibility");
+            document.querySelector(".spinner-border").classList.toggle("spinner")
+            document.getElementById("signup").style.display = "block"
         }
+    }
+
+    // handleError
+    const handleError = () =>{
+        document.querySelector(".signup-err").classList.remove("err-visibility")
     }
     
     return (
@@ -48,24 +52,25 @@ const SignUp = () => {
                 <br /> <br /> <br />
                 <div className="login-container">
                     <Link to="/"><p><i class="fa-solid fa-arrow-left" style={{ fontSize: "14px", marginRight: "10px" }}></i> Home</p></Link>
-                    <h3 className="welcome-h1">Welcome Back!!</h3>
-                    <p>Let's get you back into your account</p>
+                    <h5>Get started on your journey with us.</h5>
                     <br />
                     <form onSubmit={handleSubmit}>
                         <label style={{ display: "block" }}>Full name</label>
                         <br />
                         <div>
                             <input
-                            type="text"
-                            name="full_name"
-                            placeholder="First name and Last name"
-                            onChange={handleChange}
-                            required
-                            pattern="^[A-Za-z\s]*$"
-                            style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
+                                type="text"
+                                name="full_name"
+                                placeholder="First name and Last name"
+                                onChange={handleChange}
+                                required
+                                pattern="^[A-Za-z\s]*$"
+                                className="sign-up"
+                                onClick={handleError}
                             />
-                            <span></span>
+                            <span className="input-err"> Full name should only contain alphabets</span>
                         </div>
+                        <div>
                         <label style={{ display: "block", marginTop: "20px" }}>Email</label>
                         <br />
                         <input
@@ -74,42 +79,47 @@ const SignUp = () => {
                             placeholder="hi@example.com"
                             onChange={handleChange}
                             required
-                            style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
+                            className="sign-up"
+                            onClick={handleError}
                         />
-                        <span className="user-err" id="user-err" style={{fontSize:"14px"}}>{formData.email} is already used. Pls try another</span>
+                            <span className="input-err">Enter a valid email address e.g johndoe@gmail.com</span>
+                        </div>
                         <label style={{ display: "block", marginTop: "20px" }}>Phone Number</label>
                         <br />
                         <div>
                         <input
-                            className="input"
+                            className="sign-up"
                             type="text"
                             name="phone_number"
-                            placeholder="+2348100000000"
+                            placeholder="08100000000"
                             onChange={handleChange}
                             required
-                            style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
+                            pattern="^[0-9]*$"
+                            onClick={handleError}
                         />
-                        {/* <span className="user-err">Phone Numbers should start with +234 and should be a minimum of 13 characters</span> */}
+                        <span className="input-err">Can only contain numbers between 0-9</span>
                         </div>
-                        <label style={{ display: "block", marginTop: "20px" }}>Password</label>
+                        <div>
+                            <label style={{ display: "block", marginTop: "20px" }}>Password</label>
+                            <br />
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="password"
+                                onChange={handleChange}
+                                required
+                                pattern=".{8,}"
+                                className="sign-up"
+                                onClick={handleError}
+                            />
+                            <span className="input-err">Password should be a minimum of 8 digits</span>
+                        </div>
                         <br />
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="password"
-                            onChange={handleChange}
-                            required
-                            pattern=".{8,}"
-                            style={{ display:"block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
-                        />
-                              {/* <i className="fa-solid fa-eye password-icons" id="password-reveal"></i> */}
-
-                        <br />
-
-                        <button className="login-btn" id="signup"><span id="sign-up">Sign up</span> <i style={{ fontSize: "19px", paddingLeft: "10px" }} class="fas fa-spinner fa-spin" id="spinner"></i></button>
+                        <span className="signup-err" id="signup-err">An error occurred...</span>
+                        <button className="login-btn" id="signup">Sign up</button>
+                        <div class="spinner-border text-warning" role="status"></div>
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Already have an account? <Link to="/auth/login"><b>Sign in </b></Link></p>
                         <p className='signup-confirmation' id="signup-confirmation">An  email verification has been sent to {formData.email}</p>
-                        {/* {error.data.message} */}
                     </form>
                     <br />
                     <p>You agree to iSend’s <span style={{ color: "#F2C040", lineHeight: "1.2" }}><Link to="/terms-of-use">Terms of Use </Link> & <Link to="/privacy-policy">Privacy Policy</Link></span>. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</p>

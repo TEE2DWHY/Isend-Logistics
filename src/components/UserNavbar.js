@@ -11,7 +11,6 @@ const UserNavbar = () => {
             const res = await axios.get(logOutUrl,{
                 headers:{Authorization:`Bearer ${sessionStorage.token}`}
             });
-            console.log(res.data)
             sessionStorage.clear();
             window.location = "/"
         } 

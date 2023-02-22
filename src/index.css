@@ -113,8 +113,41 @@ li {
   margin-top: 20px;
   background-color: #000;
   color: #fff;
-  /* padding: 5px; */
   font-size: 12px;
+  display: none;
+}
+
+.sign-up{
+  display: block; 
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+  padding: 10px 20px;
+}
+
+.input-err{
+  color: red;
+  font-size: 14px;
+  display: none;
+  margin-top: 20px;
+}
+
+.sign-up:invalid:focus ~ .input-err{
+  display: block;
+}
+.signup-err{
+  color: red;
+  font-size: 14px;
+  display: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.err-visibility{
+  display: block;
+}
+
+.sign-up:focus ~ .err-visibility{
   display: none;
 }
 
