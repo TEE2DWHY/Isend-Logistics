@@ -43,7 +43,7 @@ function Home() {
             </section>
             {/* --------------------------------------------------------------------------------------------------------------------- */}
             {/* What We Offer */}
-            <section id="what-we-offer" data-aos="fade-in">
+            <section id="what-we-offer" data-aos="slide-up">
                 <div className="container">
                 <div className="row">
                     <div className="col-lg-6" style={{display:"block", margin:"auto 0"}}>
@@ -71,7 +71,7 @@ function Home() {
             </section>
             {/* --------------------------------------------------------------------------------------------- */}
             {/* Partner-Section */}
-            <section id="partner" data-aos="fade-in">
+            <section id="partner" data-aos="slide-up">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
@@ -88,7 +88,7 @@ function Home() {
             </section>
             {/* -------------------------------------------------------------------------------------------------------------- */}
             {/* what-customers-say */}
-            <section id="what-customers-say" data-aos="fade-in">
+            <section id="what-customers-say" data-aos="slide-up">
                 <div className="container">
                     <h4 className="what-customers-say">What Our Customers Say</h4>
                     <p className="what-customers-say-p2" style={{opacity:"0.6"}}>See what our customers, riders, and vendors have to say about us.</p>
@@ -103,7 +103,7 @@ function Home() {
             </section>
             {/* ---------------------------------------------------------------------------------------------- */}
             {/* FAQ */}
-            <section id="faq" data-aos="fade-in">
+            <section id="faq" data-aos="slide-up">
                 <div className="container">
                     <h3 className="FAQ-h1">Frequently Asked Questions</h3>
                     <br />
@@ -147,7 +147,7 @@ function Home() {
                 </div>
             </section>
             {/* -------------------------------------------------------------------------------------------------- */}
-            <section id="join-team" data-aos="fade-in">
+            <section id="join-team" data-aos="slide-up">
                 <br /> <br />
                 <img className="ellipse1" src={ellipse} alt="ellipse" /><h1 className="join-team-h1">Join Our Team </h1><img className="ellipse2" src={ellipse} alt="" />
                 <p className="join-team-p1">Help us on our quest to make life better for our customers</p>
