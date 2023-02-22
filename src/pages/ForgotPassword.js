@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import logo from "../assets/images/logo.png"
+
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("")
@@ -35,7 +37,7 @@ const ForgotPassword = () => {
          <section>
                 <br />
                 <div className="container">
-                    <Link to="/"><img className="logo" src="images/logo.png" alt="logo" /></Link>
+                    <Link to="/"><img className="logo" src={logo} alt="logo" /></Link>
                 </div>
                 <br /> <br />
                 <div className="fp-container">

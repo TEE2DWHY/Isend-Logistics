@@ -4,6 +4,8 @@ import axios from "axios"
 import {loginUrl} from "../config/urls"
 import setToken from "../config/session"
 import {userName, isLoggedIn, email} from "../config/session"
+// images
+import logo from "../assets/images/logo.png"
 const Login = () => {
 
     const [formData, setFormData] = useState({
@@ -56,7 +58,7 @@ const Login = () => {
             <section>
                 <br />
                 <div className="container">
-                    <Link to="/"><img className="logo" src="/images/logo.png" alt="logo" /></Link>
+                    <Link to="/"><img className="logo" src={logo} alt="logo" /></Link>
                 </div>
                 <br /> <br /> <br />
                 <div className="login-container">
@@ -97,7 +99,6 @@ const Login = () => {
                         <p style={{ textAlign: "center", fontSize: "14px", marginTop: "10px" }}>Don’t have an account? <b><Link to="/auth/sign-up">Sign up</Link> </b></p>
                     </form>
                     <br />
-                    {/* <p>Powered by <img src="/images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p> */}
                     <p>You agree to iSend’s <span style={{ color: "#F2C040", lineHeight: "1.2" }}><Link to="/terms-of-use">Terms of Use </Link> & <Link to="/privacy-policy">Privacy Policy</Link></span>. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</p>
                 </div>
             </section>

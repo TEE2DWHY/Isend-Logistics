@@ -1,11 +1,11 @@
-// import { Link } from 'react-router-dom'
+import logo from "../assets/images/logo.png"
 
 const Footer = () => {
     return (
         <>
             <div className="container footer">
                 <div>
-                  <img className="logo" src="./images/logo.png" alt="logo-footer" />
+                  <img className="logo" src={logo} alt="logo-footer" />
                 </div>
                 {/* Company */}
                 <div>

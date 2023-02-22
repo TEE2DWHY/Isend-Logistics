@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import axios from "axios";
-// const dotenv = require("dotenv")
-// dotenv.config()
+import { signUpUrl } from "../config/urls";
+// images
+import logo from "../assets/images/logo.png"
+
 const SignUp = () => {
 
     const [formData, setFormData] = useState({
@@ -24,7 +26,7 @@ const SignUp = () => {
         document.getElementById("spinner").style.display = "block"
         document.getElementById("sign-up").style.display = "none"
         try{
-            const res = await axios.post("https://isend-api-v1.herokuapp.com/api/v1/users/signup", formData)
+            const res = await axios.post(signUpUrl, formData)
             if (res.status === 200){
             document.getElementById("signup-confirmation").style.display = "block"
          }
@@ -41,7 +43,7 @@ const SignUp = () => {
             <section>
                 <br />
                 <div className="container">
-                    <Link to="/"><img className="logo" src="/images/logo.png" alt="logo" /></Link>
+                    <Link to="/"><img className="logo" src={logo} alt="logo" /></Link>
                 </div>
                 <br /> <br /> <br />
                 <div className="login-container">
@@ -110,7 +112,6 @@ const SignUp = () => {
                         {/* {error.data.message} */}
                     </form>
                     <br />
-                    {/* <p>Powered by <img src="/images/logo.png" alt="logo" style={{width:"50px", height:"14.82px", marginLeft:"3px"}}/></p> */}
                     <p>You agree to iSend’s <span style={{ color: "#F2C040", lineHeight: "1.2" }}><Link to="/terms-of-use">Terms of Use </Link> & <Link to="/privacy-policy">Privacy Policy</Link></span>. You don't need to consent as a condition of renting any property, or buying any other goods or services. Message/data rates may apply.</p>
                 </div>
             </section>

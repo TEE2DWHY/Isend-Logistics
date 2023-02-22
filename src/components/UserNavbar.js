@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { logOutUrl } from '../config/urls'
+import logo from "../assets/images/logo.png"
 
 const UserNavbar = () => {
     const Logout = async (e) =>{
@@ -25,7 +26,7 @@ const UserNavbar = () => {
     <div className="container">
         <nav className="navbar navbar-expand-lg">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/#"><img className="logo" src="/images/logo.png" alt="" /></a>
+                <a className="navbar-brand" href="/#"><img className="logo" src={logo} alt="" /></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

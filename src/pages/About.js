@@ -1,5 +1,6 @@
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
+import rectangle from "../assets/images/Rectangle 6285.png"
 
 
 const About = () => {
@@ -19,7 +20,7 @@ const About = () => {
                     Founded in 2015, we have quickly established ourselves as a trusted and reliable partner for those looking to send money abroad. Our mission is to make it easy for people to send money to their loved ones, no matter where they are in the world.</p>
                     </div>
                     <div className="col-lg-6">
-                        <img className="about-us-img img-fluid" src="images/Rectangle 6285.png" alt="about-us"/>
+                        <img className="about-us-img img-fluid" src={rectangle} alt="about-us"/>
                         </div>
                 </div>
                 <br/> <br/>

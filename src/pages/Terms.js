@@ -1,5 +1,7 @@
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
+import rectangle from "../assets/images/Rectangle 6286.png"
+
 
 const Terms = () => {
     return (
@@ -18,7 +20,7 @@ const Terms = () => {
                             <p>Last Updated: January 1st, 2023</p>
                         </div>
                         <div className="col-lg-6">
-                            <img className="img-fluid" src="images/Rectangle 6286.png" alt="" />
+                            <img className="img-fluid" src={rectangle} alt="rectangle-img" />
                         </div>
                     </div>
                 </div>

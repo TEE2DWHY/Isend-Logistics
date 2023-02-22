@@ -1,5 +1,7 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import privacy from "../assets/images/privacy.png"
+
 
 const Privacy = () => {
     return (
@@ -18,7 +20,7 @@ const Privacy = () => {
                             <p>Last Updated: January 1st, 2023</p>
                         </div>
                         <div className="col-lg-6">
-                            <img className="img-fluid terms-privacy" src="images/privacy.png" alt="" />
+                            <img className="img-fluid terms-privacy" src={privacy} alt="privacy-img" />
                         </div>
                     </div>
                 </div>

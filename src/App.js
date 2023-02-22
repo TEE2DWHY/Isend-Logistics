@@ -20,24 +20,7 @@ import Track from "./pages/Track";
 import TrackOverview from "./pages/TrackOverview.js";
 import PickupOverview from "./pages/PickupOverview";
 import ForgotPassword from "./pages/ForgotPassword";
-// Legediz
-import LoginLegediz from "./pages/Legediz/Login";
-import SignUpLegediz from "./pages/Legediz/SignUp";
-import DocumentsLegediz from "./pages/Legediz/Documents";
-import FinishedLegediz from "./pages/Legediz/Success";
-import TypeLegediz from "./pages/Legediz/Type";
-// MotorCycle
-import LoginMotorcycle from "./pages/Motorcycle/Login";
-import SignUpMotorcycle from "./pages/Motorcycle/SignUp";
-import Success from "./pages/Motorcycle/Success";
-import DocumentMotorcycle from "./pages/Motorcycle/Document";
-import TypeMotorcycle from "./pages/Motorcycle/Type";
-// Car
-import LoginCar from "./pages/Car/Login";
-import SignUpCar from "./pages/Car/SignUp";
-import DocumentsCar from "./pages/Car/Documents";
-import SuccessCar from "./pages/Car/Success";
-import TypeCar from "./pages/Car/Type";
+
 
 function App() {
   const loggedIn = sessionStorage.getItem("loggedIn")
@@ -64,21 +47,6 @@ function App() {
           <Route path="/order-overview" element={<TrackOverview />} />
           <Route path="/pickup-overview" element={loggedIn ? <PickupOverview /> : <Home/>} />
           <Route path="/forgot-password" element={<ForgotPassword/>}/>
-          <Route path="/legediz/login" element={<LoginLegediz />} />
-          <Route path="/legediz/sign-up" element={<SignUpLegediz />} />
-          <Route path="/legediz/documents" element={<DocumentsLegediz />} />
-          <Route path="/legediz/type" element={<TypeLegediz />} />
-          <Route path="/legediz/success" element={<FinishedLegediz />} />
-          <Route path="/motorcycle/login" element={<LoginMotorcycle />} />
-          <Route path="/motorcycle/sign-up" element={<SignUpMotorcycle />} />
-          <Route path="/motorcycle/type" element={<TypeMotorcycle />} />
-          <Route path="/motorcycle/success" element={<Success />} />
-          <Route path="/motorcycle/document" element={<DocumentMotorcycle />} />
-          <Route path="/car/login" element={<LoginCar />} />
-          <Route path="/car/sign-up" element={<SignUpCar />} />
-          <Route path="/car/document" element={<DocumentsCar />} />
-          <Route path="/car/success" element={<SuccessCar />} />
-          <Route path="/car/type" element={<TypeCar />} />
           <Route path="/about" element={<About/>} />
           <Route path="/continue" element={<Continue/>} />
         </Routes>

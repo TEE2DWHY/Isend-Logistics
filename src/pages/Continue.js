@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-
+import logo from "../assets/images/logo.png"
 const Continue = () => {
 
     const user = sessionStorage.getItem("user");
@@ -11,7 +11,7 @@ const Continue = () => {
            <section style={{marginBottom:"15%"}}>
                 <br />
                 <div className="container">
-                    <Link to="/"><img className="logo" src="images/logo.png" alt="logo" /></Link>
+                    <Link to="/"><img className="logo" src={logo} alt="logo" /></Link>
                 </div>
                 <div style={{textAlign:"center", marginTop:"5%"}}>
                     <h3 style={{fontWeight:"bold", marginBottom:"2%"}}>{loggedIn ? `Welcome Back ${user}` : "Welcome to Isend"}</h3>

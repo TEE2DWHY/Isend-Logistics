@@ -1,12 +1,19 @@
+import { Link } from "react-router-dom"
+import { useEffect } from "react"
+// components
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import offers from "../data/Offers"
-import { Link } from "react-router-dom"
 import UserNavbar from "../components/UserNavbar"
+// data
+import offers from "../data/Offers"
+// animation
 import TextChange from "../libs/ReactSpring"
-import { useEffect } from "react"
 import Slide from "../libs/Slider"
-
+// images
+import  isendImg1 from "../assets/images/isend-img1.png"
+import  sync from "../assets/images/sync.png"
+import frame from "../assets/images/Frame.png"
+import ellipse from "../assets/images/Ellipse 298.png"
 function Home() {
     // Get state of current user
         const loggedIn = sessionStorage.getItem("loggedIn");
@@ -25,11 +32,11 @@ function Home() {
                     <div className="row">
                         <div className="col-lg-6">
                             <h1 className="hero-section-h1"><span className="">Affordable </span>& Trusted delivery service</h1>
-                            <p className="hero-paragraph">Your sure plug for swift and affordable deliveries. Sign up for an efficient and hassle-free <TextChange/>.</p>
+                            <p className="hero-paragraph">Your sure plug for swift and affordable deliveries. Sign up for an efficient and hassle-free <span className="text-change"><TextChange/>.</span></p>
                             <Link to="/continue"><button className="cta">Book a delivery</button></Link>
                         </div>
                         <div className="col-lg-6">
-                            <img className="isend-img1" src="images/isend-img1.png" alt="" />
+                            <img className="isend-img1" src={isendImg1} alt="" />
                         </div>
                     </div>
                 </div>
@@ -74,7 +81,7 @@ function Home() {
                             <button className="partner">Partner with us </button>
                         </div>
                         <div className="col-lg-6">
-                            <img className="partner-img" src="images/sync.png" alt="" />
+                            <img className="partner-img" src={sync} alt="" />
                         </div>
                     </div>
                 </div>
@@ -91,7 +98,7 @@ function Home() {
                         <br/>
                     <p>Seyi Makinde, <span style={{ opacity: "0.6" }}>Customer</span></p>
                     <br />
-                    <img src="images/Frame.png" alt="" />
+                    <img src={frame} alt="frame" />
                 </div>
             </section>
             {/* ---------------------------------------------------------------------------------------------- */}
@@ -142,12 +149,12 @@ function Home() {
             {/* -------------------------------------------------------------------------------------------------- */}
             <section id="join-team" data-aos="fade-in">
                 <br /> <br />
-                <img className="ellipse1" src="images/Ellipse 298.png" alt="" /><h1 className="join-team-h1">Join Our Team </h1><img className="ellipse2" src="images/Ellipse 298.png" alt="" />
+                <img className="ellipse1" src={ellipse} alt="ellipse" /><h1 className="join-team-h1">Join Our Team </h1><img className="ellipse2" src={ellipse} alt="" />
                 <p className="join-team-p1">Help us on our quest to make life better for our customers</p>
                 <br />
                 <button className="sco-button"><b>See Current Openings</b></button>
                 <br /> <br /> <br />
-                <img className="ellipse1" src="images/Ellipse 298.png" alt="" /> <img className="ellipse4" src="images/Ellipse 298.png" alt="" />
+                <img className="ellipse1" src={ellipse} alt="ellipse" /> <img className="ellipse4" src={ellipse} alt="" />
             </section>
             {/* ---------------------------------------------------------------------------------------------------- */}
             {/* Footer-Section */}
