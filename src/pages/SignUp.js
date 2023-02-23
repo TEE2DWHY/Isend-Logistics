@@ -31,6 +31,7 @@ const SignUp = () => {
             document.getElementById("signup-confirmation").style.display = "block"
          }
         }catch (err){
+            console.log(err)
             document.querySelector(".signup-err").classList.add("err-visibility");
             document.querySelector(".spinner-border").classList.toggle("spinner")
             document.getElementById("signup").style.display = "block"
