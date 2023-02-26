@@ -90,11 +90,9 @@ const Login = () => {
                             placeholder="........"
                             onChange={handleChange}
                             onClick= {loginError}
-                            pattern="^[0-9]*$"
                             className="login"
                             style={{ display: "block", width: "100%", borderRadius: "6px", border: "none", padding: "10px 20px" }}
                         />
-                            <span className="input-err">Password should be a minimum of 8 digits</span>
                         <br />
                         <Link to="/forgot-password"><p style={{ textAlign: "center" }}>Forgot password?</p></Link>
                         <br />

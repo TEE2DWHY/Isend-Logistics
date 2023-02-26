@@ -13,6 +13,7 @@ const UserNavbar = () => {
             });
             sessionStorage.clear();
             window.location = "/"
+            console.log(res)
         } 
         catch(err){
             if (err){

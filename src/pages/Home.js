@@ -16,7 +16,7 @@ import frame from "../assets/images/Frame.png"
 import ellipse from "../assets/images/Ellipse 298.png"
 function Home() {
     // Get state of current user
-        const loggedIn = sessionStorage.getItem("loggedIn");
+        const auth = sessionStorage.getItem("loggedIn");
         //Slider Animation for Homepage
         useEffect(() =>{
             Slide()
@@ -24,7 +24,7 @@ function Home() {
     return (
         <>
             {/* Navbar Section */}
-            <div>{loggedIn ? <UserNavbar/> :<Navbar />}</div>
+            <div>{auth ? <UserNavbar/> :<Navbar />}</div>
             {/* ---------------------------------------------------------------------------------------------------- */}
             {/* Hero Section */}
             <section id="hero-section" data-aos="zoom-in">
@@ -54,7 +54,7 @@ function Home() {
                     <div className="col-lg-6">
                     <div className="row">
                         {offers.map((items) => (
-                            <div className="col-lg-6">
+                            <div className="col-lg-6" key={items.id}>
                                 <div className="offers-container"> 
                                  <div>
                                      <img className="offers-img" src={items.image} alt="" />
