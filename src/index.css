@@ -649,6 +649,10 @@ u{
   position: relative;
 }
 
+.navbar-toggler{
+  border: none;
+} 
+
 h2.launch {
   text-align: center;
   font-size: 22px;
